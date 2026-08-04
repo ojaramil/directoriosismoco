@@ -1,4 +1,4 @@
-const CACHE_NAME = "directorio-sismo-v2";
+const CACHE_NAME = "directorio-sismo-v3";
 
 const CORE_ASSETS = [
   "/",
@@ -9,6 +9,8 @@ const CORE_ASSETS = [
   "/mensajes/index.html",
   "/data.json",
   "/portada-ayuda.jpg",
+  "/fundasperven-telemedicina.jpeg",
+  "/dra-miryam-ortiz-gofundme.png",
   "/manifest.json",
   "/icon-192.png",
   "/icon-512.png"

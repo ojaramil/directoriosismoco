@@ -904,6 +904,43 @@
       background: var(--azul-700);
     }
 
+    .banner-prioritario.fundasperven a {
+      border-left-color: #0b8fb3;
+    }
+
+    .banner-prioritario.fundasperven .b-badge {
+      background: #0b8fb3;
+    }
+
+    .banner-prioritario.apoyo a {
+      border-left-color: #5b2ca0;
+    }
+
+    .banner-prioritario.apoyo .b-badge {
+      background: #5b2ca0;
+    }
+
+    .banner-prioritario-img {
+      width: 74px;
+      height: 74px;
+      border-radius: 8px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1px solid var(--borde);
+      background: var(--azul-50);
+    }
+
+    @media (max-width: 640px) {
+      .banner-prioritario a {
+        align-items: flex-start;
+      }
+
+      .banner-prioritario-img {
+        width: 58px;
+        height: 58px;
+      }
+    }
+
     .tea-fab {
       position: fixed;
       top: 50%;
@@ -1026,6 +1063,11 @@
     <div class="btk-tag"><span class="btk-dot"></span> En vivo</div>
     <div class="btk-track">
       <div class="btk-items">
+        <span class="btk-item">💙 <strong>Fundasperven lanza Red de Telemedicina y Teleapoyo Humanitario</strong> —
+          atención gratuita para niños, adolescentes con TEA y familias afectadas por la emergencia.</span>
+        <span class="btk-item">💜 <strong>Apoya a la Dra. Miryam Ortiz</strong> — pediatra de Fundasperven y SOVENIA,
+          aliada de la causa TEA, lucha contra el cáncer y necesita apoyo para su tratamiento. <a
+            href="https://gofund.me/3903a4d47" target="_blank" rel="noopener noreferrer">Donar en GoFundMe</a></span>
         <span class="btk-item">🍽️ <strong>Los refugios crecen y la comida no alcanza</strong> — cada bolsa que
           lleves hoy es una familia menos pasando hambre. No esperes, ve ahora.</span>
         <span class="btk-item">🏚️ <strong>169 edificios</strong> encontrados con señales de vida en el Estado
@@ -1055,13 +1097,41 @@
     <div class="bandera">🇻🇪</div>
     <h1>Directorio Sismo — Venezuela</h1>
     <p class="sub">Recursos verificados para ayudar a las víctimas del terremoto en Venezuela.</p>
-    <p class="fecha">Última actualización: 23 de julio de 2026</p>
+    <p class="fecha">Última actualización: 4 de agosto de 2026</p>
     <div class="buscador-wrap">
       <input id="buscador-input" type="text" placeholder="Buscar recurso, ciudad, categoría…"
         oninput="buscarRecurso(this.value)">
       <span class="icono">🔍</span>
     </div>
   </header>
+
+  <section class="banner-prioritario fundasperven">
+    <a href="tel:+584128050126">
+      <img class="banner-prioritario-img" src="/fundasperven-telemedicina.jpeg"
+        alt="Red de Telemedicina y Teleapoyo Humanitario Fundasperven" loading="lazy">
+      <span class="b-badge">💙 Fundasperven</span>
+      <span class="b-texto">
+        <h2>Red de Telemedicina y Teleapoyo Humanitario</h2>
+        <p>Atención gratuita humanitaria para niños, adolescentes con TEA y familias afectadas por la emergencia en
+          Venezuela.</p>
+      </span>
+      <span class="b-flecha">☎</span>
+    </a>
+  </section>
+
+  <section class="banner-prioritario apoyo">
+    <a href="https://gofund.me/3903a4d47" target="_blank" rel="noopener noreferrer">
+      <img class="banner-prioritario-img" src="/dra-miryam-ortiz-gofundme.png"
+        alt="Campaña de apoyo a la Dra. Miryam Ortiz" loading="lazy">
+      <span class="b-badge">💜 Apoyo urgente</span>
+      <span class="b-texto">
+        <h2>Apoya a la Dra. Miryam Ortiz</h2>
+        <p>Pediatra con más de 30 años de servicio a personas autistas y sus familias; hoy necesita apoyo para continuar
+          su tratamiento contra el cáncer.</p>
+      </span>
+      <span class="b-flecha">↗</span>
+    </a>
+  </section>
 
   <section class="banner-prioritario">
     <a href="/prioritario/">

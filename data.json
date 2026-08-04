@@ -162,6 +162,13 @@
       },
       {
         "icon": "💙",
+        "tag": "Telemedicina TEA",
+        "h": "Fundasperven — Red de Telemedicina y Teleapoyo Humanitario",
+        "d": "Atención gratuita humanitaria por videollamada para niños, adolescentes con TEA y familias afectadas por la emergencia. Programa temporal de 90 días.",
+        "url": "tel:+584128050126"
+      },
+      {
+        "icon": "💙",
         "tag": "TEA · A4A Recomienda",
         "h": "SOVENIA",
         "d": "Apoyo presencial para personas con autismo y familias. Tel: 0212-731-5656 / 0212-731-6342 / 0212-834-4606.",
@@ -597,6 +604,13 @@
         "h": "Ruta de la Ayuda",
         "d": "Rastrea la ayuda humanitaria internacional prometida a Venezuela: quién la ofreció, cuánto anunció y si ya llegó. Datos abiertos y mapas para exigir rendición de cuentas.",
         "url": "https://rutadeayuda.org/"
+      },
+      {
+        "icon": "💜",
+        "tag": "GoFundMe · TEA",
+        "h": "Apoyo a la Dra. Miryam Ortiz",
+        "d": "Pediatra de Fundasperven y SOVENIA, aliada de la causa TEA, con más de 30 años sirviendo a personas autistas y sus familias. Recauda apoyo para su tratamiento contra el cáncer.",
+        "url": "https://gofund.me/3903a4d47"
       },
       {
         "icon": "🍔",
