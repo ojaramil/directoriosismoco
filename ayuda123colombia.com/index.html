@@ -131,6 +131,34 @@
       font-weight: 800;
     }
 
+    .emergency-strip {
+      background: #8f2f25;
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+    }
+
+    .emergency-strip-inner {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      padding: .55rem 0;
+      font-size: .86rem;
+      font-weight: 850;
+      text-align: center;
+    }
+
+    .emergency-strip a {
+      color: #fff;
+      text-decoration: none;
+      border: 1px solid rgba(255, 255, 255, .38);
+      border-radius: 7px;
+      padding: .25rem .5rem;
+      white-space: nowrap;
+    }
+
     header {
       min-height: 92svh;
       color: #fff;
@@ -358,6 +386,10 @@
       border-left: 5px solid var(--red);
     }
 
+    .emergency {
+      border-left: 5px solid var(--red);
+    }
+
     .donation-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -449,6 +481,10 @@
       .donation-grid {
         grid-template-columns: 1fr;
       }
+
+      .emergency-strip-inner {
+        flex-wrap: wrap;
+      }
     }
   </style>
   <script>
@@ -471,6 +507,15 @@
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
+  <div class="emergency-strip" role="banner" aria-label="Números de emergencia">
+    <div class="emergency-strip-inner">
+      <span>Emergencias Colombia:</span>
+      <a href="tel:123">123</a>
+      <a href="tel:144">Defensa Civil 144</a>
+      <a href="tel:+576015529696">UNGRD 601 552 9696</a>
+    </div>
+  </div>
+
   <header>
     <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
     <div class="hero">
@@ -487,6 +532,7 @@
 
   <nav aria-label="Secciones principales">
     <div class="nav-inner">
+      <a href="#emergencias">Emergencias</a>
       <a href="#noticias">Noticias</a>
       <a href="#institucional">Institucional</a>
       <a href="#ong">Organizaciones</a>
@@ -500,6 +546,49 @@
     <p class="notice">
       Corte documental: 11 de agosto de 2026, hora de Colombia. La emergencia seguía en evaluación, por lo que las cifras de víctimas, daños y necesidades pueden cambiar. Antes de donar, desplazarte o compartir una cuenta bancaria, verifica siempre en el canal oficial de la entidad.
     </p>
+
+    <section id="emergencias">
+      <div class="section-head">
+        <div>
+          <span class="tag">Atención inmediata</span>
+          <h2>Números de emergencia</h2>
+          <p>Si hay riesgo vital, personas atrapadas, incendio, colapso, lesionados o una situación de seguridad, llama primero a la línea de emergencia.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card emergency">
+          <h3>123 Colombia</h3>
+          <p>Línea principal para emergencias: ambulancia, bomberos, policía, rescate y riesgo inmediato.</p>
+          <div class="button-row">
+            <a href="tel:123">Llamar 123</a>
+          </div>
+        </article>
+        <article class="card emergency">
+          <h3>Defensa Civil — 144</h3>
+          <p>Atención de emergencias, apoyo operativo, búsqueda y rescate, y coordinación con voluntariado.</p>
+          <div class="button-row">
+            <a href="tel:144">Llamar 144</a>
+            <a class="alt" href="tel:+576013199000">601 319 9000</a>
+          </div>
+        </article>
+        <article class="card emergency">
+          <h3>UNGRD</h3>
+          <p>Coordinación nacional de gestión del riesgo, Sala de Crisis e información institucional.</p>
+          <div class="button-row">
+            <a href="tel:+576015529696">601 552 9696</a>
+            <a class="alt" href="tel:018000113200">01 8000 113200</a>
+          </div>
+        </article>
+        <article class="card emergency">
+          <h3>Cruz Roja Colombiana</h3>
+          <p>Canales humanitarios, orientación sobre ayuda, donaciones y acompañamiento en emergencias.</p>
+          <div class="button-row">
+            <a href="tel:+576017946566">601 794 6566</a>
+            <a class="alt" href="tel:018000519853">018000 519853</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
     <section id="noticias">
       <div class="section-head">
@@ -721,6 +810,14 @@
         <article class="card">
           <h3>Evita saturar la ayuda</h3>
           <p>No envíes medicamentos sueltos, ropa usada sin clasificar, perecederos, productos vencidos ni cargamentos sin receptor confirmado. El dinero suele ser más ágil y trazable.</p>
+        </article>
+        <article class="card">
+          <h3>Acopios nacionales</h3>
+          <p>Consulta Cruz Roja Colombiana, Defensa Civil, ABACO y Cáritas/Pastoral Social para confirmar campañas activas, horarios y puntos autorizados en cada departamento.</p>
+        </article>
+        <article class="card">
+          <h3>Acopios internacionales</h3>
+          <p>Desde el exterior, prioriza canales como IFRC, CICR o consulados de Colombia. Evita enviar carga sin receptor confirmado y verifica cada centro antes de organizar recolecciones.</p>
         </article>
       </div>
     </section>

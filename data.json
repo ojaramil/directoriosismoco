@@ -148,6 +148,82 @@
         "url": "https://www.google.com/maps/search/?api=1&query=Carrera%202%20%2324-41%20Quibdo"
       },
       {
+        "header": "Acopios nacionales"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Cruz Roja Colombiana — sede nacional",
+        "d": "Av. Cra. 68 #68B-31, Bogotá. Tel: 601 794 6566 / línea nacional 018000 5198534. Confirma si reciben especie antes de desplazarte.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Seccionales de Cruz Roja Colombiana",
+        "d": "Consulta la seccional de tu departamento para validar campañas, horarios y tipo de ayuda recibida.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Defensa Civil Colombiana",
+        "d": "Red nacional de juntas y voluntariado. Úsala para confirmar necesidades locales y puntos autorizados.",
+        "url": "https://www.defensacivil.gov.co/"
+      },
+      {
+        "icon": "🍲",
+        "tag": "Nacional",
+        "h": "Red ABACO — Bancos de Alimentos",
+        "d": "Canal nacional para donar alimentos y ubicar bancos aliados por región.",
+        "url": "https://www.abaco.org.co/"
+      },
+      {
+        "icon": "🕊️",
+        "tag": "Nacional",
+        "h": "Cáritas Colombiana / Pastoral Social",
+        "d": "Canal humanitario nacional con presencia territorial. Verifica campañas activas antes de enviar ayudas.",
+        "url": "https://caritascolombiana.org/"
+      },
+      {
+        "header": "Internacionales y desde el exterior"
+      },
+      {
+        "icon": "🌎",
+        "tag": "Exterior",
+        "h": "IFRC — Federación Internacional de la Cruz Roja",
+        "d": "Para donantes fuera de Colombia, canal internacional de apoyo a sociedades nacionales de Cruz Roja y emergencias.",
+        "url": "https://www.ifrc.org/"
+      },
+      {
+        "icon": "🌎",
+        "tag": "Exterior",
+        "h": "CICR — Comité Internacional de la Cruz Roja",
+        "d": "Canal internacional para asistencia humanitaria en contextos de emergencia. Útil cuando no puedes llevar donaciones físicas.",
+        "url": "https://www.icrc.org/es"
+      },
+      {
+        "icon": "🛂",
+        "tag": "Consular",
+        "h": "Cancillería / consulados de Colombia",
+        "d": "Si estás fuera del país, consulta el consulado colombiano más cercano antes de organizar acopios o envíos transfronterizos.",
+        "url": "https://www.cancilleria.gov.co/directorio/consulados"
+      },
+      {
+        "icon": "🗺️",
+        "tag": "Directorio",
+        "h": "Manos Juntas Venezuela — centros internacionales",
+        "d": "Directorio público de centros de acopio por país para emergencias regionales. Confirma vigencia y responsable antes de donar.",
+        "url": "https://manosjuntasvenezuela.com/centros-de-acopio-venezuela"
+      },
+      {
+        "icon": "🗺️",
+        "tag": "Directorio",
+        "h": "Centros de Acopio Venezuela",
+        "d": "Mapa internacional de puntos reportados para ayuda humanitaria. Úsalo como referencia y verifica cada punto antes de ir.",
+        "url": "https://centros-acopio-vzla.com/"
+      },
+      {
         "header": "Puntos Tigresas"
       },
       {
