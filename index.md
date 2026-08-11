@@ -79,7 +79,7 @@ ONG y ayuda social
 
 ## Organizaciones colombianas para ayudar
 
-Canales de apoyo de entidades con presencia en Colombia: Cruz Roja Colombiana, ABACO, Minuto de Dios, Cáritas Colombiana y Ayuda a la Iglesia que Sufre - ACN Colombia.
+Canales de apoyo de entidades con presencia en Colombia: Cruz Roja Colombiana, Asociación de Bancos de Alimentos de Colombia (ABACO), Minuto de Dios, Cáritas Colombiana y Ayuda a la Iglesia que Sufre - ACN Colombia.
 
 ### Cruz Roja Colombiana
 
@@ -87,7 +87,7 @@ Los informes y artículos citados la ubican como canal central para respuesta hu
 
 [Cruz Roja](https://www.cruzrojacolombiana.org/) [Donar](https://accionistashumanitarios.org/)
 
-### ABACO y bancos de alimentos
+### Asociación de Bancos de Alimentos de Colombia (ABACO)
 
 Canalizan recursos para comprar y distribuir alimentos y artículos esenciales mediante bancos de alimentos regionales y corredores humanitarios.
 
@@ -127,7 +127,7 @@ Fuentes citadas mencionan donaciones por portal web, Red de Accionistas Humanita
 
 [Donar Cruz Roja](https://accionistashumanitarios.org/) [Verificar sitio](https://www.cruzrojacolombiana.org/)
 
-### ABACO
+### Asociación de Bancos de Alimentos de Colombia (ABACO)
 
 Los informes indican aportes para compra masiva de víveres y distribución por bancos de alimentos.
 
