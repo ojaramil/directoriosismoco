@@ -4,1020 +4,451 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5DTBG1DWLQ"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-5DTBG1DWLQ');
+    gtag("js", new Date());
+    gtag("config", "G-5DTBG1DWLQ");
   </script>
-  <title>Directorio Sismo — Venezuela</title>
-  <meta name="description" content="Recursos verificados para ayudar a las víctimas del terremoto en Venezuela.">
-  <meta property="og:title" content="Directorio Sismo — Venezuela">
-  <meta property="og:description"
-    content="Ayuda123venezuela.com (Directorio Sismo Venezuela) — Recursos verificados para ayudar a las víctimas del terremoto en Venezuela.">
-  <meta property="og:image" content="portada-ayuda.jpg">
+  <title>Ayuda123 Colombia - Terremoto 2026</title>
+  <meta name="description" content="Noticias, fuentes periodisticas y canales de organizaciones colombianas para donar tras el terremoto de Colombia de agosto de 2026.">
+  <meta property="og:title" content="Ayuda123 Colombia - Terremoto 2026">
+  <meta property="og:description" content="Resumen noticioso con fuentes de articulos y diarios citados en los informes, mas canales de organizaciones colombianas.">
+  <meta property="og:image" content="portada.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Directorio Sismo — Venezuela">
-  <meta name="twitter:description"
-    content="Ayuda123venezuela.com (Directorio Sismo Venezuela) — Recursos verificados para ayudar a las víctimas del terremoto en Venezuela.">
-  <meta name="twitter:image" content="portada-ayuda.jpg">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0f2c52">
-  <link rel="icon" href="/icon-192.png">
-  <link rel="apple-touch-icon" href="/icon-192.png">
+  <meta name="twitter:title" content="Ayuda123 Colombia - Terremoto 2026">
+  <meta name="twitter:description" content="Noticias, fuentes de prensa y canales de organizaciones colombianas.">
+  <meta name="twitter:image" content="portada.jpg">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#123c69">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul-900: #0f2c52;
-      --azul-800: #173963;
-      --azul-700: #1f4a82;
-      --azul-600: #2f6fbf;
-      --azul-500: #3f7fd1;
-      --azul-100: #eaf2fb;
-      --azul-50: #f5f9fe;
-      --texto: #1c2733;
-      --texto2: #5c6b7a;
-      --borde: #dde7f3;
-      --blanco: #ffffff;
-      --superficie: var(--blanco);
-      --sombra: 0 2px 4px rgba(15, 44, 82, 0.05), 0 12px 28px rgba(15, 44, 82, 0.08);
-      --font-display: 'Sora', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --ink: #18212b;
+      --muted: #5f6f7f;
+      --line: #d9e3ee;
+      --paper: #ffffff;
+      --wash: #f4f8fb;
+      --blue: #123c69;
+      --blue-2: #2366a6;
+      --red: #b9352b;
+      --gold: #b88920;
+      --green: #16756a;
+      --shadow: 0 12px 28px rgba(18, 60, 105, .08);
+      --display: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     @media (prefers-color-scheme: dark) {
       :root:not([data-theme="light"]) {
-        --azul-100: #16233a;
-        --azul-50: #0b1420;
-        --texto: #e8eef7;
-        --texto2: #93a6bd;
-        --borde: #223349;
-        --superficie: #101c2c;
+        --ink: #edf4fb;
+        --muted: #a8b8c8;
+        --line: #24364a;
+        --paper: #101c29;
+        --wash: #0a131e;
       }
     }
 
     :root[data-theme="dark"] {
-      --azul-100: #16233a;
-      --azul-50: #0b1420;
-      --texto: #e8eef7;
-      --texto2: #93a6bd;
-      --borde: #223349;
-      --superficie: #101c2c;
+      --ink: #edf4fb;
+      --muted: #a8b8c8;
+      --line: #24364a;
+      --paper: #101c29;
+      --wash: #0a131e;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: var(--azul-50);
-      color: var(--texto);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--wash);
+      color: var(--ink);
+      line-height: 1.55;
     }
 
     a {
-      color: inherit;
+      color: var(--blue-2);
+    }
+
+    .offline-banner,
+    .update-banner {
+      position: fixed;
+      left: 0;
+      right: 0;
+      z-index: 40;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .7rem;
+      padding: .65rem 1rem;
+      color: #fff;
+      text-align: center;
+      font-size: .84rem;
+      font-weight: 700;
+    }
+
+    .offline-banner {
+      top: 0;
+      background: #8f2f25;
     }
 
     .update-banner {
-      position: fixed;
       bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 9999;
-      background: var(--azul-800);
-      color: var(--blanco);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: .6rem;
-      padding: .7rem 1rem;
-      font-size: .85rem;
-      box-shadow: 0 -2px 10px rgba(0, 0, 0, .15);
+      background: var(--blue);
+      box-shadow: 0 -2px 12px rgba(0, 0, 0, .18);
     }
 
+    .offline-banner[hidden],
     .update-banner[hidden] {
       display: none;
     }
 
-    .update-banner button {
-      background: var(--blanco);
-      color: var(--azul-800);
-      border: none;
-      border-radius: 999px;
-      padding: .4rem 1.1rem;
-      font-weight: 700;
-      font-size: .82rem;
+    .update-banner button,
+    .theme-toggle,
+    .share-fab {
+      border: 0;
       cursor: pointer;
+      font: inherit;
     }
 
-    .offline-banner {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 9998;
-      background: #8e2418;
-      color: var(--blanco);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .5rem;
-      padding: .55rem 1rem;
-      font-size: .82rem;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    .offline-banner[hidden] {
-      display: none;
-    }
-
-    .offline-note {
-      max-width: 1080px;
-      margin: 1.4rem auto 0;
-      padding: 0 1.2rem;
-      font-size: .8rem;
-      color: var(--texto2);
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    .banner-top {
-      background: #c0392b;
-      color: var(--blanco);
-      display: flex;
-      align-items: stretch;
-      overflow: hidden;
-      font-size: .82rem;
-      line-height: 1.4;
-    }
-
-    .btk-tag {
-      flex-shrink: 0;
-      background: #8e2418;
-      color: var(--blanco);
-      font-weight: 800;
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
-      padding: .5rem .9rem;
-      display: flex;
-      align-items: center;
-      gap: .35rem;
-      white-space: nowrap;
-    }
-
-    .btk-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
+    .update-banner button {
+      border-radius: 7px;
+      padding: .38rem .75rem;
+      color: var(--blue);
       background: #fff;
-      animation: btk-pulse 1.4s infinite;
-    }
-
-    @keyframes btk-pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: .3;
-      }
-    }
-
-    .btk-track {
-      flex: 1;
-      min-width: 0;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-    }
-
-    .btk-items {
-      display: flex;
-      gap: 3rem;
-      white-space: nowrap;
-      will-change: transform;
-      animation: btk-scroll 65s linear infinite;
-      padding-left: 100%;
-    }
-
-    .btk-track:hover .btk-items {
-      animation-play-state: paused;
-    }
-
-    .btk-item {
-      white-space: nowrap;
-    }
-
-    @keyframes btk-scroll {
-      from {
-        transform: translateX(0);
-      }
-
-      to {
-        transform: translateX(-100%);
-      }
-    }
-
-    .banner-top a {
-      color: var(--blanco);
-      font-weight: 700;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 640px) {
-      .btk-tag {
-        font-size: .64rem;
-        padding: .5rem .7rem;
-      }
-
-      .btk-items {
-        animation-duration: 42s;
-      }
+      font-weight: 800;
     }
 
     header {
+      min-height: 92svh;
+      color: #fff;
+      background:
+        linear-gradient(90deg, rgba(8, 28, 48, .86), rgba(8, 28, 48, .42)),
+        url("portada.jpg") center / cover;
+      display: flex;
+      align-items: center;
       position: relative;
-      background: linear-gradient(135deg, var(--azul-900) 0%, var(--azul-800) 55%, var(--azul-700) 100%);
-      color: var(--blanco);
-      padding: 2.4rem 1.5rem 2rem;
-      text-align: center;
+    }
+
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, .25);
     }
 
     .theme-toggle {
       position: absolute;
       top: 1rem;
       right: 1rem;
-      width: 38px;
-      height: 38px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
-      border: 1px solid rgba(255, 255, 255, .3);
-      background: rgba(255, 255, 255, .12);
-      color: var(--blanco);
-      font-size: 1.05rem;
+      color: #fff;
+      background: rgba(255, 255, 255, .18);
+      border: 1px solid rgba(255, 255, 255, .35);
+      backdrop-filter: blur(8px);
+      font-size: 1rem;
+    }
+
+    .hero {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 4.8rem 0 6rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding: .35rem .6rem;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .28);
+      font-size: .78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--display);
+      line-height: 1.12;
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      font-size: clamp(2.25rem, 7vw, 5.1rem);
+      font-weight: 800;
+    }
+
+    .hero p {
+      max-width: 740px;
+      margin: 1rem 0 0;
+      color: #dbe9f7;
+      font-size: clamp(1rem, 2.2vw, 1.24rem);
+    }
+
+    .hero-actions {
       display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      margin-top: 1.5rem;
+    }
+
+    .hero-actions a {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      backdrop-filter: blur(6px);
-    }
-
-    .theme-toggle:hover {
-      background: rgba(255, 255, 255, .22);
-    }
-
-    header .bandera {
-      font-size: 1.9rem;
-    }
-
-    header h1 {
-      font-family: var(--font-display);
-      margin: .3rem 0 .4rem;
-      font-size: 1.9rem;
+      min-height: 42px;
+      padding: .68rem .95rem;
+      border-radius: 7px;
+      color: #fff;
+      text-decoration: none;
       font-weight: 800;
-      letter-spacing: -0.3px;
+      background: var(--red);
     }
 
-    header p.sub {
-      margin: 0;
-      color: #cfe0f5;
-      font-size: .92rem;
-      letter-spacing: .01em;
+    .hero-actions a.secondary {
+      background: rgba(255, 255, 255, .16);
+      border: 1px solid rgba(255, 255, 255, .35);
     }
 
-    header p.fecha {
-      margin: .5rem 0 0;
-      color: #a9c6ea;
-      font-size: .78rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      font-weight: 600;
-    }
-
-    .buscador-wrap {
-      max-width: 640px;
-      margin: 1.4rem auto 0;
-      position: relative;
-    }
-
-    .buscador-wrap input {
-      width: 100%;
-      padding: .75rem 2.6rem .75rem 1rem;
-      border-radius: 50px;
-      border: none;
-      font-size: .9rem;
-      outline: none;
-    }
-
-    .buscador-wrap span.icono {
-      position: absolute;
-      right: 1rem;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--azul-700);
-    }
-
-    nav.filtros {
+    nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, .72);
-      backdrop-filter: blur(10px) saturate(180%);
-      -webkit-backdrop-filter: blur(10px) saturate(180%);
-      border-bottom: 1px solid rgba(221, 231, 243, .7);
-      padding: .7rem 1rem;
+      z-index: 20;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      width: min(1080px, calc(100% - 2rem));
+      margin: 0 auto;
       display: flex;
-      gap: .5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      box-shadow: 0 1px 0 rgba(15, 44, 82, .03);
+      gap: .4rem;
+      overflow-x: auto;
+      padding: .62rem 0;
     }
 
-    @media (max-width: 640px) {
-      nav.filtros {
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        overflow-x: auto;
-        scrollbar-width: none;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      nav.filtros::-webkit-scrollbar {
-        display: none;
-      }
-
-      .filtro-btn {
-        flex: none;
-      }
-    }
-
-    .filtro-btn {
-      font-family: var(--font-display);
-      border: 1px solid var(--borde);
-      background: var(--azul-50);
-      color: var(--texto);
-      padding: .4rem .85rem;
+    .nav-inner a {
+      flex: none;
+      padding: .45rem .72rem;
       border-radius: 7px;
-      font-size: .78rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all .15s;
-      white-space: nowrap;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 800;
     }
 
-    .filtro-btn:hover {
-      background: var(--azul-100);
-    }
-
-    .filtro-btn.activo {
-      background: var(--azul-700);
-      border-color: var(--azul-700);
-      color: var(--blanco);
+    .nav-inner a:hover {
+      background: color-mix(in srgb, var(--blue-2) 11%, transparent);
     }
 
     main {
-      max-width: 1080px;
+      width: min(1080px, calc(100% - 2rem));
       margin: 0 auto;
-      padding: 1.6rem 1.2rem 3rem;
+      padding: 2rem 0 3.5rem;
     }
 
-    .categoria-titulo {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      color: var(--texto);
-      margin: 2.2rem 0 .9rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--azul-100);
+    .notice {
+      border-left: 5px solid var(--red);
+      background: var(--paper);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 1rem 1.1rem;
+      margin-bottom: 1.6rem;
+      font-size: .95rem;
     }
 
-    .categoria-grupo:first-of-type .categoria-titulo {
-      margin-top: 0;
+    section {
+      padding: 2.1rem 0;
+      border-bottom: 1px solid var(--line);
     }
 
-    .categoria-grupo:not(:first-of-type) {
-      content-visibility: auto;
-      contain-intrinsic-size: auto 900px;
-    }
-
-    .categoria-grupo[data-cat="salud"] {
-      --cat-color: #e63946;
-    }
-
-    .categoria-grupo[data-cat="emergencias"] {
-      --cat-color: #d62828;
-    }
-
-    .categoria-grupo[data-cat="refugios"] {
-      --cat-color: #f4a261;
-    }
-
-    .categoria-grupo[data-cat="personas"] {
-      --cat-color: #8e44ad;
-    }
-
-    .categoria-grupo[data-cat="mascotas"] {
-      --cat-color: #2a9d8f;
-    }
-
-    .categoria-grupo[data-cat="ingenieros"] {
-      --cat-color: #f39c12;
-    }
-
-    .categoria-grupo[data-cat="acopio"] {
-      --cat-color: #8d6e63;
-    }
-
-    .categoria-grupo[data-cat="internacional"] {
-      --cat-color: #2f6fbf;
-    }
-
-    .categoria-grupo[data-cat="donaciones"] {
-      --cat-color: #d4a017;
-    }
-
-    .categoria-grupo[data-cat="transporte"] {
-      --cat-color: #073b4c;
-    }
-
-    .aviso {
-      background: var(--azul-100);
-      border: 1px solid var(--borde);
-      color: var(--texto);
-      font-size: .82rem;
-      padding: .8rem 1rem;
-      border-radius: 10px;
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(220px, 330px);
+      gap: 1.5rem;
+      align-items: end;
       margin-bottom: 1rem;
+    }
+
+    .section-head p {
+      margin: .45rem 0 0;
+      color: var(--muted);
+    }
+
+    .tag {
+      color: var(--blue-2);
+      font-size: .74rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: .9rem;
     }
 
-    .tarjeta {
-      position: relative;
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-left: 4px solid var(--cat-color, var(--azul-600));
+    .card,
+    .source-list,
+    .donation-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 1rem 1rem 1.1rem;
-      display: flex;
-      flex-direction: column;
-      gap: .35rem;
-      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: var(--shadow);
+      padding: 1rem;
     }
 
-    .tarjeta:hover {
-      box-shadow: var(--sombra);
-      transform: translateY(-2px);
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: .4rem;
     }
 
-    .tarjeta:active {
-      transform: translateY(0) scale(.98);
-      box-shadow: var(--sombra);
-    }
-
-    .tarjeta-icon {
-      font-size: 1.35rem;
-    }
-
-    .tarjeta-cat {
-      font-size: .64rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .07em;
-      color: var(--cat-color, var(--azul-600));
-      display: inline-block;
-      width: fit-content;
-    }
-
-    .tarjeta-cat::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--cat-color, var(--azul-600));
-      margin-right: .35rem;
-    }
-
-    .tarjeta h3 {
-      font-family: var(--font-display);
-      font-size: .94rem;
-      font-weight: 700;
+    .card p,
+    .card li,
+    .donation-box p,
+    .donation-box li {
+      color: var(--muted);
+      font-size: .9rem;
       margin: 0;
-      color: var(--texto);
-      padding-right: 1.6rem;
     }
 
-    .tarjeta p {
-      font-size: .8rem;
-      color: var(--texto2);
-      line-height: 1.5;
-      margin: 0;
-      flex: 1;
+    .card ul,
+    .donation-box ul {
+      padding-left: 1.1rem;
+      margin: .45rem 0 0;
     }
 
-    .tarjeta-link {
-      position: absolute;
-      inset: 0;
-      border-radius: 8px;
-      z-index: 1;
+    .callout {
+      border-left: 5px solid var(--gold);
     }
 
-    .tarjeta-go {
-      position: absolute;
-      top: .8rem;
-      right: .8rem;
-      color: var(--azul-500);
-      z-index: 2;
-      pointer-events: none;
+    .institutional {
+      border-left: 5px solid var(--blue-2);
     }
 
-    .tarjeta-share {
-      position: absolute;
-      top: .65rem;
-      right: .65rem;
-      z-index: 3;
-      width: 26px;
-      height: 26px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0;
-      font-size: .82rem;
-      line-height: 1;
-      color: var(--texto2);
-      background: var(--azul-50);
-      border: 1px solid var(--borde);
-      border-radius: 50%;
-      cursor: pointer;
-      transition: background .15s;
+    .ngo {
+      border-left: 5px solid var(--green);
     }
 
-    .tarjeta-share:hover {
-      background: var(--azul-100);
+    .donate {
+      border-left: 5px solid var(--red);
     }
 
-    .tarjeta:not(.tarjeta-direccion) .tarjeta-share {
-      right: 2.05rem;
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .9rem;
     }
 
-    .tarjeta-url {
-      font-size: .68rem;
-      color: var(--azul-600);
-      word-break: break-all;
-    }
-
-    .tarjeta-tel {
-      background: var(--azul-50);
-    }
-
-    .grupo-header {
-      grid-column: 1/-1;
-      font-size: .78rem;
-      font-weight: 700;
-      color: var(--texto2);
-      text-transform: uppercase;
-      letter-spacing: .05em;
-      margin-top: .4rem;
-      padding-top: .7rem;
-      border-top: 1px dashed var(--borde);
-    }
-
-    .grid>.grupo-header:first-child {
-      border-top: none;
-      padding-top: 0;
-      margin-top: 0;
-    }
-
-    .tarjeta-direccion h3 {
-      padding-right: 0;
-    }
-
-    .tarjeta-fuente {
-      font-size: .68rem;
-      color: var(--azul-600);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .tips-box {
-      margin-top: .5rem;
-    }
-
-    .tip-row {
-      display: flex;
-      gap: .7rem;
-      align-items: flex-start;
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-radius: 10px;
-      padding: .7rem .9rem;
+    .donation-box h3 {
+      font-size: 1.04rem;
       margin-bottom: .5rem;
     }
 
-    .tip-num {
-      width: 22px;
-      height: 22px;
-      flex-shrink: 0;
-      background: var(--azul-700);
-      color: var(--blanco);
-      border-radius: 50%;
+    .button-row {
       display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin-top: .8rem;
+    }
+
+    .button-row a {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: .68rem;
-      font-weight: 700;
-    }
-
-    .tip-row p {
-      margin: 0;
+      min-height: 36px;
+      border-radius: 7px;
+      padding: .5rem .7rem;
+      color: #fff;
+      background: var(--blue-2);
+      text-decoration: none;
       font-size: .82rem;
-      color: var(--texto2);
-      line-height: 1.5;
+      font-weight: 800;
     }
 
-    .sources-box {
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-radius: 10px;
-      padding: .9rem 1rem;
-      margin-top: .9rem;
+    .button-row a.alt {
+      color: var(--blue-2);
+      background: color-mix(in srgb, var(--blue-2) 11%, var(--paper));
+      border: 1px solid var(--line);
     }
 
-    .sources-box h4 {
-      font-size: .66rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
-      color: var(--texto2);
-      margin: 0 0 .6rem;
-    }
-
-    .sources-box ul {
+    .source-list ul {
       list-style: none;
       margin: 0;
       padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: .35rem .9rem;
+      display: grid;
+      gap: .5rem;
     }
 
-    .sources-box li {
-      font-size: .72rem;
-    }
-
-    .sources-box a {
-      color: var(--azul-600);
+    .source-list a {
+      font-weight: 800;
       text-decoration: none;
     }
 
-    .sugerir-section {
-      max-width: 640px;
-      margin: 2.4rem auto 0;
-      padding: 0 1.2rem;
-    }
-
-    .sugerir-box {
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-left: 4px solid var(--azul-600);
-      border-radius: 12px;
-      box-shadow: var(--sombra);
-      padding: 1.4rem 1.5rem 1.6rem;
-    }
-
-    .sugerir-box h2 {
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      color: var(--texto);
-      margin: 0 0 .3rem;
-    }
-
-    .sugerir-box>p {
-      font-size: .8rem;
-      color: var(--texto2);
-      margin: 0 0 1.1rem;
-      line-height: 1.5;
-    }
-
-    .sugerir-form {
-      display: flex;
-      flex-direction: column;
-      gap: .8rem;
-    }
-
-    .sugerir-campo {
-      display: flex;
-      flex-direction: column;
-      gap: .3rem;
-    }
-
-    .sugerir-campo label {
-      font-size: .74rem;
-      font-weight: 700;
-      color: var(--texto);
-    }
-
-    .sugerir-campo .opcional {
-      font-weight: 400;
-      color: var(--texto2);
-      text-transform: none;
-    }
-
-    .sugerir-campo input,
-    .sugerir-campo select,
-    .sugerir-campo textarea {
-      font: inherit;
-      font-size: .85rem;
-      padding: .6rem .75rem;
-      border: 1px solid var(--borde);
-      border-radius: 8px;
-      background: var(--azul-50);
-      color: var(--texto);
-      width: 100%;
-    }
-
-    .sugerir-campo textarea {
-      resize: vertical;
-      min-height: 4.5rem;
-    }
-
-    .sugerir-campo input:focus,
-    .sugerir-campo select:focus,
-    .sugerir-campo textarea:focus {
-      outline: 2px solid var(--azul-500);
-      outline-offset: 1px;
-    }
-
-    .sugerir-hp {
-      position: absolute;
-      opacity: 0;
-      height: 0;
-      width: 0;
-      pointer-events: none;
-    }
-
-    .sugerir-submit {
-      font-family: var(--font-display);
-      background: var(--azul-700);
-      color: var(--blanco);
-      border: none;
-      border-radius: 8px;
-      padding: .75rem 1rem;
-      font-size: .88rem;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: .3rem;
-    }
-
-    .sugerir-submit:hover {
-      background: var(--azul-800);
-    }
-
-    .sugerir-submit:disabled {
-      opacity: .6;
-      cursor: default;
-    }
-
-    .sugerir-msg {
-      font-size: .8rem;
-      padding: .65rem .8rem;
-      border-radius: 8px;
-      display: none;
-    }
-
-    .sugerir-msg.visible {
-      display: block;
-    }
-
-    .sugerir-msg.ok {
-      background: #e6f4ea;
-      color: #1e7d34;
-    }
-
-    .sugerir-msg.error {
-      background: #fdecea;
-      color: #a12820;
+    .share-fab {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 30;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      color: #fff;
+      background: var(--blue-2);
+      box-shadow: var(--shadow);
+      font-size: 1.1rem;
     }
 
     footer {
-      background: var(--azul-900);
-      color: #bcd2ec;
-      padding: 2rem 1.2rem;
+      background: #0b2034;
+      color: #c4d6e8;
+      padding: 2rem 1rem;
       text-align: center;
-      font-size: .78rem;
-      line-height: 1.7;
+      font-size: .82rem;
     }
 
     footer strong {
-      color: var(--blanco);
+      color: #fff;
     }
 
     footer a {
-      color: #9fc4ee;
-      text-decoration: underline;
+      color: #a9cff7;
     }
 
-    .oculto {
-      display: none !important;
-    }
-
-    .banner-prioritario {
-      max-width: 1080px;
-      margin: 1.4rem auto 0;
-      padding: 0 1.2rem;
-    }
-
-    .banner-prioritario a {
-      display: flex;
-      align-items: center;
-      gap: .8rem;
-      background: var(--superficie);
-      border: 1px solid var(--borde);
-      border-left: 6px solid #c0392b;
-      border-radius: 12px;
-      box-shadow: var(--sombra);
-      padding: 1rem 1.2rem;
-      text-decoration: none;
-      transition: transform .15s;
-    }
-
-    .banner-prioritario a:hover {
-      transform: translateY(-2px);
-    }
-
-    .banner-prioritario .b-badge {
-      background: #c0392b;
-      color: var(--blanco);
-      font-size: .66rem;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      padding: .25rem .6rem;
-      border-radius: 50px;
-      flex-shrink: 0;
-    }
-
-    .banner-prioritario .b-texto {
-      flex: 1;
-    }
-
-    .banner-prioritario h2 {
-      font-size: 1rem;
-      color: var(--texto);
-      margin: 0 0 .15rem;
-    }
-
-    .banner-prioritario p {
-      font-size: .8rem;
-      color: var(--texto2);
-      margin: 0;
-    }
-
-    .banner-prioritario .b-flecha {
-      color: var(--azul-600);
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-
-    .banner-prioritario+.banner-prioritario {
-      margin-top: .7rem;
-    }
-
-    .banner-prioritario.sensorial a {
-      border-left-color: var(--azul-700);
-    }
-
-    .banner-prioritario.sensorial .b-badge {
-      background: var(--azul-700);
-    }
-
-    .banner-prioritario.fundasperven a {
-      border-left-color: #0b8fb3;
-    }
-
-    .banner-prioritario.fundasperven .b-badge {
-      background: #0b8fb3;
-    }
-
-    .banner-prioritario.apoyo a {
-      border-left-color: #5b2ca0;
-    }
-
-    .banner-prioritario.apoyo .b-badge {
-      background: #5b2ca0;
-    }
-
-    .banner-prioritario-img {
-      width: 74px;
-      height: 74px;
-      border-radius: 8px;
-      object-fit: cover;
-      flex-shrink: 0;
-      border: 1px solid var(--borde);
-      background: var(--azul-50);
-    }
-
-    @media (max-width: 640px) {
-      .banner-prioritario a {
-        align-items: flex-start;
+    @media (max-width: 860px) {
+      header {
+        min-height: 88svh;
       }
 
-      .banner-prioritario-img {
-        width: 58px;
-        height: 58px;
+      .section-head,
+      .grid,
+      .donation-grid {
+        grid-template-columns: 1fr;
       }
-    }
-
-    .tea-fab {
-      position: fixed;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      z-index: 9990;
-      display: flex;
-      align-items: center;
-      gap: .45rem;
-      background: var(--azul-700);
-      color: var(--blanco);
-      text-decoration: none;
-      font-weight: 700;
-      font-size: .78rem;
-      line-height: 1.15;
-      padding: .85rem .9rem;
-      border-radius: 14px 0 0 14px;
-      box-shadow: var(--sombra);
-      max-width: 150px;
-    }
-
-    .tea-fab:hover {
-      background: var(--azul-800);
-    }
-
-    .tea-fab .tea-fab-icon {
-      font-size: 1.3rem;
-      flex-shrink: 0;
-    }
-
-    .whatsapp-fab {
-      position: fixed;
-      bottom: 1.2rem;
-      right: 1.2rem;
-      z-index: 9990;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: #25d366;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--sombra);
-      text-decoration: none;
-    }
-
-    .whatsapp-fab:hover {
-      background: #20bd5a;
-    }
-
-    .whatsapp-fab svg {
-      width: 26px;
-      height: 26px;
-      fill: #fff;
-    }
-
-    .share-page-fab {
-      position: fixed;
-      bottom: 5.1rem;
-      right: 1.2rem;
-      z-index: 9990;
-      width: 52px;
-      height: 52px;
-      border-radius: 50%;
-      background: var(--azul-700);
-      color: var(--blanco);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: var(--sombra);
-      border: none;
-      font-size: 1.3rem;
-      cursor: pointer;
-    }
-
-    .share-page-fab:hover {
-      background: var(--azul-800);
     }
   </style>
   <script>
@@ -1031,439 +462,338 @@
 </head>
 
 <body>
-
   <div id="offline-banner" class="offline-banner" hidden>
-    📴 Sin conexión — mostrando la última versión guardada en tu teléfono. Los datos pueden no estar actualizados.
+    Sin conexión: se muestra la última versión guardada. Verifica la información cuando recuperes internet.
   </div>
 
   <div id="update-banner" class="update-banner" hidden>
-    <span>🔄 Hay una nueva versión del sitio disponible.</span>
+    <span>Hay una nueva versión del sitio disponible.</span>
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
-  <a class="tea-fab" href="https://drive.google.com/drive/folders/1Loiae2ln_dMdEExIhI-ph0rIDtuRXYs7?usp=sharing"
-    target="_blank" rel="noopener noreferrer" aria-label="Recursos Emergencia Venezuela 2026">
-    <span class="tea-fab-icon">📁</span>
-    <span>Recursos Emergencia Venezuela 2026</span>
-  </a>
-
-  <a class="whatsapp-fab"
-    href="https://wa.me/?text=Directorio%20Sismo%20%E2%80%94%20Venezuela%3A%20recursos%20verificados%20para%20ayudar%20a%20las%20v%C3%ADctimas%20del%20terremoto%20(refugios%2C%20salud%2C%20acopio%2C%20personas%20desaparecidas...).%20https%3A%2F%2Fayuda123venezuela.com"
-    target="_blank" rel="noopener noreferrer" aria-label="Compartir por WhatsApp">
-    <svg viewBox="0 0 448 512" aria-hidden="true">
-      <path
-        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-    </svg>
-  </a>
-
-  <button type="button" class="share-page-fab" onclick="compartirPagina()"
-    aria-label="Compartir esta página">📤</button>
-
-  <div class="banner-top">
-    <div class="btk-tag"><span class="btk-dot"></span> En vivo</div>
-    <div class="btk-track">
-      <div class="btk-items">
-        <span class="btk-item">💙 <strong>Fundasperven lanza Red de Telemedicina y Teleapoyo Humanitario</strong> —
-          atención gratuita para niños, adolescentes con TEA y familias afectadas por la emergencia.</span>
-        <span class="btk-item">💜 <strong>Apoya a la Dra. Miryam Ortiz</strong> — pediatra de Fundasperven y SOVENIA,
-          aliada de la causa TEA, lucha contra el cáncer y necesita apoyo para su tratamiento. <a
-            href="https://www.gofundme.com/f/lets-support-apoyemos-a-la-dra-myriam-ortiz/" target="_blank" rel="noopener noreferrer">Donar en GoFundMe</a></span>
-        <span class="btk-item">🍽️ <strong>Los refugios crecen y la comida no alcanza</strong> — cada bolsa que
-          lleves hoy es una familia menos pasando hambre. No esperes, ve ahora.</span>
-        <span class="btk-item">🧩 <strong>Necesidades del TEA tras el terremoto</strong> — guía de Asperger para
-          Asperger sobre cómo acompañar a personas autistas en la emergencia. <a
-            href="https://www.aspergerparaasperger.org/blog/necesidades-del-tea-tras-el-terremoto-de-venezuela/"
-            target="_blank" rel="noopener noreferrer">Leer artículo</a></span>
-        <span class="btk-item">🔍 <strong>Transparencia:</strong> rastrea qué ayuda internacional se prometió a
-          Venezuela y si ya llegó en <a href="https://rutadeayuda.org/" target="_blank"
-            rel="noopener noreferrer">rutadeayuda.org</a></span>
-        <span class="btk-item">🤲 <strong>#SolidaridadSinCaducidad</strong> — los centros de acopio siguen
-          necesitando voluntarios. Revisa y verifica cuál está activo en tu ciudad: la ayuda a miles de
-          damnificados del terremoto no puede parar. <a href="#contenedor" onclick="filtrar('acopio')">Ver
-            centros de acopio</a></span>
-        <span class="btk-item">🎙️ <strong>MamiNews</strong> visibiliza casos individuales de afectados por el
-          terremoto — dona directo a quien lo necesita. <a href="https://www.instagram.com/maminews"
-            target="_blank" rel="noopener noreferrer">Ver casos en Instagram</a></span>
-      </div>
-    </div>
-  </div>
-
   <header>
-    <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()"
-      aria-label="Cambiar a modo oscuro">🌙</button>
-    <div class="bandera">🇻🇪</div>
-    <h1>Directorio Sismo — Venezuela</h1>
-    <p class="sub">Recursos verificados para ayudar a las víctimas del terremoto en Venezuela.</p>
-    <p class="fecha">Última actualización: 4 de agosto de 2026</p>
-    <div class="buscador-wrap">
-      <input id="buscador-input" type="text" placeholder="Buscar recurso, ciudad, categoría…"
-        oninput="buscarRecurso(this.value)">
-      <span class="icono">🔍</span>
+    <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
+    <div class="hero">
+      <span class="eyebrow">Ayuda123 Colombia</span>
+      <h1>Ayuda para Colombia tras el terremoto</h1>
+      <p>Guía práctica para entender la emergencia, ubicar necesidades prioritarias y encontrar canales de donación de organizaciones colombianas verificables.</p>
+      <div class="hero-actions">
+        <a href="#noticias">Ver noticias</a>
+        <a class="secondary" href="#donar">Cómo donar</a>
+        <a class="secondary" href="#fuentes">Fuentes de prensa</a>
+      </div>
     </div>
   </header>
 
-  <section class="banner-prioritario fundasperven">
-    <a href="tel:+584128050126">
-      <img class="banner-prioritario-img" src="/fundasperven-telemedicina.jpeg"
-        alt="Red de Telemedicina y Teleapoyo Humanitario Fundasperven" loading="lazy">
-      <span class="b-badge">💙 Fundasperven</span>
-      <span class="b-texto">
-        <h2>Red de Telemedicina y Teleapoyo Humanitario</h2>
-        <p>Atención gratuita humanitaria para niños, adolescentes con TEA y familias afectadas por la emergencia en
-          Venezuela.</p>
-      </span>
-      <span class="b-flecha">☎</span>
-    </a>
-  </section>
-
-  <section class="banner-prioritario apoyo">
-    <a href="https://www.gofundme.com/f/lets-support-apoyemos-a-la-dra-myriam-ortiz/" target="_blank" rel="noopener noreferrer">
-      <img class="banner-prioritario-img" src="/dra-miryam-ortiz-gofundme.png"
-        alt="Campaña de apoyo a la Dra. Miryam Ortiz" loading="lazy">
-      <span class="b-badge">💜 Apoyo urgente</span>
-      <span class="b-texto">
-        <h2>Apoya a la Dra. Miryam Ortiz</h2>
-        <p>Pediatra con más de 30 años de servicio a personas autistas y sus familias; hoy necesita apoyo para continuar
-          su tratamiento contra el cáncer.</p>
-      </span>
-      <span class="b-flecha">↗</span>
-    </a>
-  </section>
-
-  <section class="banner-prioritario">
-    <a href="/prioritario/">
-      <span class="b-badge">🚨 Prioritario</span>
-      <span class="b-texto">
-        <h2>💙 Dónde y Cómo Donar — Organizaciones Verificadas</h2>
-        <p>necesidades urgentes, contactos TEA, organizaciones recomendadas y consejos clave.</p>
-      </span>
-      <span class="b-flecha">→</span>
-    </a>
-  </section>
-
-  <section class="banner-prioritario sensorial">
-    <a href="https://drive.google.com/drive/folders/1Loiae2ln_dMdEExIhI-ph0rIDtuRXYs7?usp=sharing" target="_blank"
-      rel="noopener noreferrer">
-      <span class="b-badge">📁 Recursos 2026</span>
-      <span class="b-texto">
-        <h2>📁 Recursos Emergencia Venezuela 2026</h2>
-        <p>Carpeta con documentos y materiales de apoyo para la emergencia del terremoto en Venezuela.</p>
-      </span>
-      <span class="b-flecha">↗</span>
-    </a>
-  </section>
-
-  <section class="banner-prioritario">
-    <a href="https://docs.google.com/spreadsheets/d/1ZNAwkIDD_rBW4NXNPithO9tYW0LiiJRf/edit?usp=sharing&ouid=100162423577823803227&rtpof=true&sd=true"
-      target="_blank" rel="noopener noreferrer">
-      <span class="b-badge">🏠 Alquileres</span>
-      <span class="b-texto">
-        <h2>🔑 Lista de Alquileres en Venezuela para Damnificados</h2>
-        <p>Opciones de vivienda disponibles para familias afectadas por el terremoto.</p>
-      </span>
-      <span class="b-flecha">↗</span>
-    </a>
-  </section>
-
-  <section class="banner-prioritario">
-    <a href="https://rutadeayuda.org/" target="_blank" rel="noopener noreferrer">
-      <span class="b-badge">🔍 Transparencia</span>
-      <span class="b-texto">
-        <h2>🗺️ Ruta de la Ayuda — Rastrea la Ayuda Internacional</h2>
-        <p>Quién ofreció ayuda, cuánto anunció y si ya llegó a Venezuela. Datos abiertos y mapas para exigir
-          rendición de cuentas.</p>
-      </span>
-      <span class="b-flecha">↗</span>
-    </a>
-  </section>
-
-  <p class="offline-note">📲 Este sitio funciona sin internet: ábrelo una vez con señal y tu teléfono guardará todos
-    los contactos, refugios y centros de acopio. Si luego se cae la red o la luz, podrás volver a abrirlo y
-    consultarlo igual.</p>
-
-  <nav class="filtros" id="filtros">
-    <button class="filtro-btn activo" data-filtro="todo" aria-pressed="true" onclick="filtrar('todo')">Todo</button>
-    <button class="filtro-btn" data-filtro="refugios" aria-pressed="false" onclick="filtrar('refugios')">🏚️
-      Refugios</button>
-    <button class="filtro-btn" data-filtro="salud" aria-pressed="false" onclick="filtrar('salud')">🩺 Salud</button>
-    <button class="filtro-btn" data-filtro="emergencias" aria-pressed="false" onclick="filtrar('emergencias')">🆘
-      Emergencias</button>
-    <button class="filtro-btn" data-filtro="personas" aria-pressed="false" onclick="filtrar('personas')">🔍
-      Personas</button>
-    <button class="filtro-btn" data-filtro="mascotas" aria-pressed="false" onclick="filtrar('mascotas')">🐾
-      Mascotas</button>
-    <button class="filtro-btn" data-filtro="ingenieros" aria-pressed="false" onclick="filtrar('ingenieros')">🏗️
-      Ingenieros</button>
-    <button class="filtro-btn" data-filtro="acopio" aria-pressed="false" onclick="filtrar('acopio')">🗃️
-      Acopio</button>
-    <button class="filtro-btn" data-filtro="internacional" aria-pressed="false" onclick="filtrar('internacional')">🌎
-      Internacional</button>
-    <button class="filtro-btn" data-filtro="donaciones" aria-pressed="false" onclick="filtrar('donaciones')">🤝
-      Donaciones</button>
-    <button class="filtro-btn" data-filtro="transporte" aria-pressed="false" onclick="filtrar('transporte')">🚗
-      Transporte</button>
+  <nav aria-label="Secciones principales">
+    <div class="nav-inner">
+      <a href="#noticias">Noticias</a>
+      <a href="#institucional">Institucional</a>
+      <a href="#ong">Organizaciones</a>
+      <a href="#donar">Donar</a>
+      <a href="#acopio">Acopio</a>
+      <a href="#fuentes">Fuentes de prensa</a>
+    </div>
   </nav>
 
-  <main id="contenedor"></main>
+  <main>
+    <p class="notice">
+      Corte documental: 11 de agosto de 2026, hora de Colombia. La emergencia seguía en evaluación, por lo que las cifras de víctimas, daños y necesidades pueden cambiar. Antes de donar, desplazarte o compartir una cuenta bancaria, verifica siempre en el canal oficial de la entidad.
+    </p>
 
-  <section class="sugerir-section">
-    <div class="sugerir-box">
-      <h2>📝 Sugerir nuevo recurso</h2>
-      <p>¿Conoces un refugio, centro de acopio u organización que falta aquí? Cuéntanoslo — revisamos y lo agregamos
-        al directorio.</p>
-      <form class="sugerir-form" id="form-sugerir">
-        <input type="text" name="site" class="sugerir-hp" tabindex="-1" autocomplete="off">
-        <div class="sugerir-campo">
-          <label for="sg-nombre">Nombre del recurso</label>
-          <input type="text" id="sg-nombre" name="nombre" required maxlength="120">
+    <section id="noticias">
+      <div class="section-head">
+        <div>
+          <span class="tag">Noticias y contexto</span>
+          <h2>Qué se reporta del sismo</h2>
+          <p>Los informes reúnen cobertura de prensa y fuentes institucionales sobre un terremoto de magnitud 7,4 registrado el 10 de agosto de 2026 a las 7:34 a. m., con epicentro en San José del Palmar, Chocó, y profundidad cercana a 103 km.</p>
         </div>
-        <div class="sugerir-campo">
-          <label for="sg-url">URL</label>
-          <input type="url" id="sg-url" name="url" required placeholder="https://..." maxlength="300">
+        <div class="card callout">
+          <h3>Dato clave</h3>
+          <p>El SGC reportó intensidad máxima 7 y réplicas posteriores. La UNGRD activó Sala de Crisis Nacional y movilizó capacidades de búsqueda y rescate.</p>
         </div>
-        <div class="sugerir-campo">
-          <label for="sg-descripcion">Descripción breve</label>
-          <textarea id="sg-descripcion" name="descripcion" required maxlength="400"></textarea>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Última hora y balance</h3>
+          <p>Los informes citan coberturas en vivo y notas de medios como Semana y El País sobre víctimas, heridos, edificios colapsados, cierres de aeropuertos y verificación progresiva de daños.</p>
+        </article>
+        <article class="card">
+          <h3>Zonas reportadas</h3>
+          <p>Los documentos mencionan afectaciones bajo verificación en Chocó, Caldas, Valle del Cauca, Risaralda y Quindío, además de impactos sentidos en ciudades como Cali, Manizales, Pereira y Quibdó.</p>
+        </article>
+        <article class="card">
+          <h3>Necesidades en la cobertura</h3>
+          <p>Las notas citadas resaltan agua, alimentos, higiene, refugio, atención médica, donación de sangre, logística y protección de personas vulnerables como necesidades iniciales.</p>
+        </article>
+      </div>
+      <div class="source-list" style="margin-top:.9rem">
+        <ul>
+          <li><a href="https://elpais.com/america-colombia/2026-08-10/ultima-hora-del-terremoto-en-colombia-en-directo.html" target="_blank" rel="noopener noreferrer">El País</a> - cobertura en vivo del terremoto en Colombia.</li>
+          <li><a href="https://www.semana.com/nacion/articulo/en-vivo-fuerte-temblor-sacude-a-colombia/202611/" target="_blank" rel="noopener noreferrer">Semana</a> - reporte en vivo citado en el documento de acopios.</li>
+          <li><a href="https://www.infobae.com/colombia/2026/08/10/centros-de-acopio-habilitados-en-colombia-tras-el-terremoto-guia-por-ciudad-para-donar-y-ayudar-a-las-victimas/" target="_blank" rel="noopener noreferrer">Infobae</a> - guía de centros de acopio y donaciones.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="institucional">
+      <div class="section-head">
+        <div>
+          <span class="tag">Ayuda institucional</span>
+          <h2>Quién coordina la respuesta pública</h2>
+          <p>La ruta institucional se articula a través del Sistema Nacional de Gestión del Riesgo de Desastres, con liderazgo nacional y territorial.</p>
         </div>
-        <div class="sugerir-campo">
-          <label for="sg-categoria">Categoría</label>
-          <select id="sg-categoria" name="categoria" required>
-            <option value="" disabled selected>Selecciona una categoría</option>
-            <option value="refugios">🏚️ Refugios</option>
-            <option value="salud">🩺 Salud</option>
-            <option value="emergencias">🆘 Emergencias</option>
-            <option value="personas">🔍 Personas</option>
-            <option value="mascotas">🐾 Mascotas</option>
-            <option value="ingenieros">🏗️ Ingenieros</option>
-            <option value="acopio">🗃️ Acopio</option>
-            <option value="internacional">🌎 Internacional</option>
-            <option value="donaciones">🤝 Donaciones</option>
-            <option value="transporte">🚗 Transporte</option>
-          </select>
+      </div>
+      <div class="grid">
+        <article class="card institutional">
+          <h3>UNGRD</h3>
+          <p>Coordina la respuesta nacional, la Sala de Crisis, el levantamiento de información territorial y mecanismos como el Registro Único de Damnificados para ayudas públicas.</p>
+          <ul>
+            <li>Conmutador: (+57) 601 5529696.</li>
+            <li>Línea gratuita: 01 8000 113200.</li>
+            <li>Correo citado: contactenos@gestiondelriesgo.gov.co.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://portal.gestiondelriesgo.gov.co/" target="_blank" rel="noopener noreferrer">Abrir UNGRD</a>
+          </div>
+        </article>
+        <article class="card institutional">
+          <h3>Servicio Geológico Colombiano</h3>
+          <p>Es la fuente técnica para magnitud, epicentro, profundidad, intensidad y réplicas. No asigna ayuda humanitaria, pero ayuda a entender el riesgo y la evolución sísmica.</p>
+          <div class="button-row">
+            <a href="https://www2.sgc.gov.co/" target="_blank" rel="noopener noreferrer">Abrir SGC</a>
+          </div>
+        </article>
+        <article class="card institutional">
+          <h3>Defensa Civil y cuerpos de socorro</h3>
+          <p>Apoyan búsqueda, rescate, evaluación de daños, voluntariado operativo y distribución en campo cuando la respuesta está coordinada.</p>
+          <ul>
+            <li>Línea de emergencia citada: 144.</li>
+            <li>Conmutador citado: (+57) 601 3199000.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://www.defensacivil.gov.co/" target="_blank" rel="noopener noreferrer">Abrir Defensa Civil</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ong">
+      <div class="section-head">
+        <div>
+          <span class="tag">ONG y ayuda social</span>
+          <h2>Organizaciones colombianas para ayudar</h2>
+          <p>Canales de apoyo de entidades con presencia en Colombia: Cruz Roja Colombiana, ABACO, Minuto de Dios, Cáritas Colombiana y Ayuda a la Iglesia que Sufre - ACN Colombia.</p>
         </div>
-        <div class="sugerir-campo">
-          <label for="sg-contacto">Contacto <span class="opcional">(opcional)</span></label>
-          <input type="text" id="sg-contacto" name="contacto" maxlength="120" placeholder="Email, teléfono o WhatsApp">
+      </div>
+      <div class="grid">
+        <article class="card ngo">
+          <h3>Cruz Roja Colombiana</h3>
+          <p>Los informes y artículos citados la ubican como canal central para respuesta humanitaria, donaciones, bancos de sangre, voluntariado coordinado y restablecimiento de contacto familiar.</p>
+          <div class="button-row">
+            <a href="https://www.cruzrojacolombiana.org/" target="_blank" rel="noopener noreferrer">Cruz Roja</a>
+          </div>
+        </article>
+        <article class="card ngo">
+          <h3>ABACO y bancos de alimentos</h3>
+          <p>Canalizan recursos para comprar y distribuir alimentos y artículos esenciales mediante bancos de alimentos regionales y corredores humanitarios.</p>
+          <div class="button-row">
+            <a href="https://abaco.org.co/" target="_blank" rel="noopener noreferrer">ABACO</a>
+            <a class="alt" href="https://abaco.org.co/emergenciasaprio/" target="_blank" rel="noopener noreferrer">Emergencias</a>
+          </div>
+        </article>
+        <article class="card ngo">
+          <h3>Minuto de Dios</h3>
+          <p>La Corporación Organización El Minuto de Dios cuenta con programa de Ayuda Humanitaria para acompañar comunidades en adversidad en Colombia.</p>
+          <div class="button-row">
+            <a href="https://minutodedios.org/programa/ayuda-humanitaria" target="_blank" rel="noopener noreferrer">Ayuda humanitaria</a>
+          </div>
+        </article>
+        <article class="card ngo">
+          <h3>Cáritas Colombiana</h3>
+          <p>El Secretariado Nacional de Pastoral Social - Cáritas Colombiana tiene líneas de atención humanitaria, emergencias, migración y apoyo a poblaciones vulnerables.</p>
+          <div class="button-row">
+            <a href="https://caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Cáritas Colombia</a>
+            <a class="alt" href="https://donar.caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Donar</a>
+          </div>
+        </article>
+        <article class="card ngo">
+          <h3>Ayuda a la Iglesia que Sufre</h3>
+          <p>ACN Colombia es una fundación pontificia con sede en Bogotá que apoya comunidades cristianas en dificultad, pobreza, persecución, guerras o catástrofes.</p>
+          <div class="button-row">
+            <a href="https://www.acncolombia.org/" target="_blank" rel="noopener noreferrer">ACN Colombia</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="donar">
+      <div class="section-head">
+        <div>
+          <span class="tag">Cómo donar</span>
+          <h2>Canales de organizaciones colombianas</h2>
+          <p>Usa siempre la página oficial antes de transferir. Si una cuenta aparece en redes o cadenas, contrástala con el sitio de la organización.</p>
         </div>
-        <button type="submit" class="sugerir-submit" id="sg-submit">Enviar sugerencia</button>
-        <p class="sugerir-msg" id="sg-msg" role="status"></p>
-      </form>
-    </div>
-  </section>
+      </div>
+      <div class="donation-grid">
+        <article class="donation-box donate">
+          <h3>Cruz Roja Colombiana</h3>
+          <p>Fuentes citadas mencionan donaciones por portal web, Red de Accionistas Humanitarios, Daviplata, QR y cuenta Davivienda para la campaña de emergencia.</p>
+          <ul>
+            <li>Cuenta corriente Davivienda citada en un informe: 455-069996904.</li>
+            <li>Otra fuente histórica del sitio cita: 0560455069996904. Verifica cuál aplica en el portal oficial antes de consignar.</li>
+            <li>Correo citado: donaciones@cruzrojacolombiana.org.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://www.cruzrojacolombiana.org/dona-dinero/" target="_blank" rel="noopener noreferrer">Donar Cruz Roja</a>
+            <a class="alt" href="https://www.cruzrojacolombiana.org/" target="_blank" rel="noopener noreferrer">Verificar sitio</a>
+          </div>
+        </article>
+        <article class="donation-box donate">
+          <h3>ABACO</h3>
+          <p>Los informes indican aportes para compra masiva de víveres y distribución por bancos de alimentos.</p>
+          <ul>
+            <li>Bancolombia cuenta corriente citada: 15264342372.</li>
+            <li>Bancolombia cuenta de ahorros citada: 04867105340.</li>
+            <li>NIT citado: 900326456-1.</li>
+            <li>Llaves Bre-B citadas: nubiahernandez@abaco.org.co y 00909897532.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://abaco.org.co/" target="_blank" rel="noopener noreferrer">Ver ABACO</a>
+          </div>
+        </article>
+        <article class="donation-box donate">
+          <h3>Minuto de Dios</h3>
+          <p>Su página oficial de Ayuda Humanitaria indica donación digital y una cuenta de ahorros Davivienda para apoyar su programa.</p>
+          <ul>
+            <li>Cuenta de ahorros Davivienda citada en el sitio oficial: 0040 0016 0590.</li>
+            <li>Verifica el destino y la campaña vigente antes de transferir.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://minutodedios.org/programa/ayuda-humanitaria" target="_blank" rel="noopener noreferrer">Donar Minuto de Dios</a>
+          </div>
+        </article>
+        <article class="donation-box donate">
+          <h3>Cáritas Colombiana</h3>
+          <p>El portal oficial permite donar en línea y también muestra datos de transferencia nacional e internacional.</p>
+          <ul>
+            <li>Banco de Bogotá, cuenta de ahorros citada: 081789224.</li>
+            <li>Bancolombia, cuenta de ahorros citada: 82900024657.</li>
+            <li>A nombre del Secretariado Nacional de Pastoral Social - Cáritas Colombiana.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://donar.caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Donar Cáritas</a>
+            <a class="alt" href="https://caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Verificar sitio</a>
+          </div>
+        </article>
+        <article class="donation-box donate">
+          <h3>Ayuda a la Iglesia que Sufre</h3>
+          <p>ACN Colombia recibe apoyo para campañas y proyectos pastorales/humanitarios desde su sitio oficial.</p>
+          <ul>
+            <li>Dirección oficial citada: Calle 98 # 71 A - 42, Bogotá.</li>
+            <li>WhatsApp citado: 305 337 6113.</li>
+            <li>Correo citado: info@iglesiaquesufre.co.</li>
+          </ul>
+          <div class="button-row">
+            <a href="https://www.acncolombia.org/" target="_blank" rel="noopener noreferrer">Donar ACN Colombia</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="acopio">
+      <div class="section-head">
+        <div>
+          <span class="tag">Acopio en las noticias</span>
+          <h2>Qué reportaron los artículos sobre acopios</h2>
+          <p>Los informes citan guías de Publimetro, Infobae, La República y alcaldías sobre puntos de acopio en Bogotá, Cali, Barranquilla, Medellín/Antioquia y bancos de alimentos.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Insumos prioritarios</h3>
+          <p>Agua embotellada, alimentos no perecederos, kits de aseo, papel higiénico, toallas higiénicas, pañales, cobijas, colchonetas, toldillos, linternas y elementos de primeros auxilios.</p>
+        </article>
+        <article class="card">
+          <h3>Rescate y protección</h3>
+          <p>En Cali se citaron guantes de construcción, cascos, gafas de seguridad, colchonetas y elementos de protección para brigadas. Entrégalos solo si el punto de acopio los está recibiendo.</p>
+        </article>
+        <article class="card">
+          <h3>Evita saturar la ayuda</h3>
+          <p>No envíes medicamentos sueltos, ropa usada sin clasificar, perecederos, productos vencidos ni cargamentos sin receptor confirmado. El dinero suele ser más ágil y trazable.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="fuentes">
+      <div class="section-head">
+        <div>
+          <span class="tag">Fuentes</span>
+          <h2>Diarios y artículos citados en los informes</h2>
+          <p>Estas son fuentes periodísticas y artículos presentes en los documentos base. Úsalas para contrastar noticias, acopios y canales de ayuda.</p>
+        </div>
+      </div>
+      <div class="source-list">
+        <ul>
+          <li><a href="https://www.elcolombiano.com/colombia/como-donar-afectados-terremoto-colombia-canales-oficiales-BF39784041" target="_blank" rel="noopener noreferrer">El Colombiano</a> - cómo donar a afectados y canales oficiales citados.</li>
+          <li><a href="https://elpais.com/america-colombia/2026-08-10/ultima-hora-del-terremoto-en-colombia-en-directo.html" target="_blank" rel="noopener noreferrer">El País</a> - última hora del terremoto en Colombia.</li>
+          <li><a href="https://elpais.com/america-colombia/2026-08-10/como-ayudar-a-las-personas-damnificadas-por-el-terremoto-en-colombia.html" target="_blank" rel="noopener noreferrer">El País</a> - cómo ayudar a las personas damnificadas.</li>
+          <li><a href="https://www.semana.com/nacion/articulo/en-vivo-fuerte-temblor-sacude-a-colombia/202611/" target="_blank" rel="noopener noreferrer">Semana</a> - cobertura en vivo del sismo.</li>
+          <li><a href="https://www.infobae.com/colombia/2026/08/10/centros-de-acopio-habilitados-en-colombia-tras-el-terremoto-guia-por-ciudad-para-donar-y-ayudar-a-las-victimas/" target="_blank" rel="noopener noreferrer">Infobae</a> - centros de acopio por ciudad.</li>
+          <li><a href="https://www.larepublica.co/especiales/catastrofe-nacional/estos-son-algunos-de-los-canales-oficiales-para-donar-a-los-damnificados-por-el-terremoto-4455056" target="_blank" rel="noopener noreferrer">La República</a> - canales oficiales para donar.</li>
+          <li><a href="https://www.publimetro.co/bogota/2026/08/10/como-puede-ayudar-a-las-victimas-del-terremoto-en-colombia-activaron-varios-centros-de-acopio-en-el-pais/" target="_blank" rel="noopener noreferrer">Publimetro</a> - centros de acopio activados en el país.</li>
+          <li><a href="https://caracol.com.co/2026/08/10/estamos-en-busqueda-y-rescate-cruz-roja-colombiana-aun-no-activa-donaciones-en-especie-tras-sismo/" target="_blank" rel="noopener noreferrer">Caracol Radio</a> - declaraciones de Cruz Roja sobre búsqueda, rescate y donaciones.</li>
+          <li><a href="https://www.infobae.com/colombia/2026/08/10/la-adres-garantizara-indemnizaciones-y-los-gastos-funerarios-a-las-familias-afectadas-por-el-terremoto-de-74-en-colombia/" target="_blank" rel="noopener noreferrer">Infobae</a> - cobertura sobre ADRES, indemnizaciones y gastos funerarios.</li>
+          <li><a href="https://www.cali.gov.co/boletines/publicaciones/193592/plazoleta-jairo-varela-funcionara-como-centro-de-acopio-para-recibir-donaciones-tras-el-sismo-de-este-lunes-10-de-agosto/" target="_blank" rel="noopener noreferrer">Alcaldía de Cali</a> - centro de acopio en la Plazoleta Jairo Varela.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <button type="button" class="share-fab" onclick="compartirPagina()" aria-label="Compartir esta página">↗</button>
 
   <footer>
-    <strong>🇻🇪 #VenezuelaSeRecupera </strong> — Directorio comunitario sin fines de lucro. Acceso también en <a
-      href="https://ayuda123venezuela.com" target="_blank" rel="noopener noreferrer">ayuda123venezuela.com</a>.<br>
-    ⚠️ Estas son iniciativas ciudadanas verificadas — organizaciones independientes y voluntarios, no entes
-    gubernamentales. Verifica siempre antes de enviar dinero.<br>
-    Contenido basado en los directorios <a href="https://venezuelainfosismo.org" target="_blank"
-      rel="noopener noreferrer">venezuelainfosismo.org</a> y <a href="https://www.veneconnect.com/apoyo-terremoto"
-      target="_blank" rel="noopener noreferrer">VENEConnect</a>.<br>
-    Centros de acopio internacionales según reportes de <a
-      href="https://elpais.com/america/2026-06-26/como-ayudar-a-venezuela-tras-los-terremotos-de-magnitud-72-y-75-guia-de-donaciones-y-organizaciones.html"
-      target="_blank" rel="noopener noreferrer">El País</a>, <a
-      href="https://eldiario.com/2026/06/25/centros-de-acopio-terremotos-en-venezuela/" target="_blank"
-      rel="noopener noreferrer">El Diario</a>, <a
-      href="https://www.ntn24.com/noticias-actualidad/estos-son-los-estados-de-venezuela-en-los-que-se-habilitaran-centros-de-acopio-tras-fuerte-terremotos-que-sacudieron-al-pais-629217"
-      target="_blank" rel="noopener noreferrer">NTN24</a>, <a
-      href="https://www.infobae.com/america/agencias/2026/06/26/cientos-de-voluntarios-reunen-ayuda-en-bogota-para-enviar-a-venezuela-tras-terremotos/"
-      target="_blank" rel="noopener noreferrer">Infobae</a>, <a
-      href="https://es-us.noticias.yahoo.com/puntos-oficiales-donar-ayudar-afectados-152220513.html" target="_blank"
-      rel="noopener noreferrer">Yahoo Noticias</a>, <a
-      href="https://www.teleamazonas.com/actualidad/noticias/sociedad/terremoto-venezuela-puntos-acopio-donaciones-ecuador-121128/"
-      target="_blank" rel="noopener noreferrer">Teleamazonas</a>, <a
-      href="https://www.diariolibre.com/actualidad/nacional/2026/06/26/tras-los-terremotos-en-venezuela-rd-activa-centros-de-acopio/3580591"
-      target="_blank" rel="noopener noreferrer">Diario Libre</a>, <a
-      href="https://www.latimes.com/espanol/california/articulo/2026-06-26/expresan-solidaridad-con-damnificados-en-venezuela-lista-de-centros-de-acopio-en-la"
-      target="_blank" rel="noopener noreferrer">LA Times</a> y <a
-      href="https://www.bnnbloomberg.ca/press-releases/2026/06/26/canadian-red-cross-launches-appeal-to-support-people-impacted-by-the-earthquakes-in-venezuela/"
-      target="_blank" rel="noopener noreferrer">BNN Bloomberg</a>.<br>
-    Hecho con ❤️ por Asperger para Asperger® por la comunidad asperger y autista para los venezolanos y comunidad
-    asperger y autista.<br>
-    ¿Quién soy? Orlando Javier Jaramillo Gutierrez — <a
-      href="https://www.linkedin.com/in/orlando-j-jaramillo-gutierrez/" target="_blank" rel="noopener noreferrer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"
-        style="vertical-align:-2px">
-        <path
-          d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
-      </svg> LinkedIn</a>
+    <strong>Ayuda123 Colombia</strong> - Directorio comunitario sin fines de lucro. Verifica siempre fechas, cuentas y canales antes de donar.<br>
+    Hecho por Asperger para Asperger y la comunidad.
   </footer>
 
   <script>
-    let datos = [];
-
-    function escAttr(s) {
-      return String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;");
-    }
-
-    function botonCompartir(it, url) {
-      return `<button type="button" class="tarjeta-share" aria-label="Compartir ${escAttr(it.h)}"
-        data-title="${escAttr(it.h)}" data-desc="${escAttr(it.d)}" data-url="${escAttr(url)}"
-        onclick="compartirTarjeta(event, this)">📤</button>`;
-    }
-
-    function compartirTarjeta(event, btn) {
-      event.preventDefault();
-      event.stopPropagation();
-      const titulo = btn.dataset.title;
-      const desc = btn.dataset.desc;
-      const url = btn.dataset.url;
-      const enlace = url && !url.startsWith("tel:") ? url : "https://ayuda123venezuela.com";
-      const texto = `${titulo} — ${desc} — Más info en: ayuda123venezuela.com`;
-      if (navigator.share) {
-        navigator.share({ title: titulo, text: texto, url: enlace }).catch(() => { });
-      } else if (navigator.clipboard) {
-        navigator.clipboard.writeText(`${texto}\n${enlace}`).then(() => {
-          const original = btn.textContent;
-          btn.textContent = "✅";
-          setTimeout(() => { btn.textContent = original; }, 1500);
-        });
-      }
-    }
-
     function compartirPagina() {
-      const titulo = "Directorio Sismo — Venezuela";
-      const texto = "Recursos verificados para ayudar a las víctimas del terremoto en Venezuela: refugios, salud, acopio, personas desaparecidas y más.";
-      const url = "https://ayuda123venezuela.com";
-      const btn = document.querySelector(".share-page-fab");
+      const titulo = "Ayuda123 Colombia";
+      const texto = "Noticias, fuentes de prensa y canales de organizaciones colombianas para donar tras el terremoto en Colombia.";
+      const url = "https://ayuda123colombia.com";
+      const btn = document.querySelector(".share-fab");
       if (navigator.share) {
         navigator.share({ title: titulo, text: texto, url }).catch(() => { });
       } else if (navigator.clipboard) {
         navigator.clipboard.writeText(`${texto}\n${url}`).then(() => {
           const original = btn.textContent;
-          btn.textContent = "✅";
+          btn.textContent = "OK";
           setTimeout(() => { btn.textContent = original; }, 1500);
         });
       }
     }
 
-    function render() {
-      const cont = document.getElementById("contenedor");
-      cont.innerHTML = "";
-      datos.forEach(grupo => {
-        const sec = document.createElement("div");
-        sec.className = "categoria-grupo";
-        sec.dataset.cat = grupo.cat;
-        let html = `<h2 class="categoria-titulo">${grupo.titulo}</h2>`;
-        if (grupo.aviso) html += `<p class="aviso">${grupo.aviso}</p>`;
-        html += `<div class="grid">`;
-        grupo.items.forEach(it => {
-          if (it.header) {
-            html += `<div class="grupo-header">${it.header}</div>`;
-            return;
-          }
-          if (it.fuente && !it.url) {
-            const dominio = new URL(it.fuente).hostname.replace("www.", "");
-            html += `
-          <div class="tarjeta tarjeta-direccion" data-texto="${(it.h + " " + it.d + " " + it.tag).toLowerCase()}">
-            ${botonCompartir(it, it.fuente)}
-            <span class="tarjeta-icon">${it.icon}</span>
-            <span class="tarjeta-cat">${it.tag}</span>
-            <h3>${it.h}</h3>
-            <p>${it.d}</p>
-            <a href="${it.fuente}" target="_blank" rel="noopener noreferrer" class="tarjeta-fuente">Fuente: ${dominio} ↗</a>
-          </div>`;
-            return;
-          }
-          if (!it.url) {
-            html += `
-          <div class="tarjeta tarjeta-direccion" data-texto="${(it.h + " " + it.d + " " + it.tag).toLowerCase()}">
-            ${botonCompartir(it, "")}
-            <span class="tarjeta-icon">${it.icon}</span>
-            <span class="tarjeta-cat">${it.tag}</span>
-            <h3>${it.h}</h3>
-            <p>${it.d}</p>
-          </div>`;
-            return;
-          }
-          const dominio = it.url.startsWith("tel:") ? it.url.replace("tel:", "") : new URL(it.url).hostname.replace("www.", "");
-          html += `
-        <div class="tarjeta" data-texto="${(it.h + " " + it.d + " " + it.tag).toLowerCase()}">
-          <a href="${it.url}" target="${it.url.startsWith('tel:') ? '_self' : '_blank'}" rel="noopener noreferrer" class="tarjeta-link" aria-label="Abrir ${it.h}"></a>
-          ${botonCompartir(it, it.url)}
-          <span class="tarjeta-go">↗</span>
-          <span class="tarjeta-icon">${it.icon}</span>
-          <span class="tarjeta-cat">${it.tag}</span>
-          <h3>${it.h}</h3>
-          <p>${it.d}</p>
-          <span class="tarjeta-url">${dominio}</span>
-        </div>`;
-        });
-        html += `</div>`;
-        if (grupo.notas) {
-          html += `<div class="tips-box">`;
-          grupo.notas.forEach((t, i) => {
-            html += `<div class="tip-row"><span class="tip-num">${i + 1}</span><p>${t}</p></div>`;
-          });
-          html += `</div>`;
-        }
-        if (grupo.fuentes) {
-          html += `<div class="sources-box"><h4>Fuentes</h4><ul>`;
-          grupo.fuentes.forEach(f => {
-            html += `<li><a href="${f.u}" target="_blank" rel="noopener noreferrer">${f.n}</a></li>`;
-          });
-          html += `</ul></div>`;
-        }
-        sec.innerHTML = html;
-        cont.appendChild(sec);
-      });
+    function estaOscuro() {
+      return document.documentElement.dataset.theme === "dark" ||
+        (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
     }
 
-    function filtrar(cat, actualizarHash = true) {
-      document.getElementById("buscador-input").value = "";
-      document.querySelectorAll(".filtro-btn").forEach(b => {
-        const activo = b.dataset.filtro === cat;
-        b.classList.toggle("activo", activo);
-        b.setAttribute("aria-pressed", String(activo));
-      });
-      document.querySelectorAll(".categoria-grupo").forEach(g => {
-        g.classList.toggle("oculto", !(cat === "todo" || g.dataset.cat === cat));
-        g.querySelectorAll(".tarjeta").forEach(t => t.classList.remove("oculto"));
-      });
-      if (actualizarHash) {
-        history.replaceState(null, "", cat === "todo" ? location.pathname + location.search : "#" + cat);
-      }
+    function actualizarBotonTema() {
+      const btn = document.getElementById("theme-toggle");
+      const oscuro = estaOscuro();
+      btn.textContent = oscuro ? "☀" : "☾";
+      btn.setAttribute("aria-label", oscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
     }
 
-    function buscarRecurso(q) {
-      const texto = q.toLowerCase().trim();
-      if (!texto) { filtrar(document.querySelector(".filtro-btn.activo").dataset.filtro); return; }
-      const tokens = texto.split(/\s+/).filter(Boolean);
-      document.querySelectorAll(".filtro-btn").forEach(b => {
-        const activo = b.dataset.filtro === "todo";
-        b.classList.toggle("activo", activo);
-        b.setAttribute("aria-pressed", String(activo));
-      });
-      document.querySelectorAll(".categoria-grupo").forEach(g => {
-        let visible = false;
-        g.querySelectorAll(".tarjeta").forEach(t => {
-          const coincide = tokens.every(tok => t.dataset.texto.includes(tok));
-          t.classList.toggle("oculto", !coincide);
-          if (coincide) visible = true;
-        });
-        g.classList.toggle("oculto", !visible);
-      });
+    function alternarTema() {
+      const nuevo = estaOscuro() ? "light" : "dark";
+      document.documentElement.dataset.theme = nuevo;
+      localStorage.setItem("tema", nuevo);
+      actualizarBotonTema();
     }
 
-    function aplicarFiltroInicial() {
-      const cat = location.hash.replace("#", "");
-      const btn = cat && document.querySelector(`.filtro-btn[data-filtro="${cat}"]`);
-      filtrar(btn ? cat : "todo", false);
-    }
-
-    fetch("/data.json")
-      .then(r => r.json())
-      .then(d => {
-        datos = d;
-        render();
-        aplicarFiltroInicial();
-      })
-      .catch(() => {
-        document.getElementById("contenedor").innerHTML =
-          '<p style="text-align:center;color:var(--texto2);padding:2rem 1rem;">No se pudieron cargar los datos. Verifica tu conexión e intenta de nuevo.</p>';
-      });
-
-    window.addEventListener("hashchange", aplicarFiltroInicial);
+    actualizarBotonTema();
   </script>
 
   <script>
@@ -1516,84 +846,10 @@
       updateOnlineStatus();
 
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js").catch(() => { });
+        navigator.serviceWorker.register("service-worker.js").catch(() => { });
       }
     })();
   </script>
-
-  <script>
-    function estaOscuro() {
-      return document.documentElement.dataset.theme === "dark" ||
-        (!document.documentElement.dataset.theme && matchMedia("(prefers-color-scheme: dark)").matches);
-    }
-
-    function actualizarBotonTema() {
-      const btn = document.getElementById("theme-toggle");
-      const oscuro = estaOscuro();
-      btn.textContent = oscuro ? "☀️" : "🌙";
-      btn.setAttribute("aria-label", oscuro ? "Cambiar a modo claro" : "Cambiar a modo oscuro");
-    }
-
-    function alternarTema() {
-      const nuevo = estaOscuro() ? "light" : "dark";
-      document.documentElement.dataset.theme = nuevo;
-      localStorage.setItem("tema", nuevo);
-      actualizarBotonTema();
-    }
-
-    actualizarBotonTema();
-  </script>
-
-  <script>
-    (function () {
-      const SUGERIR_ENDPOINT = "https://script.google.com/macros/s/AKfycbxr32f_fiieQykDpf-IK4byX2r7zSFyNn9WZ3jA8gwRkwFOWYQQtLuZD3Wq59X5bLDZ/exec";
-      const form = document.getElementById("form-sugerir");
-      const msg = document.getElementById("sg-msg");
-      const submitBtn = document.getElementById("sg-submit");
-
-      function mostrarMsg(texto, tipo) {
-        msg.textContent = texto;
-        msg.className = "sugerir-msg visible " + tipo;
-      }
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        if (form.site.value) return;
-
-        if (!SUGERIR_ENDPOINT || SUGERIR_ENDPOINT.startsWith("PEGA_AQUI")) {
-          mostrarMsg("⚠️ El formulario aún no está conectado. Contáctanos por WhatsApp mientras tanto.", "error");
-          return;
-        }
-
-        const datos = new URLSearchParams({
-          nombre: form.nombre.value.trim(),
-          url: form.url.value.trim(),
-          descripcion: form.descripcion.value.trim(),
-          categoria: form.categoria.value,
-          contacto: form.contacto.value.trim(),
-          pagina: location.href
-        });
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = "Enviando…";
-
-        fetch(SUGERIR_ENDPOINT, { method: "POST", mode: "no-cors", body: datos })
-          .then(() => {
-            mostrarMsg("✅ ¡Gracias! Tu sugerencia fue enviada y la revisaremos pronto.", "ok");
-            form.reset();
-          })
-          .catch(() => {
-            mostrarMsg("❌ No se pudo enviar. Intenta de nuevo o escríbenos por WhatsApp.", "error");
-          })
-          .finally(() => {
-            submitBtn.disabled = false;
-            submitBtn.textContent = "Enviar sugerencia";
-          });
-      });
-    })();
-  </script>
-
 </body>
 
 </html>

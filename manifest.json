@@ -1,7 +1,7 @@
 {
-  "name": "Directorio Sismo — Venezuela",
-  "short_name": "Directorio Sismo",
-  "description": "Recursos verificados para ayudar a las víctimas del terremoto en Venezuela. Funciona sin conexión.",
+  "name": "Ayuda123 Colombia",
+  "short_name": "Ayuda123 CO",
+  "description": "Puntos de acopio, Red de Esperanza y recursos verificados para coordinar ayuda en Colombia. Funciona sin conexión.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

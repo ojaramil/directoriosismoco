@@ -4,244 +4,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mensajes de Campo — Directorio Sismo</title>
-  <meta name="description"
-    content="Mensajes urgentes de campo desde centros de acopio y puntos de atención en Venezuela tras los terremotos.">
+  <title>Mensajes de Campo — Ayuda123 Colombia</title>
+  <meta name="description" content="Mensajes breves para coordinar ayuda, acopios y verificación en Colombia.">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0f2c52">
   <link rel="icon" href="/icon-192.png">
   <link rel="apple-touch-icon" href="/icon-192.png">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     :root {
       --azul-900: #0f2c52;
-      --azul-800: #173963;
       --azul-700: #1f4a82;
-      --azul-600: #2f6fbf;
-      --azul-500: #3f7fd1;
-      --azul-100: #eaf2fb;
       --azul-50: #f5f9fe;
-      --texto: #1a1a18;
+      --texto: #1c2733;
       --texto2: #5c6b7a;
       --borde: #dde7f3;
-      --blanco: #ffffff;
-      --sombra: 0 2px 4px rgba(15, 44, 82, 0.05), 0 12px 28px rgba(15, 44, 82, 0.08);
+      --blanco: #fff;
+      --sombra: 0 2px 4px rgba(15, 44, 82, .05), 0 12px 28px rgba(15, 44, 82, .08);
     }
-
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
-      color: var(--texto);
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--azul-50);
+      color: var(--texto);
+      line-height: 1.6;
     }
-
     header {
       background: linear-gradient(135deg, var(--azul-900), var(--azul-700));
       color: var(--blanco);
-      padding: 2.2rem 1.5rem 1.6rem;
       text-align: center;
+      padding: 2.2rem 1.2rem 1.7rem;
     }
-
-    header .bandera {
-      font-size: 2.4rem;
-      margin-bottom: .5rem;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: .3rem;
-      font-weight: 700;
-    }
-
-    header p {
-      font-size: .9rem;
-      opacity: 0.95;
-      margin-bottom: .8rem;
-    }
-
-    header a {
-      color: var(--blanco);
-      text-decoration: none;
-      font-size: .82rem;
-      opacity: 0.85;
-      transition: opacity .15s;
-    }
-
-    header a:hover {
-      opacity: 1;
-    }
-
-    .mensaje-card {
+    h1 { margin: .2rem 0 .35rem; }
+    header p { margin: 0; color: #cfe0f5; }
+    header a { color: #cfe0f5; display: inline-block; margin-top: .8rem; text-decoration: none; font-weight: 700; }
+    main { max-width: 860px; margin: 0 auto; padding: 1.4rem 1.2rem 3rem; }
+    .mensaje {
       background: var(--blanco);
+      border: 1px solid var(--borde);
       border-left: 6px solid var(--azul-700);
-      border-radius: 12px;
-      padding: 1.2rem;
-      margin-bottom: 1rem;
+      border-radius: 8px;
       box-shadow: var(--sombra);
-      max-width: 1080px;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 1rem;
+      margin-bottom: .9rem;
     }
-
-    .mensaje-card.urgente {
-      border-left-color: #ff6b35;
-      background: #fff3cd;
-    }
-
-    .mensaje-badge {
+    .mensaje strong { color: var(--azul-900); }
+    .badge {
       display: inline-block;
-      padding: .25rem .6rem;
-      border-radius: 50px;
-      font-size: .66rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-bottom: .6rem;
-    }
-
-    .mensaje-badge.urgente {
-      background: #ff6b35;
-      color: var(--blanco);
-    }
-
-    .mensaje-badge.acopio {
       background: var(--azul-700);
       color: var(--blanco);
+      border-radius: 6px;
+      padding: .2rem .5rem;
+      font-size: .72rem;
+      font-weight: 800;
+      margin-bottom: .45rem;
     }
-
-    .mensaje-card h3 {
-      font-size: .95rem;
-      color: #0f2c52;
-      margin-bottom: .6rem;
-      font-weight: 700;
-    }
-
-    .mensaje-card.urgente h3 {
-      color: #c0392b;
-    }
-
-    .mensaje-card p {
-      font-size: .85rem;
-      color: var(--texto2);
-      line-height: 1.7;
-      margin-bottom: .4rem;
-    }
-
-    .contenedor {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-
-    .fecha {
-      font-size: .8rem;
-      color: var(--texto2);
-      text-align: center;
-      margin: 1rem 0 1.5rem;
-    }
-
+    p { color: var(--texto2); }
+    a { color: var(--azul-700); font-weight: 700; }
     footer {
-      background: var(--blanco);
-      border-top: 1px solid var(--borde);
-      padding: 1.5rem;
+      background: var(--azul-900);
+      color: #bcd2ec;
       text-align: center;
-      margin-top: 2rem;
-      font-size: .8rem;
-      color: var(--texto2);
-    }
-
-    footer a {
-      color: var(--azul-600);
-      text-decoration: none;
-      font-weight: 600;
+      padding: 1.4rem 1rem;
+      font-size: .82rem;
     }
   </style>
 </head>
 
 <body>
   <header>
-    <div class="bandera">📢</div>
+    <div>📢</div>
     <h1>Mensajes de Campo</h1>
-    <p>Alertas urgentes desde puntos de atención y centros de acopio en Venezuela</p>
-    <a href="/">← Volver al Directorio Sismo</a>
+    <p>Actualizaciones breves para acopios, verificación y coordinación comunitaria.</p>
+    <a href="/">← Volver a Ayuda123 Colombia</a>
   </header>
 
-  <div class="contenedor">
-    <p class="fecha"><strong>Actualizado: 4 de julio de 2026</strong></p>
+  <main>
+    <article class="mensaje">
+      <span class="badge">🌐 Coordinación</span>
+      <h2>Red de Esperanza está como recurso central</h2>
+      <p>Usa <a href="https://reddeesperanza.com/" target="_blank" rel="noopener noreferrer">reddeesperanza.com</a> para reportar necesidades, zonas sin atender, desaparecidos, centros de acopio y coordinación por región.</p>
+    </article>
 
-    <div class="mensaje-card urgente">
-      <span class="mensaje-badge urgente">🚨 Rescatistas · Vida</span>
-      <h3>@drjavieramirez – OPP: Rescatistas Solicitan Apoyo Urgente</h3>
-      <p>
-        <strong>🕙 4 jul, 10:28 p.m.</strong><br><br>
-        Rescatistas en OPP solicitan apoyo urgente mientras continúan las labores. <strong>Aún hay personas con vida.</strong> Se necesita:<br>
-        • Comida para toda la noche<br>
-        • Artículos de aseo personal<br>
-        • Café<br>
-        • Toallitas húmedas (no hay agua)<br>
-        • Dulces y caramelos<br><br>
-        <strong>📷 Fuente:</strong> <a href="https://www.instagram.com/drjavieramirez" target="_blank" rel="noopener noreferrer">@drjavieramirez</a><br><br>
-        <strong>📢 Difundir.</strong>
-      </p>
-    </div>
+    <article class="mensaje">
+      <span class="badge">📦 Acopio</span>
+      <h2>Puntos iniciales cargados desde el afiche</h2>
+      <p>El directorio incluye Bogotá, Medellín, Cali, Pereira, Manizales, Barranquilla, Armenia y Quibdó. Antes de ir, confirma horario y vigencia por canales oficiales.</p>
+    </article>
 
-    <div class="mensaje-card urgente">
-      <span class="mensaje-badge urgente">🍽️ Urgen Donaciones</span>
-      <h3>@alteacatering – Caracas: 550 Comidas Diarias en Riesgo</h3>
-      <p>
-        <strong>🕙 4 jul, 10:00 p.m.</strong><br><br>
-        Urgen donaciones para mantener la entrega de <strong>550 comidas diarias</strong>. Se necesitan:<br>
-        • Proteínas (pollo, carne, chuleta ahumada)<br>
-        • Arroz y pasta<br>
-        • Plátanos<br>
-        • Huevos<br>
-        • Quesos y jamón<br>
-        • Verduras<br><br>
-        <strong>💬 WhatsApp:</strong> <a href="https://wa.link/xy67zp" target="_blank" rel="noopener noreferrer">wa.link/xy67zp</a><br>
-        <strong>📷 Fuente:</strong> <a href="https://www.instagram.com/alteacatering" target="_blank" rel="noopener noreferrer">@alteacatering</a>
-      </p>
-    </div>
-
-    <div class="mensaje-card urgente">
-      <span class="mensaje-badge urgente">🚨 Urgente</span>
-      <h3>Parque del Este – Caracas: Necesidad Urgente de Comidas Preparadas</h3>
-      <p>
-        <strong>📍 Ubicación:</strong> Parque del Este, entrada por estacionamiento del Museo del Transporte.<br><br>
-        <strong>🍽️ Se necesita:</strong> Comidas preparadas (mañanas y tardes, hasta 6 PM).<br><br>
-        <strong>💧 También:</strong> Hidratación. Las ayudas han disminuido pero hay cientos de personas necesitadas.<br><br>
-        <strong>⏰ Importante:</strong> No traer comida después de las 6 PM.
-      </p>
-    </div>
-
-    <div class="mensaje-card">
-      <span class="mensaje-badge acopio">⛪ Centro de Acopio</span>
-      <h3>Iglesia Chiquinquirá – Caracas</h3>
-      <p>
-        <strong>Reciben:</strong><br>
-        • Alimentos no perecederos<br>
-        • Medicinas y artículos de primeros auxilios<br>
-        • Agua potable<br>
-        • Artículos de aseo personal
-      </p>
-    </div>
-  </div>
+    <article class="mensaje">
+      <span class="badge">⚠️ Verificación</span>
+      <h2>Comparte con fuente y fecha</h2>
+      <p>Evita cadenas sin contacto o sin fecha. Publica ciudad, dirección, horario, entidad responsable y enlace oficial siempre que sea posible.</p>
+    </article>
+  </main>
 
   <footer>
-    <strong>🇻🇪 Venezuela Solidaria</strong> — Mensajes de campo verificados.<br>
-    Hecho con ❤️ por Asperger para Asperger® por la comunidad asperger y autista para los venezolanos y comunidad asperger y autista.<br>
-    ¿Quién soy? Orlando Javier Jaramillo Gutierrez — <a href="https://www.linkedin.com/in/orlando-j-jaramillo-gutierrez/" target="_blank" rel="noopener noreferrer">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px">
-        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
-      </svg> LinkedIn</a>
+    🇨🇴 Ayuda123 Colombia — Mensajes de campo verificados.
   </footer>
 
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js").catch(() => { });
+      navigator.serviceWorker.register("/service-worker.js").catch(() => {});
     }
   </script>
 </body>

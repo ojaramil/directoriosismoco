@@ -1,4 +1,4 @@
-const CACHE_NAME = "directorio-sismo-v3";
+const CACHE_NAME = "ayuda123-colombia-v3";
 
 const CORE_ASSETS = [
   "/",
@@ -8,9 +8,15 @@ const CORE_ASSETS = [
   "/mensajes/",
   "/mensajes/index.html",
   "/data.json",
-  "/portada-ayuda.jpg",
-  "/fundasperven-telemedicina.jpeg",
-  "/dra-miryam-ortiz-gofundme.png",
+  "/acopio-colombia.png",
+  "/cruz-roja-colombia-donacion.png",
+  "/tigresas-acopio-1.png",
+  "/tigresas-acopio-2.png",
+  "/tigresas-acopio-3.png",
+  "/tigresas-donaciones.png",
+  "/tigresas-que-donar.png",
+  "/centros-acopio-colombia-2026.md",
+  "/portada.jpg",
   "/manifest.json",
   "/icon-192.png",
   "/icon-512.png"
