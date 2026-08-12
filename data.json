@@ -40,6 +40,13 @@
         "url": "https://reddeesperanza.com/"
       },
       {
+        "icon": "🗺️",
+        "tag": "Mapa vivo",
+        "h": "Mapa de Emergencia Cali",
+        "d": "Mapa colaborativo en tiempo real: reporta y ubica puntos urgentes y zonas donde falta gente en Cali.",
+        "url": "https://mapa-emergencia.artefactofilms.workers.dev"
+      },
+      {
         "icon": "🏛️",
         "tag": "Oficial",
         "h": "UNGRD Colombia",
@@ -52,6 +59,20 @@
         "h": "Cruz Roja Colombiana",
         "d": "Canales oficiales de ayuda humanitaria y donación.",
         "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "💚",
+        "tag": "Salud mental",
+        "h": "Clínica para la Familia — Sanando las heridas del corazón",
+        "d": "Servicio gratuito de apoyo psicológico para personas afectadas por el terremoto. Escribe por WhatsApp para agendar cita. Instagram: @clinicaparalafamilia.",
+        "url": "https://wa.me/573006749247"
+      },
+      {
+        "icon": "🧸",
+        "tag": "Niñez",
+        "h": "Guardianes del Refugio",
+        "d": "Guía gratuita de Fundación Soy Un Guardián para acompañar a niños y adolescentes ante desastres naturales: miedo, confusión, esperanza y recuperación emocional. Instagram: @soyunguardian.",
+        "url": "https://drive.google.com/file/d/1mVD13UDRgTV_zl4vvG4RL2amATYx_ka5/view"
       }
     ]
   },
@@ -160,6 +181,16 @@
         "h": "Defensa Civil Colombiana — Chocó",
         "d": "Carrera 2 #24-41. Tel: 604 672 2222.",
         "url": "https://www.google.com/maps/search/?api=1&query=Carrera%202%20%2324-41%20Quibdo"
+      },
+      {
+        "header": "Voluntariado"
+      },
+      {
+        "icon": "🙋",
+        "tag": "Bogotá",
+        "h": "Voluntarios — Banco de Ropa Minuto de Dios",
+        "d": "Convocatoria de voluntarios para clasificar, empacar, cargar y despachar donaciones. Carrera 73A # 81B-70, Bogotá. Fuente: Instagram @uniminutoradio; verifica que siga activa antes de ir.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2073A%20%2381B-70%20Bogota"
       },
       {
         "header": "Acopios nacionales"
