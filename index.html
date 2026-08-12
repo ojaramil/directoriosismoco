@@ -131,85 +131,90 @@
       font-weight: 800;
     }
 
-    .emergency-strip {
-      background: #7f271f;
+    .banner-top {
+      background: #c0392b;
       color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, .2);
+      display: flex;
+      align-items: stretch;
       overflow: hidden;
+      font-size: .82rem;
+      line-height: 1.4;
     }
 
-    .emergency-strip-inner {
+    .btk-tag {
+      flex-shrink: 0;
+      background: #8e2418;
+      color: #fff;
+      font-weight: 800;
+      font-size: .72rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      padding: .5rem .9rem;
       display: flex;
       align-items: center;
-      gap: .85rem;
-      padding: .5rem 0;
-      font-size: .86rem;
-      font-weight: 850;
+      gap: .35rem;
       white-space: nowrap;
     }
 
-    .live-label {
-      position: relative;
-      z-index: 2;
-      flex: none;
-      align-self: stretch;
-      display: inline-flex;
-      align-items: center;
-      margin-left: max(1rem, calc((100vw - 1080px) / 2));
-      padding: 0 .65rem;
-      border-radius: 7px;
+    .btk-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
       background: #fff;
-      color: #7f271f;
-      font-size: .74rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      box-shadow: 12px 0 18px rgba(127, 39, 31, .72);
+      animation: btk-pulse 1.4s infinite;
     }
 
-    .ticker-window {
+    .btk-track {
+      flex: 1;
       min-width: 0;
       overflow: hidden;
-      flex: 1;
-    }
-
-    .ticker-track {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      gap: 1.05rem;
-      min-width: max-content;
-      animation: ticker 46s linear infinite;
-      line-height: 1.55;
     }
 
-    .ticker-window:hover .ticker-track {
+    .btk-items {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      white-space: nowrap;
+      will-change: transform;
+      animation: btk-scroll 65s linear infinite;
+      padding-left: 100%;
+    }
+
+    .btk-track:hover .btk-items {
       animation-play-state: paused;
     }
 
-    .ticker-item {
-      display: inline-flex;
-      align-items: center;
-      gap: .35rem;
-    }
-
-    .ticker-item::after {
-      content: "";
-    }
-
-    .emergency-strip a {
-      color: #fff;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255, 255, 255, .55);
-      padding: 0;
+    .btk-item {
       white-space: nowrap;
     }
 
-    @keyframes ticker {
+    .banner-top a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    @keyframes btk-pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: .3;
+      }
+    }
+
+    @keyframes btk-scroll {
       from {
         transform: translateX(0);
       }
 
       to {
-        transform: translateX(-50%);
+        transform: translateX(-100%);
       }
     }
 
@@ -579,22 +584,21 @@
         grid-template-columns: 1fr;
       }
 
-      .emergency-strip-inner {
-        gap: .55rem;
+      .btk-tag {
+        font-size: .64rem;
+        padding: .5rem .7rem;
       }
 
-      .live-label {
-        margin-left: 1rem;
+      .btk-items {
+        animation-duration: 42s;
       }
-
     }
 
     @media (prefers-reduced-motion: reduce) {
-      .ticker-track {
+      .btk-items {
         animation: none;
-        flex-wrap: wrap;
-        min-width: 0;
-        padding-right: 1rem;
+        overflow-x: auto;
+        padding-left: 1rem;
       }
     }
   </style>
@@ -618,26 +622,18 @@
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
-  <div class="emergency-strip" role="banner" aria-label="Cinta en vivo de noticias y emergencias">
-    <div class="emergency-strip-inner">
-      <span class="live-label">En vivo</span>
-      <div class="ticker-window">
-        <div class="ticker-track">
-          <span class="ticker-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
-          <span class="ticker-item">📰 Semana reporta movimientos fuertes sentidos en varias ciudades y recomienda seguir canales oficiales. <a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Leer en Semana</a></span>
-          <span class="ticker-item">📍 El Colombiano explica por qué Santander y Valle están entre las zonas de mayor amenaza sísmica del país. <a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">Leer en El Colombiano</a></span>
-          <span class="ticker-item">🎙️ Caracol Radio reseña el sismo con epicentro en Chocó y reportes desde varias ciudades. <a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Leer en Caracol Radio</a></span>
-          <span class="ticker-item">📻 La FM recoge reportes de sismos sentidos en Antioquia, Chocó, Valle y el Eje Cafetero. <a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">Leer en La FM</a></span>
-          <span class="ticker-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
-          <span class="ticker-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
-          <span class="ticker-item">📰 Semana reporta movimientos fuertes sentidos en varias ciudades y recomienda seguir canales oficiales. <a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Leer en Semana</a></span>
-          <span class="ticker-item">📍 El Colombiano explica por qué Santander y Valle están entre las zonas de mayor amenaza sísmica del país. <a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">Leer en El Colombiano</a></span>
-          <span class="ticker-item">🎙️ Caracol Radio reseña el sismo con epicentro en Chocó y reportes desde varias ciudades. <a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Leer en Caracol Radio</a></span>
-          <span class="ticker-item">📻 La FM recoge reportes de sismos sentidos en Antioquia, Chocó, Valle y el Eje Cafetero. <a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">Leer en La FM</a></span>
-          <span class="ticker-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
+  <div class="banner-top" role="banner" aria-label="Cinta en vivo de noticias y emergencias">
+    <div class="btk-tag"><span class="btk-dot"></span>En vivo</div>
+    <div class="btk-track">
+      <div class="btk-items">
+          <span class="btk-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
+          <span class="btk-item">📰 Semana reporta movimientos fuertes sentidos en varias ciudades y recomienda seguir canales oficiales. <a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Leer en Semana</a></span>
+          <span class="btk-item">📍 El Colombiano explica por qué Santander y Valle están entre las zonas de mayor amenaza sísmica del país. <a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">Leer en El Colombiano</a></span>
+          <span class="btk-item">🎙️ Caracol Radio reseña el sismo con epicentro en Chocó y reportes desde varias ciudades. <a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Leer en Caracol Radio</a></span>
+          <span class="btk-item">📻 La FM recoge reportes de sismos sentidos en Antioquia, Chocó, Valle y el Eje Cafetero. <a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">Leer en La FM</a></span>
+          <span class="btk-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
         </div>
       </div>
-    </div>
   </div>
 
   <header>
