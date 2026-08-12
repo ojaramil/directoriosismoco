@@ -61,12 +61,6 @@
     "aviso": "Lleva solo lo solicitado: agua, alimentos no perecederos, aseo, primeros auxilios, colchonetas/cobijas y elementos de protección. Confirma horario antes de salir.",
     "items": [
       {
-        "icon": "🖼️",
-        "tag": "Afiche",
-        "h": "Afiche general de puntos de acopio",
-        "d": "Bogotá, Medellín, Cali, Pereira, Manizales, Barranquilla, Armenia y Quibdó."
-      },
-      {
         "header": "Puntos principales"
       },
       {
