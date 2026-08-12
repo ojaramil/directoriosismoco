@@ -64,8 +64,7 @@
         "icon": "🖼️",
         "tag": "Afiche",
         "h": "Afiche general de puntos de acopio",
-        "d": "Bogotá, Medellín, Cali, Pereira, Manizales, Barranquilla, Armenia y Quibdó.",
-        "url": "/acopio-colombia.png"
+        "d": "Bogotá, Medellín, Cali, Pereira, Manizales, Barranquilla, Armenia y Quibdó."
       },
       {
         "header": "Puntos principales"
@@ -367,15 +366,15 @@
         "icon": "💳",
         "tag": "Tigresas",
         "h": "Fundación Colombia Luz y Sonrisas",
-        "d": "Banco de Bogotá, cuenta de ahorros #125128462. NIT 9020850963.",
-        "url": "/tigresas-donaciones.png"
+        "d": "Banco de Bogotá, cuenta de ahorros #125128462. NIT 9020850963."
+
       },
       {
         "icon": "💳",
         "tag": "Tigresas",
         "h": "Organización El Minuto de Dios",
-        "d": "Banco Davivienda, cuenta de ahorros 004000240970. NIT 860.010.371-0.",
-        "url": "/tigresas-donaciones.png"
+        "d": "Banco Davivienda, cuenta de ahorros 004000240970. NIT 860.010.371-0."
+
       },
       {
         "icon": "🍲",
@@ -406,64 +405,64 @@
         "icon": "💧",
         "tag": "Prioridad",
         "h": "Agua e hidratación",
-        "d": "Agua potable y bebidas de hidratación.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Agua potable y bebidas de hidratación."
+
       },
       {
         "icon": "🥫",
         "tag": "Alimentos",
         "h": "Alimentos no perecederos",
-        "d": "Arroz, aceite, pasta, granos, enlatados, harina, panela, chocolate, avena, cereales, galletas y alimentos listos para consumo.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Arroz, aceite, pasta, granos, enlatados, harina, panela, chocolate, avena, cereales, galletas y alimentos listos para consumo."
+
       },
       {
         "icon": "🍼",
         "tag": "Infantil",
         "h": "Bebés y niñez",
-        "d": "Pañales, leche de fórmula, alimentos infantiles, toallitas húmedas y crema antipañalitis.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Pañales, leche de fórmula, alimentos infantiles, toallitas húmedas y crema antipañalitis."
+
       },
       {
         "icon": "🧼",
         "tag": "Aseo",
         "h": "Higiene personal",
-        "d": "Jabón, shampoo, cepillo y crema dental, toallas higiénicas, papel higiénico y elementos básicos de higiene.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Jabón, shampoo, cepillo y crema dental, toallas higiénicas, papel higiénico y elementos básicos de higiene."
+
       },
       {
         "icon": "🛏️",
         "tag": "Abrigo",
         "h": "Descanso y abrigo",
-        "d": "Toallas, colchonetas, mantas/cobijas, sábanas limpias y ropa en buen estado organizada por tallas.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Toallas, colchonetas, mantas/cobijas, sábanas limpias y ropa en buen estado organizada por tallas."
+
       },
       {
         "icon": "⛑️",
         "tag": "Rescate",
         "h": "Protección para rescate",
-        "d": "Cascos, guantes de trabajo, gafas, tapabocas/protección respiratoria, botas, chalecos reflectivos, linternas, radios y cinta de señalización.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Cascos, guantes de trabajo, gafas, tapabocas/protección respiratoria, botas, chalecos reflectivos, linternas, radios y cinta de señalización."
+
       },
       {
         "icon": "🩹",
         "tag": "Primeros auxilios",
         "h": "Primeros auxilios",
-        "d": "Botiquines sin medicamentos de prescripción y elementos para control de hemorragias solo si el centro los solicita.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Botiquines sin medicamentos de prescripción y elementos para control de hemorragias solo si el centro los solicita."
+
       },
       {
         "icon": "🔋",
         "tag": "Energía",
         "h": "Energía y comunicación",
-        "d": "Linternas, baterías, power banks y radios de comunicación.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Linternas, baterías, power banks y radios de comunicación."
+
       },
       {
         "icon": "🐾",
         "tag": "Mascotas",
         "h": "Mascotas",
-        "d": "Alimento y elementos básicos para mascotas.",
-        "url": "/tigresas-que-donar.png"
+        "d": "Alimento y elementos básicos para mascotas."
+
       }
     ],
     "notas": [
