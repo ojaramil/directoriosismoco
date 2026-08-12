@@ -75,6 +75,28 @@
       font-weight: 800;
       font-size: .86rem;
     }
+    .lineas-emergencia {
+      margin: .65rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .lineas-emergencia li {
+      display: flex;
+      justify-content: space-between;
+      gap: .7rem;
+      padding: .42rem 0;
+      border-top: 1px solid var(--borde);
+    }
+    .lineas-emergencia strong {
+      color: var(--texto);
+      font-size: .9rem;
+    }
+    .lineas-emergencia a {
+      color: var(--azul-700);
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
     .aviso {
       margin-top: 1rem;
       background: #fff7da;
@@ -106,7 +128,13 @@
     <div class="grid">
       <section class="card">
         <h2>1. Si es emergencia</h2>
-        <p>Llama al 123. Para reportes comunitarios o zonas sin atender, usa Red de Esperanza.</p>
+        <p>Si hay riesgo vital, personas atrapadas, incendio, colapso o lesionados, llama primero a una línea de emergencia.</p>
+        <ul class="lineas-emergencia" aria-label="Líneas de emergencia">
+          <li><strong>Emergencias Colombia</strong><a href="tel:123">123</a></li>
+          <li><strong>Defensa Civil</strong><a href="tel:144">144</a></li>
+          <li><strong>UNGRD</strong><a href="tel:+576015529696">601 552 9696</a></li>
+          <li><strong>Cruz Roja Colombiana</strong><a href="tel:+576017946566">601 794 6566</a></li>
+        </ul>
         <div class="acciones">
           <a href="tel:123">Llamar 123</a>
           <a href="https://reddeesperanza.com/" target="_blank" rel="noopener noreferrer">Red de Esperanza</a>

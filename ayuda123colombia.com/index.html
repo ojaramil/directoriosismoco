@@ -132,22 +132,67 @@
     }
 
     .emergency-strip {
-      background: #8f2f25;
+      background: #7f271f;
       color: #fff;
       border-bottom: 1px solid rgba(255, 255, 255, .2);
+      overflow: hidden;
     }
 
     .emergency-strip-inner {
-      width: min(1080px, calc(100% - 2rem));
-      margin: 0 auto;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: .7rem;
-      padding: .55rem 0;
+      gap: .85rem;
+      padding: .5rem 0;
       font-size: .86rem;
       font-weight: 850;
-      text-align: center;
+      white-space: nowrap;
+    }
+
+    .live-label {
+      position: relative;
+      z-index: 2;
+      flex: none;
+      align-self: stretch;
+      display: inline-flex;
+      align-items: center;
+      margin-left: max(1rem, calc((100vw - 1080px) / 2));
+      padding: 0 .65rem;
+      border-radius: 7px;
+      background: #fff;
+      color: #7f271f;
+      font-size: .74rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      box-shadow: 12px 0 18px rgba(127, 39, 31, .72);
+    }
+
+    .ticker-window {
+      min-width: 0;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .ticker-track {
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+      min-width: max-content;
+      animation: ticker 46s linear infinite;
+    }
+
+    .ticker-window:hover .ticker-track {
+      animation-play-state: paused;
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: .8rem;
+    }
+
+    .ticker-item::after {
+      content: "•";
+      opacity: .65;
     }
 
     .emergency-strip a {
@@ -157,6 +202,24 @@
       border-radius: 7px;
       padding: .25rem .5rem;
       white-space: nowrap;
+    }
+
+    .ticker-note {
+      flex: none;
+      margin-right: max(1rem, calc((100vw - 1080px) / 2));
+      color: rgba(255, 255, 255, .82);
+      font-size: .76rem;
+      font-weight: 750;
+    }
+
+    @keyframes ticker {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
     }
 
     header {
@@ -350,6 +413,48 @@
       padding: 1rem;
     }
 
+    .news-links {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .75rem;
+      margin-top: .9rem;
+    }
+
+    .news-link {
+      display: block;
+      min-height: 100%;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 5px solid var(--red);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: .95rem;
+    }
+
+    .news-link strong {
+      display: block;
+      margin-top: .18rem;
+      line-height: 1.25;
+    }
+
+    .news-link span {
+      color: var(--blue-2);
+      font-size: .73rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .news-link small {
+      display: block;
+      margin-top: .45rem;
+      color: var(--muted);
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+
     .card h3 {
       font-size: 1rem;
       margin-bottom: .4rem;
@@ -478,12 +583,30 @@
 
       .section-head,
       .grid,
-      .donation-grid {
+      .donation-grid,
+      .news-links {
         grid-template-columns: 1fr;
       }
 
       .emergency-strip-inner {
+        gap: .55rem;
+      }
+
+      .live-label {
+        margin-left: 1rem;
+      }
+
+      .ticker-note {
+        display: none;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ticker-track {
+        animation: none;
         flex-wrap: wrap;
+        min-width: 0;
+        padding-right: 1rem;
       }
     }
   </style>
@@ -507,12 +630,28 @@
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
-  <div class="emergency-strip" role="banner" aria-label="Números de emergencia">
+  <div class="emergency-strip" role="banner" aria-label="Cinta en vivo de noticias y emergencias">
     <div class="emergency-strip-inner">
-      <span>Emergencias Colombia:</span>
-      <a href="tel:123">123</a>
-      <a href="tel:144">Defensa Civil 144</a>
-      <a href="tel:+576015529696">UNGRD 601 552 9696</a>
+      <span class="live-label">En vivo</span>
+      <div class="ticker-window">
+        <div class="ticker-track">
+          <span class="ticker-item"><a href="tel:123">Emergencias 123</a></span>
+          <span class="ticker-item"><a href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">AP: continúan búsquedas y balance de personas afectadas</a></span>
+          <span class="ticker-item"><a href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">The Guardian: emergencia nacional tras sismo de magnitud 7,4</a></span>
+          <span class="ticker-item"><a href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">AP: epicentro en San José del Palmar, Chocó</a></span>
+          <span class="ticker-item"><a href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">People: equipos usan drones y perros en rescate</a></span>
+          <span class="ticker-item"><a href="https://portal.gestiondelriesgo.gov.co/" target="_blank" rel="noopener noreferrer">UNGRD: verificar comunicados oficiales</a></span>
+          <span class="ticker-item"><a href="tel:144">Defensa Civil 144</a></span>
+          <span class="ticker-item"><a href="tel:123">Emergencias 123</a></span>
+          <span class="ticker-item"><a href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">AP: continúan búsquedas y balance de personas afectadas</a></span>
+          <span class="ticker-item"><a href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">The Guardian: emergencia nacional tras sismo de magnitud 7,4</a></span>
+          <span class="ticker-item"><a href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">AP: epicentro en San José del Palmar, Chocó</a></span>
+          <span class="ticker-item"><a href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">People: equipos usan drones y perros en rescate</a></span>
+          <span class="ticker-item"><a href="https://portal.gestiondelriesgo.gov.co/" target="_blank" rel="noopener noreferrer">UNGRD: verificar comunicados oficiales</a></span>
+          <span class="ticker-item"><a href="tel:144">Defensa Civil 144</a></span>
+        </div>
+      </div>
+      <span class="ticker-note">Cifras en actualización</span>
     </div>
   </div>
 
@@ -615,6 +754,28 @@
           <h3>Necesidades en la cobertura</h3>
           <p>Las notas citadas resaltan agua, alimentos, higiene, refugio, atención médica, donación de sangre, logística y protección de personas vulnerables como necesidades iniciales.</p>
         </article>
+      </div>
+      <div class="news-links" aria-label="Links de noticias sobre el terremoto">
+        <a class="news-link" href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">
+          <span>AP · 11 ago 2026</span>
+          <strong>Búsqueda de desaparecidos y balance nacional tras el terremoto.</strong>
+          <small>Cobertura internacional con cifras en actualización y respuesta del Gobierno.</small>
+        </a>
+        <a class="news-link" href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">
+          <span>The Guardian · 11 ago 2026</span>
+          <strong>Estado de emergencia, rescates y afectaciones en el occidente del país.</strong>
+          <small>Reporte sobre Cali, Pereira, Manizales, Chocó y medidas oficiales.</small>
+        </a>
+        <a class="news-link" href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">
+          <span>AP · 10 ago 2026</span>
+          <strong>Primer balance del sismo de magnitud 7,4 con epicentro en Chocó.</strong>
+          <small>Nota inicial sobre daños, edificios colapsados y ayuda internacional.</small>
+        </a>
+        <a class="news-link" href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">
+          <span>People · 11 ago 2026</span>
+          <strong>Equipos de rescate trabajan con drones y perros para ubicar sobrevivientes.</strong>
+          <small>Resumen de operaciones de búsqueda y daños estructurales reportados.</small>
+        </a>
       </div>
       <div class="source-list" style="margin-top:.9rem">
         <ul>

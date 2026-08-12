@@ -12,6 +12,27 @@
         "url": "tel:123"
       },
       {
+        "icon": "🟠",
+        "tag": "Emergencias",
+        "h": "Defensa Civil — 144",
+        "d": "Atención de emergencias, apoyo operativo, búsqueda y rescate, y coordinación con voluntariado.",
+        "url": "tel:144"
+      },
+      {
+        "icon": "🛟",
+        "tag": "Oficial",
+        "h": "UNGRD — 601 552 9696",
+        "d": "Coordinación nacional de gestión del riesgo, Sala de Crisis e información institucional.",
+        "url": "tel:+576015529696"
+      },
+      {
+        "icon": "➕",
+        "tag": "Humanitario",
+        "h": "Cruz Roja Colombiana — 601 794 6566",
+        "d": "Canales humanitarios, orientación sobre ayuda, donaciones y acompañamiento en emergencias.",
+        "url": "tel:+576017946566"
+      },
+      {
         "icon": "🌐",
         "tag": "Mapa vivo",
         "h": "Red de Esperanza",
@@ -19,14 +40,14 @@
         "url": "https://reddeesperanza.com/"
       },
       {
-        "icon": "🛟",
+        "icon": "🏛️",
         "tag": "Oficial",
         "h": "UNGRD Colombia",
         "d": "Consulta comunicados y recomendaciones oficiales.",
         "url": "https://portal.gestiondelriesgo.gov.co/"
       },
       {
-        "icon": "➕",
+        "icon": "🌐",
         "tag": "Humanitario",
         "h": "Cruz Roja Colombiana",
         "d": "Canales oficiales de ayuda humanitaria y donación.",
