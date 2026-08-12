@@ -1,4 +1,4 @@
-const CACHE_NAME = "ayuda123-colombia-v9";
+const CACHE_NAME = "ayuda123-colombia-v10";
 
 const CORE_ASSETS = [
   "/",

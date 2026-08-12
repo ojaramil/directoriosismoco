@@ -594,13 +594,6 @@
       }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      .btk-items {
-        animation: none;
-        overflow-x: auto;
-        padding-left: 1rem;
-      }
-    }
   </style>
   <script>
     (function () {
@@ -635,6 +628,24 @@
         </div>
       </div>
   </div>
+
+  <script>
+    (function () {
+      function iniciarCinta() {
+        document.querySelectorAll(".btk-items").forEach((cinta) => {
+          cinta.style.animation = "none";
+          cinta.getBoundingClientRect();
+          cinta.style.animation = "";
+          cinta.style.animationPlayState = "running";
+        });
+      }
+
+      window.addEventListener("load", iniciarCinta);
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") iniciarCinta();
+      });
+    })();
+  </script>
 
   <header>
     <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
