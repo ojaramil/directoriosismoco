@@ -592,6 +592,133 @@
       margin: -.4rem 0 1.2rem;
     }
 
+    .dir-controls {
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    #dir-buscar {
+      padding: .7rem 1rem;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      font: inherit;
+      font-size: .92rem;
+    }
+
+    .dir-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    .dir-chips .chip {
+      padding: .45rem .9rem;
+      border-radius: 50px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      font: inherit;
+      font-weight: 700;
+      font-size: .8rem;
+      cursor: pointer;
+    }
+
+    .dir-chips .chip.active {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .dir-group-title {
+      font-family: var(--display);
+      font-size: 1.1rem;
+      margin: 1.6rem 0 .4rem;
+    }
+
+    .dir-group-title:first-child {
+      margin-top: 0;
+    }
+
+    .dir-aviso {
+      font-size: .84rem;
+      background: color-mix(in srgb, var(--gold) 14%, var(--paper));
+      border: 1px solid var(--line);
+      padding: .6rem .85rem;
+      border-radius: 10px;
+      margin-bottom: .9rem;
+    }
+
+    .dir-subhead {
+      font-weight: 800;
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      color: var(--muted);
+      margin: 1.1rem 0 .5rem;
+    }
+
+    .dir-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: .8rem;
+    }
+
+    .dir-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: .9rem 1rem;
+      background: var(--paper);
+    }
+
+    .dir-card .dir-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      color: var(--blue-2);
+      background: color-mix(in srgb, var(--blue-2) 12%, var(--paper));
+      padding: .15rem .55rem;
+      border-radius: 50px;
+      margin-bottom: .45rem;
+    }
+
+    .dir-card h4 {
+      margin: 0 0 .3rem;
+      font-size: .96rem;
+      font-family: var(--display);
+    }
+
+    .dir-card p {
+      margin: 0 0 .65rem;
+      font-size: .83rem;
+      color: var(--muted);
+    }
+
+    .dir-card a.dir-link {
+      font-weight: 800;
+      font-size: .82rem;
+      color: var(--blue-2);
+      text-decoration: none;
+    }
+
+    .dir-notas {
+      margin: .9rem 0 0;
+      font-size: .8rem;
+      color: var(--muted);
+      padding-left: 1.1rem;
+    }
+
+    .dir-empty {
+      font-size: .9rem;
+      color: var(--muted);
+      padding: 1rem 0;
+    }
+
     .donation-box h3 {
       font-size: 1.04rem;
       margin-bottom: .5rem;
@@ -771,6 +898,7 @@
       <a href="#centros-acopio">Centros confirmados</a>
       <a href="#acopio">Acopio</a>
       <a href="#fuentes">Fuentes de prensa</a>
+      <a href="#directorio">Directorio</a>
     </div>
   </nav>
 
@@ -1200,6 +1328,25 @@
         </ul>
       </div>
     </section>
+
+    <section id="directorio">
+      <div class="section-head">
+        <div>
+          <span class="tag">Directorio</span>
+          <h2>Directorio completo por categoría</h2>
+          <p>Busca y filtra todos los recursos recopilados: emergencias, puntos de acopio, donaciones económicas y qué donar. Verifica siempre vigencia y horario antes de desplazarte o transferir.</p>
+        </div>
+      </div>
+      <div class="dir-controls">
+        <input type="search" id="dir-buscar" placeholder="🔍 Buscar por ciudad, organización o palabra clave…" oninput="renderDirectorio()">
+        <div class="dir-chips" id="dir-chips">
+          <button type="button" class="chip active" data-cat="todos" onclick="setCatDirectorio('todos', this)">Todos</button>
+        </div>
+      </div>
+      <div id="dir-resultado">
+        <p class="dir-empty">Cargando directorio…</p>
+      </div>
+    </section>
   </main>
 
   <button type="button" class="share-fab" onclick="compartirPagina()" aria-label="Compartir esta página">↗</button>
@@ -1269,6 +1416,131 @@
         tr.style.display = valor === "todos" || v === valor ? "" : "none";
       });
     }
+
+    let DIRECTORIO_DATA = [];
+    let dirCatActiva = "todos";
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, (c) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[c]));
+    }
+
+    function segmentarItems(items) {
+      const segmentos = [];
+      let actual = { header: null, items: [] };
+      items.forEach((it) => {
+        if (it.header) {
+          if (actual.header || actual.items.length) segmentos.push(actual);
+          actual = { header: it.header, items: [] };
+        } else {
+          actual.items.push(it);
+        }
+      });
+      segmentos.push(actual);
+      return segmentos.filter((s) => s.items.length);
+    }
+
+    function setCatDirectorio(cat, btn) {
+      dirCatActiva = cat;
+      document.querySelectorAll("#dir-chips .chip").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderDirectorio();
+    }
+
+    function renderDirectorio() {
+      const texto = (document.getElementById("dir-buscar").value || "").toLowerCase().trim();
+      const cont = document.getElementById("dir-resultado");
+      cont.innerHTML = "";
+      let totalMostrado = 0;
+
+      DIRECTORIO_DATA.forEach((grupo) => {
+        if (dirCatActiva !== "todos" && dirCatActiva !== grupo.cat) return;
+
+        const segmentos = segmentarItems(grupo.items).map((seg) => ({
+          header: seg.header,
+          items: seg.items.filter((it) => {
+            if (!texto) return true;
+            const hay = (it.h + " " + it.d + " " + (it.tag || "")).toLowerCase();
+            return hay.includes(texto);
+          })
+        })).filter((seg) => seg.items.length);
+
+        if (!segmentos.length) return;
+
+        const bloque = document.createElement("div");
+        bloque.className = "dir-bloque";
+
+        const titulo = document.createElement("div");
+        titulo.className = "dir-group-title";
+        titulo.textContent = grupo.titulo;
+        bloque.appendChild(titulo);
+
+        if (grupo.aviso) {
+          const aviso = document.createElement("div");
+          aviso.className = "dir-aviso";
+          aviso.textContent = grupo.aviso;
+          bloque.appendChild(aviso);
+        }
+
+        segmentos.forEach((seg) => {
+          if (seg.header) {
+            const sub = document.createElement("div");
+            sub.className = "dir-subhead";
+            sub.textContent = seg.header;
+            bloque.appendChild(sub);
+          }
+          const grid = document.createElement("div");
+          grid.className = "dir-grid";
+          seg.items.forEach((it) => {
+            totalMostrado++;
+            const card = document.createElement("article");
+            card.className = "dir-card";
+            card.innerHTML =
+              (it.tag ? `<span class="dir-tag">${escapeHtml(it.tag)}</span>` : "") +
+              `<h4>${it.icon ? escapeHtml(it.icon) + " " : ""}${escapeHtml(it.h)}</h4>` +
+              `<p>${escapeHtml(it.d)}</p>` +
+              (it.url ? `<a class="dir-link" href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer">Abrir ↗</a>` : "");
+            grid.appendChild(card);
+          });
+          bloque.appendChild(grid);
+        });
+
+        if (Array.isArray(grupo.notas) && grupo.notas.length) {
+          const notas = document.createElement("ul");
+          notas.className = "dir-notas";
+          notas.innerHTML = grupo.notas.map((n) => `<li>${escapeHtml(n)}</li>`).join("");
+          bloque.appendChild(notas);
+        }
+
+        cont.appendChild(bloque);
+      });
+
+      if (!totalMostrado) {
+        cont.innerHTML = '<p class="dir-empty">No se encontraron resultados. Ajusta la búsqueda o cambia de categoría.</p>';
+      }
+    }
+
+    (async function cargarDirectorio() {
+      try {
+        const res = await fetch("data.json", { cache: "no-store" });
+        DIRECTORIO_DATA = await res.json();
+        const chips = document.getElementById("dir-chips");
+        DIRECTORIO_DATA.forEach((grupo) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "chip";
+          btn.dataset.cat = grupo.cat;
+          btn.textContent = grupo.titulo;
+          btn.onclick = () => setCatDirectorio(grupo.cat, btn);
+          chips.appendChild(btn);
+        });
+        renderDirectorio();
+      } catch (e) {
+        document.getElementById("dir-resultado").innerHTML =
+          '<p class="dir-empty">No se pudo cargar el directorio. Recarga la página.</p>';
+      }
+    })();
   </script>
 
   <script>

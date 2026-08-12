@@ -1,0 +1,474 @@
+[
+  {
+    "cat": "emergencias",
+    "titulo": "🆘 Primero: emergencia y verificación",
+    "aviso": "Emergencia en curso. Si hay riesgo inmediato, llama al 123. Antes de moverte o donar, confirma que el punto siga activo.",
+    "items": [
+      {
+        "icon": "🚨",
+        "tag": "Emergencias",
+        "h": "Línea 123 Colombia",
+        "d": "Para riesgo vital, rescate, ambulancia, incendio, seguridad o atención urgente.",
+        "url": "tel:123"
+      },
+      {
+        "icon": "🟠",
+        "tag": "Emergencias",
+        "h": "Defensa Civil — 144",
+        "d": "Atención de emergencias, apoyo operativo, búsqueda y rescate, y coordinación con voluntariado.",
+        "url": "tel:144"
+      },
+      {
+        "icon": "🛟",
+        "tag": "Oficial",
+        "h": "UNGRD — 601 552 9696",
+        "d": "Coordinación nacional de gestión del riesgo, Sala de Crisis e información institucional.",
+        "url": "tel:+576015529696"
+      },
+      {
+        "icon": "➕",
+        "tag": "Humanitario",
+        "h": "Cruz Roja Colombiana — 601 794 6566",
+        "d": "Canales humanitarios, orientación sobre ayuda, donaciones y acompañamiento en emergencias.",
+        "url": "tel:+576017946566"
+      },
+      {
+        "icon": "🌐",
+        "tag": "Mapa vivo",
+        "h": "Red de Esperanza",
+        "d": "Reporta necesidades, zonas sin atender, desaparecidos y centros de acopio.",
+        "url": "https://reddeesperanza.com/"
+      },
+      {
+        "icon": "🏛️",
+        "tag": "Oficial",
+        "h": "UNGRD Colombia",
+        "d": "Consulta comunicados y recomendaciones oficiales.",
+        "url": "https://portal.gestiondelriesgo.gov.co/"
+      },
+      {
+        "icon": "🌐",
+        "tag": "Humanitario",
+        "h": "Cruz Roja Colombiana",
+        "d": "Canales oficiales de ayuda humanitaria y donación.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      }
+    ]
+  },
+  {
+    "cat": "acopio",
+    "titulo": "📦 Puntos de acopio",
+    "aviso": "Lleva solo lo solicitado: agua, alimentos no perecederos, aseo, primeros auxilios, colchonetas/cobijas y elementos de protección. Confirma horario antes de salir.",
+    "items": [
+      {
+        "icon": "🖼️",
+        "tag": "Afiche",
+        "h": "Afiche general de puntos de acopio",
+        "d": "Bogotá, Medellín, Cali, Pereira, Manizales, Barranquilla, Armenia y Quibdó.",
+        "url": "/acopio-colombia.png"
+      },
+      {
+        "header": "Puntos principales"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "Banco de Alimentos de Bogotá",
+        "d": "Calle 78 # 54-52. Tel: 601 236 6161 ext. 109. Lunes a sábado, 8:00 a.m. a 4:00 p.m.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Calle%2078%20%23%2054-52%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "Cruz Roja / Alcaldía — SAMU Sur",
+        "d": "Av. Carrera 68 #31-41 Sur. Agua, alimentos, higiene, cobijas, colchonetas y primeros auxilios.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Avenida%20Carrera%2068%20%2331-41%20Sur%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "Cruz Roja / Alcaldía — SAMU Norte",
+        "d": "Calle 134 con carrera 7B Bis #132-31. Agua, alimentos e higiene.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Calle%20134%20Carrera%207B%20Bis%20132-31%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "Palacio de los Deportes",
+        "d": "Calle 63 #59A-06. Agua, alimentos, cobijas y kits de higiene.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palacio%20de%20los%20Deportes%20Calle%2063%2059A-06%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Cali",
+        "h": "Plazoleta Jairo Varela",
+        "d": "Av. 2 Norte #10N-1, frente al CAM. Prioridad: agua, cascos, guantes, gafas, colchonetas y protección para rescate.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Plazoleta%20Jairo%20Varela%20Avenida%202%20Norte%2010N-1%20Cali"
+      },
+      {
+        "icon": "📦",
+        "tag": "Cali",
+        "h": "Banco de Alimentos de Cali",
+        "d": "Calle 24 #6-103. Alimentos no perecederos, agua y primeros auxilios.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Banco%20de%20Alimentos%20de%20Cali%20Calle%2024%20%236-103"
+      },
+      {
+        "icon": "📦",
+        "tag": "Barranquilla",
+        "h": "Alcaldía de Barranquilla — Barranquillita",
+        "d": "Carrera 43 #6-120. Tel: 605 371 0200. Reportado 24 horas.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2043%20%236-120%20Barranquillita%20Barranquilla"
+      },
+      {
+        "icon": "📦",
+        "tag": "Medellín",
+        "h": "Alcaldía de Medellín — La Alpujarra",
+        "d": "Carrera 53 #44-16. Tel: 604 385 5555. Lunes a domingo, 8:00 a.m. a 6:00 p.m.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2053%20%23%2044-16%20Centro%20Administrativo%20La%20Alpujarra%20Medellin"
+      },
+      {
+        "icon": "📦",
+        "tag": "Antioquia",
+        "h": "Cruz Roja Antioquia",
+        "d": "Carrera 50 #25-249, entrada Av. Regional. Kits de aseo y paquetes alimentarios.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cruz%20Roja%20Antioquia%20Carrera%2050%20%2325-249%20Medellin"
+      },
+      {
+        "icon": "📦",
+        "tag": "Cali",
+        "h": "Cruz Roja Colombiana Seccional Valle",
+        "d": "Plazoleta Jaime Varela, Av. 6N #23N-58. Tel: 602 554 0505.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Plazoleta%20Jaime%20Varela%20Avenida%206N%20%2323N-58%20Cali"
+      },
+      {
+        "icon": "📦",
+        "tag": "Pereira",
+        "h": "Expofuturo",
+        "d": "Av. 30 de Agosto #87-76. Tel: 606 340 1081.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Expofuturo%20Avenida%2030%20de%20Agosto%2087-76%20Pereira"
+      },
+      {
+        "icon": "📦",
+        "tag": "Manizales",
+        "h": "Universidad de Manizales",
+        "d": "Carrera 9 #19-03. Tel: 606 887 9680.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Universidad%20de%20Manizales%20Carrera%209%20%2319-03"
+      },
+      {
+        "icon": "📦",
+        "tag": "Armenia",
+        "h": "Cámara de Comercio de Armenia",
+        "d": "Carrera 14 #21N-30. Tel: 606 741 2300.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Camara%20de%20Comercio%20de%20Armenia%20Carrera%2014%20%2321N-30"
+      },
+      {
+        "icon": "📦",
+        "tag": "Quibdó",
+        "h": "Defensa Civil Colombiana — Chocó",
+        "d": "Carrera 2 #24-41. Tel: 604 672 2222.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%202%20%2324-41%20Quibdo"
+      },
+      {
+        "header": "Acopios nacionales"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Cruz Roja Colombiana — sede nacional",
+        "d": "Av. Cra. 68 #68B-31, Bogotá. Tel: 601 794 6566 / línea nacional 018000 5198534. Confirma si reciben especie antes de desplazarte.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Seccionales de Cruz Roja Colombiana",
+        "d": "Consulta la seccional de tu departamento para validar campañas, horarios y tipo de ayuda recibida.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "🇨🇴",
+        "tag": "Nacional",
+        "h": "Defensa Civil Colombiana",
+        "d": "Red nacional de juntas y voluntariado. Úsala para confirmar necesidades locales y puntos autorizados.",
+        "url": "https://www.defensacivil.gov.co/"
+      },
+      {
+        "icon": "🍲",
+        "tag": "Nacional",
+        "h": "Asociación de Bancos de Alimentos de Colombia (ABACO)",
+        "d": "Canal nacional para donar alimentos y ubicar bancos aliados por región.",
+        "url": "https://www.abaco.org.co/"
+      },
+      {
+        "icon": "🕊️",
+        "tag": "Nacional",
+        "h": "Cáritas Colombiana / Pastoral Social",
+        "d": "Canal humanitario nacional con presencia territorial. Verifica campañas activas antes de enviar ayudas.",
+        "url": "https://caritascolombiana.org/"
+      },
+      {
+        "header": "Internacionales y desde el exterior"
+      },
+      {
+        "icon": "🌎",
+        "tag": "Exterior",
+        "h": "IFRC — Federación Internacional de la Cruz Roja",
+        "d": "Para donantes fuera de Colombia, canal internacional de apoyo a sociedades nacionales de Cruz Roja y emergencias.",
+        "url": "https://www.ifrc.org/"
+      },
+      {
+        "icon": "🌎",
+        "tag": "Exterior",
+        "h": "CICR — Comité Internacional de la Cruz Roja",
+        "d": "Canal internacional para asistencia humanitaria en contextos de emergencia. Útil cuando no puedes llevar donaciones físicas.",
+        "url": "https://www.icrc.org/es"
+      },
+      {
+        "icon": "🛂",
+        "tag": "Consular",
+        "h": "Cancillería / consulados de Colombia",
+        "d": "Si estás fuera del país, consulta el consulado colombiano más cercano antes de organizar acopios o envíos transfronterizos.",
+        "url": "https://www.cancilleria.gov.co/directorio/consulados"
+      },
+      {
+        "icon": "🗺️",
+        "tag": "Directorio",
+        "h": "Manos Juntas Venezuela — centros internacionales",
+        "d": "Directorio público de centros de acopio por país para emergencias regionales. Confirma vigencia y responsable antes de donar.",
+        "url": "https://manosjuntasvenezuela.com/centros-de-acopio-venezuela"
+      },
+      {
+        "icon": "🗺️",
+        "tag": "Directorio",
+        "h": "Centros de Acopio Venezuela",
+        "d": "Mapa internacional de puntos reportados para ayuda humanitaria. Úsalo como referencia y verifica cada punto antes de ir.",
+        "url": "https://centros-acopio-vzla.com/"
+      },
+      {
+        "header": "Puntos Tigresas"
+      },
+      {
+        "icon": "📦",
+        "tag": "Tame",
+        "h": "Complejo Deportivo Villa Olímpica",
+        "d": "Calle 15 Cra. 37, barrio La Libertad. Tel: 311 218 6525.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Complejo%20Deportivo%20Villa%20Olimpica%20Calle%2015%20Cra%2037%20La%20Libertad%20Tame%20Arauca"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "GAULA — La Castellana",
+        "d": "Carrera 47 #94-68. Tel: 318 544 4431.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2047%20%2394-68%20La%20Castellana%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "CODABAS",
+        "d": "Carrera 7 #180-75, módulo 2, piso 2. Tel: 305 714 1513.",
+        "url": "https://www.google.com/maps/search/?api=1&query=CODABAS%20Carrera%207%20%23180-75%20Bogota"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bogotá",
+        "h": "Unicentro Bogotá",
+        "d": "Entradas Carrera 13, Zona de Banderas, y Carrera 15, entrada principal. Tel: 317 645 6373.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Unicentro%20Bogota%20Carrera%2015"
+      },
+      {
+        "icon": "📦",
+        "tag": "Barranquilla",
+        "h": "Casa Abelardista",
+        "d": "Cra. 49C #80-76. Tel: 301 760 6374 / 304 234 450. 9:00 a.m. a 5:00 p.m.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cra%2049C%20%2380-76%20Barranquilla"
+      },
+      {
+        "icon": "📦",
+        "tag": "Valledupar",
+        "h": "Centro de Solidaridad Valledupar",
+        "d": "Carrera 23 #4-116, MZ A, Casa 14, Conjunto Callejas. Tel: 311 403 9818.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2023%20%234-116%20Conjunto%20Residencial%20Callejas%20Valledupar"
+      },
+      {
+        "icon": "📦",
+        "tag": "Pailitas",
+        "h": "Emisora Universal Stereo",
+        "d": "Barrio El Bosque. Tel: 314 592 7152.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Emisora%20Universal%20Stereo%20Barrio%20El%20Bosque%20Pailitas%20Cesar"
+      },
+      {
+        "icon": "📦",
+        "tag": "Bucaramanga",
+        "h": "Centro de Solidaridad Bucaramanga",
+        "d": "Calle 54 #21A-07, barrio La Concordia. Tel: 316 256 7986.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Calle%2054%20%2321A-07%20La%20Concordia%20Bucaramanga"
+      },
+      {
+        "icon": "📦",
+        "tag": "Cartagena",
+        "h": "Puntos de solidaridad Cartagena",
+        "d": "Perpetuo Socorro, Cristo Rey y Banco de Alimentos de Cartagena. Tel: 310 803 6477 / 300 329 3219 / 301 352 3180 / 301 433 8038.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Banco%20de%20Alimentos%20de%20Cartagena%20Parque%20Industrial%20Ternera%20Bodega%2051"
+      },
+      {
+        "icon": "📦",
+        "tag": "Riohacha",
+        "h": "Terrazas de Coquivacoa",
+        "d": "Casa 15, barrio Coquivacoa. Tel: 300 817 1502.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Terrazas%20de%20Coquivacoa%20Casa%2015%20Riohacha"
+      },
+      {
+        "icon": "📦",
+        "tag": "Ibagué",
+        "h": "Centro Comercial Plazas del Bosque",
+        "d": "Avenida Ambalá 69-80. Tel: 321 840 2089.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Centro%20Comercial%20Plazas%20del%20Bosque%20Avenida%20Ambala%2069-80%20Ibague"
+      },
+      {
+        "icon": "📦",
+        "tag": "Cúcuta",
+        "h": "Conjunto Portal Boconó",
+        "d": "Local 2, anillo vial antes de Postobón. Tel: 312 339 2032.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Conjunto%20Portal%20Bocono%20Local%202%20Cucuta"
+      },
+      {
+        "icon": "📦",
+        "tag": "Medellín",
+        "h": "Los Verdes de la 80",
+        "d": "Cra. 80 #49A-39. Tel: 322 653 1804.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cra%2080%20%2349A-39%20Medellin"
+      },
+      {
+        "icon": "📦",
+        "tag": "Montería",
+        "h": "Puntos de Solidaridad Montería",
+        "d": "El Recreo: Calle 69 #3-89. Norte: Cra. 1A #62-41, Edificio Río apto. 1502. Centro: Calle 69 #1C-92.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Calle%2069%20%233-89%20El%20Recreo%20Monteria"
+      }
+    ],
+    "notas": [
+      "Confirma vigencia antes de salir.",
+      "No lleves ropa dañada, alimentos vencidos ni medicamentos abiertos."
+    ]
+  },
+  {
+    "cat": "donaciones",
+    "titulo": "💳 Donaciones económicas",
+    "aviso": "Dona solo por cuentas institucionales o sitios oficiales. Evita cuentas personales.",
+    "items": [
+      {
+        "icon": "➕",
+        "tag": "Cruz Roja",
+        "h": "Cruz Roja Colombiana — #Todos por Colombia",
+        "d": "Cuenta corriente Davivienda 0560455069996490. Sociedad Nacional de la Cruz Roja Colombiana. NIT 899999025-3. También App Daviplata y cruzrojacolombiana.org.",
+        "url": "https://www.cruzrojacolombiana.org/"
+      },
+      {
+        "icon": "💳",
+        "tag": "Tigresas",
+        "h": "Fundación Colombia Luz y Sonrisas",
+        "d": "Banco de Bogotá, cuenta de ahorros #125128462. NIT 9020850963.",
+        "url": "/tigresas-donaciones.png"
+      },
+      {
+        "icon": "💳",
+        "tag": "Tigresas",
+        "h": "Organización El Minuto de Dios",
+        "d": "Banco Davivienda, cuenta de ahorros 004000240970. NIT 860.010.371-0.",
+        "url": "/tigresas-donaciones.png"
+      },
+      {
+        "icon": "🍲",
+        "tag": "Alimentos",
+        "h": "Asociación de Bancos de Alimentos de Colombia (ABACO)",
+        "d": "Red de bancos de alimentos de Colombia.",
+        "url": "https://www.abaco.org.co/"
+      },
+      {
+        "icon": "➕",
+        "tag": "Bogotá",
+        "h": "Cruz Roja Bogotá",
+        "d": "Portal de donaciones de Cruz Roja Bogotá y Cundinamarca.",
+        "url": "https://donar.cruzrojabogota.org.co/"
+      }
+    ],
+    "notas": [
+      "Verifica NIT, titular y canal oficial antes de transferir.",
+      "Guarda el soporte de la donación."
+    ]
+  },
+  {
+    "cat": "insumos",
+    "titulo": "✅ Qué donar",
+    "aviso": "En fase temprana, menos es más: lleva lo útil, limpio, cerrado y vigente.",
+    "items": [
+      {
+        "icon": "💧",
+        "tag": "Prioridad",
+        "h": "Agua e hidratación",
+        "d": "Agua potable y bebidas de hidratación.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🥫",
+        "tag": "Alimentos",
+        "h": "Alimentos no perecederos",
+        "d": "Arroz, aceite, pasta, granos, enlatados, harina, panela, chocolate, avena, cereales, galletas y alimentos listos para consumo.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🍼",
+        "tag": "Infantil",
+        "h": "Bebés y niñez",
+        "d": "Pañales, leche de fórmula, alimentos infantiles, toallitas húmedas y crema antipañalitis.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🧼",
+        "tag": "Aseo",
+        "h": "Higiene personal",
+        "d": "Jabón, shampoo, cepillo y crema dental, toallas higiénicas, papel higiénico y elementos básicos de higiene.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🛏️",
+        "tag": "Abrigo",
+        "h": "Descanso y abrigo",
+        "d": "Toallas, colchonetas, mantas/cobijas, sábanas limpias y ropa en buen estado organizada por tallas.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "⛑️",
+        "tag": "Rescate",
+        "h": "Protección para rescate",
+        "d": "Cascos, guantes de trabajo, gafas, tapabocas/protección respiratoria, botas, chalecos reflectivos, linternas, radios y cinta de señalización.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🩹",
+        "tag": "Primeros auxilios",
+        "h": "Primeros auxilios",
+        "d": "Botiquines sin medicamentos de prescripción y elementos para control de hemorragias solo si el centro los solicita.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🔋",
+        "tag": "Energía",
+        "h": "Energía y comunicación",
+        "d": "Linternas, baterías, power banks y radios de comunicación.",
+        "url": "/tigresas-que-donar.png"
+      },
+      {
+        "icon": "🐾",
+        "tag": "Mascotas",
+        "h": "Mascotas",
+        "d": "Alimento y elementos básicos para mascotas.",
+        "url": "/tigresas-que-donar.png"
+      }
+    ],
+    "notas": [
+      "No entregues alimentos vencidos, productos abiertos, ropa sucia o medicamentos de prescripción.",
+      "Para rescate, prioriza centros que pidan esos elementos y puedan entregarlos a personal capacitado."
+    ]
+  }
+]
