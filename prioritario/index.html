@@ -4,8 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ayuda rápida — Ayuda123 Colombia</title>
-  <meta name="description" content="Lo esencial para donar y verificar ayuda durante las primeras horas de emergencia en Colombia.">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY3XRF2GNV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-TY3XRF2GNV");
+  </script>
+  <title>Dónde y Cómo Donar — Ayuda123 Colombia</title>
+  <meta name="description" content="Organizaciones verificadas y consejos clave para donar tras el terremoto de Colombia de agosto de 2026.">
+  <meta property="og:title" content="Dónde y Cómo Donar — Ayuda123 Colombia">
+  <meta property="og:description" content="Organizaciones verificadas y consejos clave para donar tras el terremoto de Colombia de agosto de 2026.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dónde y Cómo Donar — Ayuda123 Colombia">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0f2c52">
   <link rel="icon" href="/icon-192.png">
@@ -13,7 +26,10 @@
   <style>
     :root {
       --azul-900: #0f2c52;
+      --azul-800: #173963;
       --azul-700: #1f4a82;
+      --azul-600: #2f6fbf;
+      --azul-100: #eaf2fb;
       --azul-50: #f5f9fe;
       --texto: #1c2733;
       --texto2: #5c6b7a;
@@ -21,7 +37,9 @@
       --blanco: #fff;
       --sombra: 0 2px 4px rgba(15, 44, 82, .05), 0 12px 28px rgba(15, 44, 82, .08);
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -29,177 +47,466 @@
       color: var(--texto);
       line-height: 1.6;
     }
+
+    a { color: inherit; }
+
     header {
       background: linear-gradient(135deg, var(--azul-900), var(--azul-700));
       color: var(--blanco);
       padding: 2.2rem 1.2rem 1.8rem;
       text-align: center;
     }
-    h1 { margin: .2rem 0 .4rem; font-size: clamp(1.8rem, 5vw, 2.35rem); line-height: 1.1; }
-    header p { margin: 0 auto; max-width: 640px; color: #cfe0f5; }
-    header a {
+
+    header div.bandera { font-size: 1.9rem; }
+    h1 { margin: .3rem 0 .4rem; font-size: clamp(1.8rem, 5vw, 2.35rem); line-height: 1.1; }
+    header p.sub { margin: 0 auto; max-width: 640px; color: #cfe0f5; }
+
+    header a.volver {
       display: inline-block;
       margin-top: 1rem;
       color: #cfe0f5;
       text-decoration: none;
-      border: 1px solid rgba(255,255,255,.32);
-      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, .32);
+      border-radius: 50px;
       padding: .45rem .85rem;
       font-weight: 700;
       font-size: .85rem;
     }
+
     main { max-width: 960px; margin: 0 auto; padding: 1.3rem 1.1rem 3rem; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
-      gap: .85rem;
+
+    /* ── Banners rápidos de navegación ── */
+    .banner-prioritario {
+      max-width: 960px;
+      margin: .7rem auto 0;
+      padding: 0 1.1rem;
     }
-    .card {
+
+    .banner-prioritario a {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
       background: var(--blanco);
       border: 1px solid var(--borde);
       border-left: 5px solid var(--azul-700);
-      border-radius: 8px;
-      padding: 1rem;
+      border-radius: 10px;
+      padding: .8rem 1rem;
+      text-decoration: none;
       box-shadow: var(--sombra);
     }
-    .card h2 { margin: 0 0 .45rem; line-height: 1.2; }
-    .card p, li { color: var(--texto2); font-size: .92rem; }
-    ul { margin: .35rem 0 0; padding-left: 1.15rem; }
-    .acciones { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .8rem; }
-    .acciones a {
-      background: var(--azul-700);
-      color: var(--blanco);
-      text-decoration: none;
-      border-radius: 8px;
-      padding: .6rem .8rem;
-      font-weight: 800;
-      font-size: .86rem;
-    }
-    .lineas-emergencia {
-      margin: .65rem 0 0;
-      padding: 0;
-      list-style: none;
-    }
-    .lineas-emergencia li {
-      display: flex;
-      justify-content: space-between;
-      gap: .7rem;
-      padding: .42rem 0;
-      border-top: 1px solid var(--borde);
-    }
-    .lineas-emergencia strong {
-      color: var(--texto);
-      font-size: .9rem;
-    }
-    .lineas-emergencia a {
+
+    .banner-prioritario .b-badge {
+      flex-shrink: 0;
+      background: var(--azul-100);
       color: var(--azul-700);
+      font-size: .68rem;
       font-weight: 800;
-      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      padding: .3rem .6rem;
+      border-radius: 50px;
       white-space: nowrap;
     }
+
+    .banner-prioritario .b-texto { flex: 1; min-width: 0; }
+    .banner-prioritario .b-texto h2 { margin: 0 0 .15rem; font-size: .95rem; color: var(--azul-900); }
+    .banner-prioritario .b-texto p { margin: 0; font-size: .8rem; color: var(--texto2); }
+    .banner-prioritario .b-flecha { flex-shrink: 0; color: var(--azul-700); font-size: 1.1rem; }
+
+    /* ── Sección destacada: Dónde y cómo donar ── */
+    .destacado { max-width: 960px; margin: 1.6rem auto 0; padding: 0 1.1rem; }
+
+    .destacado-caja {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-left: 6px solid var(--azul-700);
+      border-radius: 12px;
+      box-shadow: var(--sombra);
+      padding: 1.6rem 1.6rem 1.8rem;
+    }
+
+    .destacado-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: #c0392b;
+      color: var(--blanco);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .25rem .7rem;
+      border-radius: 50px;
+      margin-bottom: .7rem;
+    }
+
+    .destacado-caja h2 { font-size: 1.35rem; color: var(--azul-900); margin: .2rem 0 .2rem; }
+    .destacado-org { font-size: .82rem; color: var(--azul-700); font-weight: 700; margin-bottom: .6rem; }
+    .destacado-lead { font-size: .88rem; color: var(--texto2); line-height: 1.6; margin-bottom: 1.2rem; }
+
+    .destacado-caja h3 {
+      font-size: .95rem;
+      color: var(--azul-900);
+      margin: 1.5rem 0 .8rem;
+      padding-bottom: .35rem;
+      border-bottom: 2px solid var(--azul-100);
+    }
+
+    .destacado-caja h3:first-of-type { margin-top: 0; }
+
+    .necesidad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .7rem;
+      margin-bottom: .8rem;
+    }
+
+    .necesidad-card {
+      background: var(--azul-50);
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      padding: .8rem .9rem;
+    }
+
+    .necesidad-card.urgente { background: #fdecea; border-color: #f4b8b8; }
+    .necesidad-card .n-icon { font-size: 1.3rem; display: block; margin-bottom: .3rem; }
+    .necesidad-card h4 { font-size: .8rem; font-weight: 700; color: var(--texto); margin: 0 0 .25rem; }
+    .necesidad-card.urgente h4 { color: #7b1a1a; }
+    .necesidad-card p { font-size: .76rem; color: var(--texto2); line-height: 1.5; margin: 0; }
+
+    .org-destacada { border: 1.5px solid var(--azul-700); border-radius: 12px; overflow: hidden; margin-bottom: .8rem; }
+
+    .org-destacada-header {
+      background: var(--azul-800);
+      padding: .7rem .9rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .org-destacada-header .org-badge {
+      background: #f5cc5a;
+      color: #1a1a18;
+      font-size: .62rem;
+      font-weight: 700;
+      padding: .15rem .5rem;
+      border-radius: 10px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .org-destacada-header h4 { color: var(--blanco); font-size: .9rem; font-weight: 700; margin: 0; }
+    .org-destacada-body { background: var(--azul-50); padding: .8rem .9rem; }
+    .org-destacada-body p { font-size: .82rem; color: var(--texto2); line-height: 1.55; margin: 0 0 .6rem; }
+
+    .org-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .6rem; }
+
+    .org-tag {
+      font-size: .68rem;
+      background: var(--azul-100);
+      color: var(--azul-700);
+      border: 1px solid var(--borde);
+      padding: .15rem .55rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .org-destacada-body a.org-link { font-size: .78rem; font-weight: 700; color: var(--azul-600); text-decoration: none; }
+
+    .otras-org-tabla { width: 100%; border-collapse: collapse; font-size: .8rem; }
+    .otras-org-tabla th {
+      text-align: left;
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--texto2);
+      padding: .4rem .5rem;
+      border-bottom: 2px solid var(--borde);
+    }
+    .otras-org-tabla td { padding: .55rem .5rem; border-bottom: 1px solid var(--borde); vertical-align: top; }
+    .otras-org-tabla a { color: var(--azul-600); font-weight: 700; text-decoration: none; }
+
+    .tips-box { display: flex; flex-direction: column; gap: .7rem; }
+    .tip-row { display: flex; gap: .7rem; align-items: flex-start; }
+    .tip-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--azul-700);
+      color: var(--blanco);
+      font-size: .78rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .tip-row p { margin: 0; font-size: .84rem; color: var(--texto2); }
+    .tip-row p strong { color: var(--texto); }
+
+    .sources-box { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--borde); }
+    .sources-box h4 { font-size: .85rem; color: var(--azul-900); margin: 0 0 .5rem; }
+    .sources-box ul { margin: 0; padding-left: 1.1rem; }
+    .sources-box li { font-size: .78rem; margin-bottom: .3rem; }
+    .sources-box a { color: var(--azul-600); text-decoration: none; }
+
+    .compromiso-caja {
+      margin-top: 1.3rem;
+      background: var(--azul-100);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+    .compromiso-caja p { margin: 0; font-size: .84rem; color: var(--azul-800); line-height: 1.6; }
+
     .aviso {
-      margin-top: 1rem;
       background: #fff7da;
       border: 1px solid #f1d36a;
       border-radius: 8px;
-      padding: .85rem 1rem;
+      padding: .8rem 1rem;
       color: #4f3b00;
-      font-weight: 650;
+      font-size: .84rem;
+      margin-bottom: .8rem;
     }
+
     footer {
       background: var(--azul-900);
       color: #bcd2ec;
+      padding: 2rem 1.2rem;
       text-align: center;
-      padding: 1.3rem 1rem;
-      font-size: .82rem;
+      font-size: .78rem;
+      line-height: 1.7;
     }
+
+    footer strong { color: var(--blanco); }
+    footer a { color: #9fc4ee; text-decoration: underline; }
   </style>
 </head>
 
 <body>
   <header>
-    <div>🇨🇴</div>
-    <h1>Ayuda rápida</h1>
-    <p>Lo esencial para actuar durante las primeras horas: confirmar, donar bien y evitar ruido.</p>
-    <a href="/">← Volver a Ayuda123 Colombia</a>
+    <div class="bandera">🇨🇴</div>
+    <h1>Dónde y Cómo Donar</h1>
+    <p class="sub">Organizaciones verificadas y consejos clave</p>
+    <a class="volver" href="/">← Volver a Ayuda123 Colombia</a>
   </header>
 
+  <div class="banner-prioritario">
+    <a href="/#emergencias">
+      <span class="b-badge">🆘 Emergencia</span>
+      <span class="b-texto">
+        <h2>¿Riesgo vital ahora mismo?</h2>
+        <p>Líneas de emergencia: 123, Defensa Civil 144, UNGRD y Cruz Roja.</p>
+      </span>
+      <span class="b-flecha">→</span>
+    </a>
+  </div>
+
+  <div class="banner-prioritario" style="margin-top:.6rem;">
+    <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">
+      <span class="b-badge">🧩 Recurso TEA</span>
+      <span class="b-texto">
+        <h2>Guía de la emergencia y audiocuento para personas TEA</h2>
+        <p>Materiales para acompañar a personas autistas/Asperger afectadas por el terremoto.</p>
+      </span>
+      <span class="b-flecha">↗</span>
+    </a>
+  </div>
+
+  <div class="banner-prioritario" style="margin-top:.6rem;">
+    <a href="/#centros-acopio">
+      <span class="b-badge">📦 Centros de acopio</span>
+      <span class="b-texto">
+        <h2>Puntos confirmados por ciudad y país</h2>
+        <p>Colombia y centros habilitados en el exterior, filtrables por ciudad/país.</p>
+      </span>
+      <span class="b-flecha">→</span>
+    </a>
+  </div>
+
+  <div class="banner-prioritario" style="margin-top:.6rem;">
+    <a href="/#directorio">
+      <span class="b-badge">🇨🇴 Directorio</span>
+      <span class="b-texto">
+        <h2>Directorio completo por categoría</h2>
+        <p>Emergencias, acopio, donaciones y qué donar, con buscador y filtros.</p>
+      </span>
+      <span class="b-flecha">→</span>
+    </a>
+  </div>
+
   <main>
-    <div class="grid">
-      <section class="card">
-        <h2>1. Si es emergencia</h2>
-        <p>Si hay riesgo vital, personas atrapadas, incendio, colapso o lesionados, llama primero a una línea de emergencia.</p>
-        <ul class="lineas-emergencia" aria-label="Líneas de emergencia">
-          <li><strong>Emergencias Colombia</strong><a href="tel:123">123</a></li>
-          <li><strong>Defensa Civil</strong><a href="tel:144">144</a></li>
-          <li><strong>UNGRD</strong><a href="tel:+576015529696">601 552 9696</a></li>
-          <li><strong>Cruz Roja Colombiana</strong><a href="tel:+576017946566">601 794 6566</a></li>
-        </ul>
-        <div class="acciones">
-          <a href="tel:123">Llamar 123</a>
-          <a href="https://reddeesperanza.com/" target="_blank" rel="noopener noreferrer">Red de Esperanza</a>
-        </div>
-      </section>
+    <section class="destacado">
+      <div class="destacado-caja">
+        <span class="destacado-badge">🚨 Prioritario</span>
+        <h2>💙 Dónde y Cómo Donar — Organizaciones Verificadas</h2>
+        <p class="destacado-org">Ayuda Humanitaria Colombia 2026</p>
+        <p class="destacado-lead">El 10 de agosto un terremoto de magnitud 7,4 con epicentro en San José del Palmar, Chocó, dejó cientos de fallecidos, miles de heridos y daños estructurales en Chocó, Caldas, Risaralda y Valle del Cauca. El Gobierno declaró desastre nacional y más de 12 países ofrecieron ayuda. La fase actual es sostener la respuesta por semanas, no solo días — esta guía ayuda a canalizar tu apoyo de forma efectiva, especialmente si donas desde fuera de Colombia.</p>
 
-      <section class="card">
-        <h2>2. Qué llevar</h2>
-        <ul>
-          <li>Agua e hidratación.</li>
-          <li>Alimentos no perecederos.</li>
-          <li>Aseo e higiene.</li>
-          <li>Pañales y elementos para bebé.</li>
-          <li>Colchonetas, cobijas y sábanas limpias.</li>
-          <li>Protección para rescate solo si el punto la pidió.</li>
-        </ul>
-        <div class="acciones">
-          <a href="/#insumos">Ver qué donar</a>
+        <h3>🆘 Las mayores necesidades en este momento</h3>
+        <div class="necesidad-grid">
+          <div class="necesidad-card urgente">
+            <span class="n-icon">💧</span>
+            <h4>Agua y alimentos — URGENTE</h4>
+            <p>Agua potable, alimentos no perecederos e insumos de aseo para familias desplazadas.</p>
+          </div>
+          <div class="necesidad-card urgente">
+            <span class="n-icon">🏥</span>
+            <h4>Atención médica y psicológica — URGENTE</h4>
+            <p>Zonas más afectadas: Chocó, Valle del Cauca, Caldas y Risaralda.</p>
+          </div>
+          <div class="necesidad-card">
+            <span class="n-icon">🏠</span>
+            <h4>Refugio temporal</h4>
+            <p>Cobijas, colchonetas y kits de vivienda temporal para familias sin hogar.</p>
+          </div>
+          <div class="necesidad-card">
+            <span class="n-icon">🩸</span>
+            <h4>Donación de sangre</h4>
+            <p>Bancos de sangre habilitados en las ciudades afectadas.</p>
+          </div>
+          <div class="necesidad-card">
+            <span class="n-icon">🔍</span>
+            <h4>Búsqueda de personas</h4>
+            <p>Reportar desaparecidos en la plataforma ciudadana Colombia Te Busca.</p>
+          </div>
         </div>
-      </section>
 
-      <section class="card">
-        <h2>3. Dónde llevar</h2>
-        <p>Consulta los puntos activos en la página principal. Confirma horario por teléfono o canal oficial antes de salir.</p>
-        <div class="acciones">
-          <a href="/#acopio">Ver acopios</a>
+        <h3>⭐ Organizaciones destacadas — donar desde el exterior</h3>
+        <div class="org-destacada">
+          <div class="org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h4>➕ Cruz Roja Colombiana</h4>
+          </div>
+          <div class="org-destacada-body">
+            <p>Canal humanitario central para búsqueda, rescate, salud, apoyo psicosocial y kits de emergencia.</p>
+            <div class="org-tags">
+              <span class="org-tag">🍽️ Alimentos</span><span class="org-tag">💧 Agua</span><span class="org-tag">🏥 Salud</span><span class="org-tag">🧠 Psicosocial</span>
+            </div>
+            <a class="org-link" href="https://www.cruzrojacolombiana.org/dona-dinero/" target="_blank" rel="noopener noreferrer">cruzrojacolombiana.org/dona-dinero ↗</a>
+          </div>
         </div>
-      </section>
-
-      <section class="card">
-        <h2>4. Donar dinero</h2>
-        <p>Usa cuentas institucionales y verifica titular, NIT y sitio oficial.</p>
-        <ul>
-          <li>Cruz Roja Colombiana: Davivienda 0560455069996490, NIT 899999025-3.</li>
-          <li>Asociación de Bancos de Alimentos de Colombia (ABACO): abaco.org.co.</li>
-        </ul>
-        <div class="acciones">
-          <a href="/#donaciones">Ver donaciones</a>
+        <div class="org-destacada">
+          <div class="org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h4>📦 Banco de Alimentos de Bogotá</h4>
+          </div>
+          <div class="org-destacada-body">
+            <p>Corredor humanitario activo tras el terremoto. Recibe donaciones por su página oficial o transferencia directa mediante Bre-B.</p>
+            <div class="org-tags">
+              <span class="org-tag">🍽️ Alimentos</span><span class="org-tag">💳 Bre-B: 0091677852</span>
+            </div>
+            <a class="org-link" href="https://www.bancodealimentos.org.co/" target="_blank" rel="noopener noreferrer">bancodealimentos.org.co ↗</a>
+          </div>
         </div>
-      </section>
-
-      <section class="card">
-        <h2>5. Donar desde el exterior (España y otros países)</h2>
-        <p>Organizaciones con respuesta activa confirmada al terremoto, útiles si donas desde fuera de Colombia.</p>
-        <ul>
-          <li>Cruz Roja Colombiana — alimentos, agua, salud, apoyo psicosocial.</li>
-          <li>Banco de Alimentos de Bogotá — Bre-B 0091677852.</li>
-          <li>World Central Kitchen — comida caliente vía aliados locales en Chocó, Cali, Pereira y Manizales.</li>
-          <li>Fundación Plan — niñez, adolescencia y familias; Bre-B emergenciaterrem.</li>
-          <li>GlobalGiving — Colombia Earthquake Relief Fund.</li>
-        </ul>
-        <div class="acciones">
-          <a href="https://www.cruzrojacolombiana.org/dona-dinero/" target="_blank" rel="noopener noreferrer">Cruz Roja</a>
-          <a href="https://www.bancodealimentos.org.co/" target="_blank" rel="noopener noreferrer">Banco Alimentos Bogotá</a>
-          <a href="https://donate.wck.org/" target="_blank" rel="noopener noreferrer">World Central Kitchen</a>
-          <a href="https://www.plan.org.co/" target="_blank" rel="noopener noreferrer">Fundación Plan</a>
-          <a href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">GlobalGiving</a>
+        <div class="org-destacada">
+          <div class="org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h4>🍽️ World Central Kitchen</h4>
+          </div>
+          <div class="org-destacada-body">
+            <p>Trabaja con cocinas y restaurantes locales para distribuir comida caliente en Chocó, Cali, Pereira y Manizales.</p>
+            <div class="org-tags">
+              <span class="org-tag">🍽️ Comida caliente</span><span class="org-tag">🌍 Internacional</span>
+            </div>
+            <a class="org-link" href="https://donate.wck.org/" target="_blank" rel="noopener noreferrer">donate.wck.org ↗</a>
+          </div>
         </div>
-      </section>
-    </div>
+        <div class="org-destacada">
+          <div class="org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h4>🧒 Fundación Plan</h4>
+          </div>
+          <div class="org-destacada-body">
+            <p>Más de 63 años en Colombia. Campaña "Terremoto en Colombia" enfocada en niños, adolescentes, familias y comunidades afectadas.</p>
+            <div class="org-tags">
+              <span class="org-tag">🧒 Niñez</span><span class="org-tag">💳 Bre-B: emergenciaterrem</span>
+            </div>
+            <a class="org-link" href="https://www.plan.org.co/" target="_blank" rel="noopener noreferrer">plan.org.co ↗</a>
+          </div>
+        </div>
+        <div class="org-destacada">
+          <div class="org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h4>🌎 GlobalGiving — Colombia Earthquake Relief Fund</h4>
+          </div>
+          <div class="org-destacada-body">
+            <p>Fondo internacional que canaliza financiación rápida a organizaciones locales para salud de emergencia, búsqueda y rescate, refugio, alimentos y agua.</p>
+            <div class="org-tags">
+              <span class="org-tag">🌍 Internacional</span><span class="org-tag">💰 Fondo multi-ONG</span>
+            </div>
+            <a class="org-link" href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">globalgiving.org ↗</a>
+          </div>
+        </div>
 
-    <p class="aviso">⚠️ No compartas cadenas sin fecha, fuente y contacto. Si un dato no se puede confirmar, márcalo como “por verificar”. Lista de organizaciones para el exterior verificada de forma independiente; gráfica original compartida por @lamesademariap, atribuida a @elle_spain.</p>
+        <h3>🤝 Otras organizaciones confiables</h3>
+        <table class="otras-org-tabla">
+          <tr><th>Organización</th><th>Enfoque</th><th>Sitio</th></tr>
+          <tr>
+            <td>🍲 Asociación de Bancos de Alimentos de Colombia (ABACO)</td>
+            <td>Red nacional de bancos de alimentos</td>
+            <td><a href="https://www.abaco.org.co/" target="_blank" rel="noopener noreferrer">abaco.org.co</a></td>
+          </tr>
+          <tr>
+            <td>🕊️ Cáritas Colombiana / Pastoral Social</td>
+            <td>Canal humanitario con presencia territorial</td>
+            <td><a href="https://donar.caritascolombiana.org/" target="_blank" rel="noopener noreferrer">donar.caritascolombiana.org</a></td>
+          </tr>
+          <tr>
+            <td>🏠 Minuto de Dios</td>
+            <td>Ayuda humanitaria y banco de ropa</td>
+            <td><a href="https://minutodedios.org/programa/ayuda-humanitaria" target="_blank" rel="noopener noreferrer">minutodedios.org</a></td>
+          </tr>
+          <tr>
+            <td>✝️ Ayuda a la Iglesia que Sufre (ACN Colombia)</td>
+            <td>Proyectos pastorales y humanitarios</td>
+            <td><a href="https://www.acncolombia.org/" target="_blank" rel="noopener noreferrer">acncolombia.org</a></td>
+          </tr>
+        </table>
+
+        <h3>🧩 Recursos para población TEA</h3>
+        <p class="aviso">Guía de la emergencia y un audiocuento pensado para explicar el terremoto a personas autistas/Asperger, hechos por y para la comunidad TEA colombiana. <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir guía de la emergencia ↗</a> · <a href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Escuchar audiocuento ↗</a></p>
+
+        <h3>💡 Consejos para que tu donación tenga el mayor impacto</h3>
+        <div class="tips-box">
+          <div class="tip-row"><span class="tip-num">1</span>
+            <p><strong>Prioriza el dinero sobre los insumos físicos</strong> — las organizaciones en terreno compran lo que más se necesita en cada momento; las donaciones económicas son más flexibles y llegan más rápido.</p>
+          </div>
+          <div class="tip-row"><span class="tip-num">2</span>
+            <p><strong>Verifica siempre el canal oficial</strong> — confirma cuentas, claves Bre-B y enlaces directamente en el sitio de la organización antes de transferir. No dones a cuentas personales.</p>
+          </div>
+          <div class="tip-row"><span class="tip-num">3</span>
+            <p><strong>Si donas insumos, confirma la lista de necesidades del centro de acopio</strong> antes de salir: agua, alimentos no perecederos, aseo, pañales y cobijas suelen ser prioritarios.</p>
+          </div>
+          <div class="tip-row"><span class="tip-num">4</span>
+            <p><strong>Evita hacer ruido cerca de la zona cero</strong> — los equipos de rescate necesitan silencio para ubicar sobrevivientes. Si no vas a ayudar en la operación, mejor no te acerques.</p>
+          </div>
+          <div class="tip-row"><span class="tip-num">5</span>
+            <p><strong>Amplifica solo información verificada</strong> — no compartas cadenas sin fecha, fuente y contacto. Si un dato no se puede confirmar, márcalo como "por verificar".</p>
+          </div>
+        </div>
+
+        <div class="sources-box">
+          <h4>Fuentes verificadas</h4>
+          <ul>
+            <li><a href="https://www.semana.com/nacion/articulo/bancos-de-alimentos-activan-ayuda-para-damnificados-por-el-terremoto-en-colombia-asi-puede-donar/202641/" target="_blank" rel="noopener noreferrer">Semana</a> — bancos de alimentos activan ayuda y Bre-B.</li>
+            <li><a href="https://www.elespectador.com/bogota/banco-de-alimentos-activa-corredor-humanitario-tras-terremoto-en-colombia-esto-puede-donar/" target="_blank" rel="noopener noreferrer">El Espectador</a> — corredor humanitario del Banco de Alimentos.</li>
+            <li><a href="https://www.elnuevosiglo.com.co/nacion/por-sismo-el-banco-de-alimentos-activa-campana-de-emergencia" target="_blank" rel="noopener noreferrer">El Nuevo Siglo</a> — campaña de emergencia del Banco de Alimentos.</li>
+            <li><a href="https://www.telemundo.com/noticias/noticias-telemundo/desastres-naturales/asi-puede-ayudar-organizaciones-trabajando-ayuda-colombia-rcna591980" target="_blank" rel="noopener noreferrer">Telemundo</a> — organizaciones trabajando en la ayuda a Colombia.</li>
+            <li><a href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">GlobalGiving</a> — Colombia Earthquake Relief Fund.</li>
+            <li><a href="https://elpais.com/america-colombia/2026-08-10/como-ayudar-a-las-personas-damnificadas-por-el-terremoto-en-colombia.html" target="_blank" rel="noopener noreferrer">El País</a> — cómo ayudar a las personas damnificadas.</li>
+          </ul>
+        </div>
+
+        <div class="compromiso-caja">
+          <p><strong>💙 Ayuda123 Colombia</strong> Seguiremos informando con pasos concretos para apoyar a las comunidades afectadas. Cada donación, cada insumo, cada mensaje de apoyo cuenta.<br>La fuerza está en la solidaridad.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>🇨🇴 Ayuda123 Colombia — Directorio comunitario sin fines de lucro.</footer>
+  <footer>
+    <strong>🇨🇴 Ayuda123 Colombia</strong> — Directorio comunitario sin fines de lucro.<br>
+    ⚠️ Estas son iniciativas ciudadanas verificadas — organizaciones independientes y voluntarios, no entes gubernamentales. Verifica siempre antes de enviar dinero.<br>
+    Actualizado al 12 de agosto de 2026.<br>
+    <a href="/">← Volver a Ayuda123 Colombia</a><br>
+    Hecho con ❤️ por Asperger para Asperger® por la comunidad asperger y autista para los colombianos y comunidad asperger y autista.<br>
+    ¿Quién soy? Orlando Javier Jaramillo Gutierrez — <a href="https://www.linkedin.com/in/orlando-j-jaramillo-gutierrez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </footer>
 
   <script>
     if ("serviceWorker" in navigator) {
