@@ -175,9 +175,10 @@
     .ticker-track {
       display: inline-flex;
       align-items: center;
-      gap: .8rem;
+      gap: 1.05rem;
       min-width: max-content;
       animation: ticker 46s linear infinite;
+      line-height: 1.55;
     }
 
     .ticker-window:hover .ticker-track {
@@ -187,29 +188,19 @@
     .ticker-item {
       display: inline-flex;
       align-items: center;
-      gap: .8rem;
+      gap: .35rem;
     }
 
     .ticker-item::after {
-      content: "•";
-      opacity: .65;
+      content: "";
     }
 
     .emergency-strip a {
       color: #fff;
       text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, .38);
-      border-radius: 7px;
-      padding: .25rem .5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, .55);
+      padding: 0;
       white-space: nowrap;
-    }
-
-    .ticker-note {
-      flex: none;
-      margin-right: max(1rem, calc((100vw - 1080px) / 2));
-      color: rgba(255, 255, 255, .82);
-      font-size: .76rem;
-      font-weight: 750;
     }
 
     @keyframes ticker {
@@ -596,9 +587,6 @@
         margin-left: 1rem;
       }
 
-      .ticker-note {
-        display: none;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -635,23 +623,20 @@
       <span class="live-label">En vivo</span>
       <div class="ticker-window">
         <div class="ticker-track">
-          <span class="ticker-item"><a href="tel:123">Emergencias 123</a></span>
-          <span class="ticker-item"><a href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">AP: continúan búsquedas y balance de personas afectadas</a></span>
-          <span class="ticker-item"><a href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">The Guardian: emergencia nacional tras sismo de magnitud 7,4</a></span>
-          <span class="ticker-item"><a href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">AP: epicentro en San José del Palmar, Chocó</a></span>
-          <span class="ticker-item"><a href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">People: equipos usan drones y perros en rescate</a></span>
-          <span class="ticker-item"><a href="https://portal.gestiondelriesgo.gov.co/" target="_blank" rel="noopener noreferrer">UNGRD: verificar comunicados oficiales</a></span>
-          <span class="ticker-item"><a href="tel:144">Defensa Civil 144</a></span>
-          <span class="ticker-item"><a href="tel:123">Emergencias 123</a></span>
-          <span class="ticker-item"><a href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">AP: continúan búsquedas y balance de personas afectadas</a></span>
-          <span class="ticker-item"><a href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">The Guardian: emergencia nacional tras sismo de magnitud 7,4</a></span>
-          <span class="ticker-item"><a href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">AP: epicentro en San José del Palmar, Chocó</a></span>
-          <span class="ticker-item"><a href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">People: equipos usan drones y perros en rescate</a></span>
-          <span class="ticker-item"><a href="https://portal.gestiondelriesgo.gov.co/" target="_blank" rel="noopener noreferrer">UNGRD: verificar comunicados oficiales</a></span>
-          <span class="ticker-item"><a href="tel:144">Defensa Civil 144</a></span>
+          <span class="ticker-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
+          <span class="ticker-item">📰 Semana reporta movimientos fuertes sentidos en varias ciudades y recomienda seguir canales oficiales. <a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Leer en Semana</a></span>
+          <span class="ticker-item">📍 El Colombiano explica por qué Santander y Valle están entre las zonas de mayor amenaza sísmica del país. <a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">Leer en El Colombiano</a></span>
+          <span class="ticker-item">🎙️ Caracol Radio reseña el sismo con epicentro en Chocó y reportes desde varias ciudades. <a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Leer en Caracol Radio</a></span>
+          <span class="ticker-item">📻 La FM recoge reportes de sismos sentidos en Antioquia, Chocó, Valle y el Eje Cafetero. <a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">Leer en La FM</a></span>
+          <span class="ticker-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
+          <span class="ticker-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
+          <span class="ticker-item">📰 Semana reporta movimientos fuertes sentidos en varias ciudades y recomienda seguir canales oficiales. <a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Leer en Semana</a></span>
+          <span class="ticker-item">📍 El Colombiano explica por qué Santander y Valle están entre las zonas de mayor amenaza sísmica del país. <a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">Leer en El Colombiano</a></span>
+          <span class="ticker-item">🎙️ Caracol Radio reseña el sismo con epicentro en Chocó y reportes desde varias ciudades. <a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Leer en Caracol Radio</a></span>
+          <span class="ticker-item">📻 La FM recoge reportes de sismos sentidos en Antioquia, Chocó, Valle y el Eje Cafetero. <a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">Leer en La FM</a></span>
+          <span class="ticker-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
         </div>
       </div>
-      <span class="ticker-note">Cifras en actualización</span>
     </div>
   </div>
 
@@ -744,7 +729,7 @@
       <div class="grid">
         <article class="card">
           <h3>Última hora y balance</h3>
-          <p>Los informes citan coberturas en vivo y notas de medios como Semana y El País sobre víctimas, heridos, edificios colapsados, cierres de aeropuertos y verificación progresiva de daños.</p>
+          <p>Los enlaces priorizan notas de Semana, El Colombiano, Caracol Radio y La FM sobre sismos sentidos en Colombia, zonas de amenaza y reportes regionales.</p>
         </article>
         <article class="card">
           <h3>Zonas reportadas</h3>
@@ -756,32 +741,33 @@
         </article>
       </div>
       <div class="news-links" aria-label="Links de noticias sobre el terremoto">
-        <a class="news-link" href="https://apnews.com/article/e6afe31239c0deae34ab944014464399" target="_blank" rel="noopener noreferrer">
-          <span>AP · 11 ago 2026</span>
-          <strong>Búsqueda de desaparecidos y balance nacional tras el terremoto.</strong>
-          <small>Cobertura internacional con cifras en actualización y respuesta del Gobierno.</small>
+        <a class="news-link" href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">
+          <span>Semana · 24 jun 2026</span>
+          <strong>Fuerte sismo sentido en Bogotá, Cali, Bucaramanga y otras ciudades.</strong>
+          <small>Reporte con videos ciudadanos y llamado a seguir información oficial.</small>
         </a>
-        <a class="news-link" href="https://www.theguardian.com/world/2026/aug/10/colombia-earthquake-cali-pereira-choco" target="_blank" rel="noopener noreferrer">
-          <span>The Guardian · 11 ago 2026</span>
-          <strong>Estado de emergencia, rescates y afectaciones en el occidente del país.</strong>
-          <small>Reporte sobre Cali, Pereira, Manizales, Chocó y medidas oficiales.</small>
+        <a class="news-link" href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">
+          <span>El Colombiano · 30 jun 2026</span>
+          <strong>Santander y Valle figuran entre los departamentos con mayor amenaza sísmica.</strong>
+          <small>Contexto geológico para entender el riesgo en Colombia.</small>
         </a>
-        <a class="news-link" href="https://apnews.com/article/26fd40f93272d834fced47a4a673edc9" target="_blank" rel="noopener noreferrer">
-          <span>AP · 10 ago 2026</span>
-          <strong>Primer balance del sismo de magnitud 7,4 con epicentro en Chocó.</strong>
-          <small>Nota inicial sobre daños, edificios colapsados y ayuda internacional.</small>
+        <a class="news-link" href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">
+          <span>Caracol Radio · 14 may 2026</span>
+          <strong>Temblor con epicentro en Chocó fue sentido en varias ciudades del país.</strong>
+          <small>Reporte de magnitud, profundidad y zonas donde se percibió.</small>
         </a>
-        <a class="news-link" href="https://people.com/colombia-earthquake-death-toll-reaches-224-12057121" target="_blank" rel="noopener noreferrer">
-          <span>People · 11 ago 2026</span>
-          <strong>Equipos de rescate trabajan con drones y perros para ubicar sobrevivientes.</strong>
-          <small>Resumen de operaciones de búsqueda y daños estructurales reportados.</small>
+        <a class="news-link" href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">
+          <span>La FM</span>
+          <strong>Sismo sentido en Antioquia, Chocó, Valle y el Eje Cafetero.</strong>
+          <small>Nota de referencia sobre reportes regionales y epicentro en Chocó.</small>
         </a>
       </div>
       <div class="source-list" style="margin-top:.9rem">
         <ul>
-          <li><a href="https://elpais.com/america-colombia/2026-08-10/ultima-hora-del-terremoto-en-colombia-en-directo.html" target="_blank" rel="noopener noreferrer">El País</a> - cobertura en vivo del terremoto en Colombia.</li>
-          <li><a href="https://www.semana.com/nacion/articulo/en-vivo-fuerte-temblor-sacude-a-colombia/202611/" target="_blank" rel="noopener noreferrer">Semana</a> - reporte en vivo citado en el documento de acopios.</li>
-          <li><a href="https://www.infobae.com/colombia/2026/08/10/centros-de-acopio-habilitados-en-colombia-tras-el-terremoto-guia-por-ciudad-para-donar-y-ayudar-a-las-victimas/" target="_blank" rel="noopener noreferrer">Infobae</a> - guía de centros de acopio y donaciones.</li>
+          <li><a href="https://www.semana.com/nacion/bogota/articulo/fuerte-temblor-sacude-a-bogota/202606/" target="_blank" rel="noopener noreferrer">Semana</a> - reporte de sismo sentido en varias ciudades colombianas.</li>
+          <li><a href="https://www.elcolombiano.com/colombia/departamentos-colombia-mayor-amenaza-temblores-EM38348941" target="_blank" rel="noopener noreferrer">El Colombiano</a> - contexto de amenaza sísmica en Santander y Valle.</li>
+          <li><a href="https://caracol.com.co/2026/05/14/atencion-fuerte-temblor-en-choco-hoy-14-de-mayo-de-55-afectaciones-y-profundidad/" target="_blank" rel="noopener noreferrer">Caracol Radio</a> - reporte de sismo con epicentro en Chocó.</li>
+          <li><a href="https://www.lafm.com.co/actualidad/fuerte-sismo-sacudio-antioquia-choco-y-el-eje-cafetero-135579" target="_blank" rel="noopener noreferrer">La FM</a> - reporte regional de sismo sentido en Chocó, Valle y Eje Cafetero.</li>
         </ul>
       </div>
     </section>
