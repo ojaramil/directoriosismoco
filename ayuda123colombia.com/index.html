@@ -321,6 +321,28 @@
       border: 1px solid rgba(255, 255, 255, .35);
     }
 
+    .hero-actions a.tea-cta {
+      background: #c9670c;
+    }
+
+    .hero-tea-badge {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      margin-top: 1.3rem;
+      padding: .8rem 1.1rem;
+      background: rgba(201, 103, 12, .22);
+      border: 1.5px solid #c9670c;
+      border-radius: 12px;
+      max-width: 640px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .hero-tea-badge .ic { font-size: 1.6rem; flex-shrink: 0; }
+    .hero-tea-badge strong { display: block; font-size: .95rem; }
+    .hero-tea-badge span { display: block; font-size: .8rem; color: #ffe0bf; margin-top: .1rem; }
+
     nav {
       position: sticky;
       top: 0;
@@ -983,14 +1005,23 @@
       <span class="eyebrow">Ayuda123 Colombia</span>
       <h1>Ayuda para Colombia tras el terremoto</h1>
       <p>Guía práctica para entender la emergencia, ubicar necesidades prioritarias y encontrar canales de donación de organizaciones colombianas verificables.</p>
+
+      <a class="hero-tea-badge" href="#tea">
+        <span class="ic">🧩</span>
+        <span>
+          <strong>Recursos para voluntarios y familiares de personas con autismo</strong>
+          <span>Guía de la emergencia y audiocuento, hechos por y para la comunidad TEA colombiana →</span>
+        </span>
+      </a>
+
       <div class="hero-actions">
+        <a class="tea-cta" href="#tea">🧩 Ver recursos TEA</a>
         <a href="prioritario/index.html">🚨 Prioritario</a>
         <a class="secondary" href="prioritario/index.html">Dónde y Cómo Donar — Organizaciones Verificadas</a>
         <a class="secondary" href="#noticias">Ver noticias</a>
         <a class="secondary" href="#donar">Cómo donar</a>
         <a class="secondary" href="#fuentes">Fuentes de prensa</a>
         <a class="secondary" href="https://forms.gle/KYmeAQV7aentFFFTA" target="_blank" rel="noopener noreferrer">Proponer un recurso</a>
-        <a class="secondary" href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">🧩 Recursos TEA Colombia</a>
       </div>
     </div>
   </header>
