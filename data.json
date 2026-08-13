@@ -207,11 +207,49 @@
         "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2073A%20%2381B-70%20Bogota"
       },
       {
-        "icon": "🤝",
+        "icon": "⛔",
         "tag": "Bogotá",
-        "h": "Voluntarios — Estadio El Campín",
-        "d": "Convocatoria de voluntarios para labores de ayuda, con apoyo de Sencia, Corfi Colombiana, Cruz Roja Colombiana (Seccional Cundinamarca y Bogotá), IDIGER y la Alcaldía Mayor de Bogotá. Escribe antes por WhatsApp al 310 785 9941 para coordinar horario y disponibilidad. Fuente: Instagram @senciabogota; verifica que siga activa antes de ir.",
+        "h": "Estadio El Campín — YA NO se necesitan voluntarios",
+        "d": "Actualización 13 de agosto: este punto ya cubrió su cupo de voluntariado. No se necesitan más voluntarios aquí; sí se necesitan en Unicentro, Vive Claro, Nuestro Bogotá y la Universidad Jorge Tadeo Lozano (ver abajo). Convocatoria original con apoyo de Sencia, Corfi Colombiana, Cruz Roja Cundinamarca y Bogotá, IDIGER y la Alcaldía Mayor. Fuente: Instagram @senciabogota.",
         "url": "https://wa.me/573107859941"
+      },
+      {
+        "header": "Puntos oficiales de acopio y voluntariado — jueves 13 de agosto"
+      },
+      {
+        "icon": "🙋",
+        "tag": "Bogotá",
+        "h": "Unicentro — Cra. 15 #124-30",
+        "d": "8:00 a. m. a 9:00 p. m. Voluntarios: sí, por orden de llegada. Registro en Administración, por Banderas.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Unicentro%20Carrera%2015%20124-30%20Bogota"
+      },
+      {
+        "icon": "🙋",
+        "tag": "Bogotá",
+        "h": "Vive Claro — Cra. 60 #42-41",
+        "d": "8:00 a. m. a 5:00 p. m. Voluntarios: sí.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2060%20%2342-41%20Bogota"
+      },
+      {
+        "icon": "🙋",
+        "tag": "Bogotá",
+        "h": "Nuestro Bogotá — Av. Cra. 86 #55A-75",
+        "d": "Lunes a viernes 10:00 a. m.-7:00 p. m. · Sábado 11:00 a. m.-7:00 p. m. · Domingo 12:00-7:00 p. m. Voluntarios: sí.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Avenida%20Carrera%2086%20%2355A-75%20Bogota"
+      },
+      {
+        "icon": "🙋",
+        "tag": "Bogotá",
+        "h": "Universidad Jorge Tadeo Lozano — Cra. 4 #22-61",
+        "d": "8:00 a. m. a 9:00 p. m. Voluntarios: sí, requiere inscripción previa.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Universidad%20Jorge%20Tadeo%20Lozano%20Carrera%204%20%2322-61%20Bogota"
+      },
+      {
+        "icon": "➕",
+        "tag": "Bogotá",
+        "h": "Cruz Roja — Cra. 24 #73-38",
+        "d": "24 horas. NO requiere voluntarios (tiene los propios). Solo donaciones.",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carrera%2024%20%2373-38%20Bogota"
       },
       {
         "header": "Acopios nacionales"
