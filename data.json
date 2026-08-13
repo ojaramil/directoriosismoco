@@ -98,6 +98,21 @@
     ]
   },
   {
+    "cat": "comunicados",
+    "titulo": "🎙️ Comunicados oficiales",
+    "aviso": "Resúmenes de comunicados y transmisiones de autoridades y voceros oficiales. Ordenados del más reciente al más antiguo.",
+    "items": [
+      {
+        "icon": "🎙️",
+        "tag": "Comunicado",
+        "fecha": "2026-08-13",
+        "h": "Gustavo Quintero — Secretario de Gobierno de Bogotá",
+        "d": "Resumen del comunicado en el centro de acopio de El Campín (13 de agosto): se necesita agua, colchones y almohadas, ropa nueva o limpia, alimentos no perecederos con fecha de vencimiento lejana, mercados listos empacados en cajas, cajas para embalaje, y pañales para bebés y adultos. La Alcaldía tiene 6 puntos activos: El Campín, Unicentro (Calle 161A #7F-55), Palacio de los Deportes (exclusivo para personas de Chocó), Universidad Jorge Tadeo Lozano, y un punto 24 horas en Carrera 24 con Calle 73. Se siguen necesitando voluntarios; no requiere inscripción previa, solo llegar.",
+        "url": "https://www.instagram.com/gaquinteroa"
+      }
+    ]
+  },
+  {
     "cat": "acopio",
     "titulo": "📦 Puntos de acopio",
     "aviso": "Lleva solo lo solicitado: agua, alimentos no perecederos, aseo, primeros auxilios, colchonetas/cobijas y elementos de protección. Confirma horario antes de salir.",
@@ -219,17 +234,6 @@
         "h": "Estadio El Campín — SÍ se necesitan voluntarios",
         "d": "Actualización 13 de agosto (Secretaría de Gobierno de Bogotá): sí se necesitan voluntarios, incluido el fin de semana y la próxima semana. No requiere inscripción previa: llegas, te registran en el sitio y te dan la manilla. Convocatoria original con apoyo de Sencia, Corfi Colombiana, Cruz Roja Cundinamarca y Bogotá, IDIGER y la Alcaldía Mayor.",
         "url": "https://wa.me/573107859941"
-      },
-      {
-        "header": "Comunicados oficiales"
-      },
-      {
-        "icon": "🎙️",
-        "tag": "Comunicado",
-        "fecha": "2026-08-13",
-        "h": "Gustavo Quintero — Secretario de Gobierno de Bogotá",
-        "d": "Resumen del comunicado en el centro de acopio de El Campín (13 de agosto): se necesita agua, colchones y almohadas, ropa nueva o limpia, alimentos no perecederos con fecha de vencimiento lejana, mercados listos empacados en cajas, cajas para embalaje, y pañales para bebés y adultos. La Alcaldía tiene 6 puntos activos: El Campín, Unicentro (Calle 161A #7F-55), Palacio de los Deportes (exclusivo para personas de Chocó), Universidad Jorge Tadeo Lozano, y un punto 24 horas en Carrera 24 con Calle 73. Se siguen necesitando voluntarios; no requiere inscripción previa, solo llegar.",
-        "url": "https://www.instagram.com/gaquinteroa"
       },
       {
         "header": "Puntos oficiales de acopio y voluntariado — jueves 13 de agosto"
