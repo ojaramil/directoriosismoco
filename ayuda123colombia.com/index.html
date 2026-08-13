@@ -998,6 +998,43 @@
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
+  <div class="banner-top" role="banner" aria-label="Cinta en vivo de noticias y emergencias">
+    <div class="btk-tag"><span class="btk-dot"></span>En vivo</div>
+    <div class="btk-track">
+      <div class="btk-items">
+          <span class="btk-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
+          <span class="btk-item">📢 Prioritario! Infórmate: Priorizar ayudas.</span>
+          <span class="btk-item">🩸 Prioridad ahora: donación de sangre en bancos de sangre habilitados.</span>
+          <span class="btk-item">💧 Prioridad ahora: agua potable, alimentos no perecederos e insumos de aseo.</span>
+          <span class="btk-item">🏥 Prioridad ahora: atención médica y psicológica en Chocó, Valle, Caldas y Risaralda.</span>
+          <span class="btk-item">🧠 Apoyo psicológico en emergencias: <a href="https://forms.gle/nsqBN38vkbZFuek59" target="_blank" rel="noopener noreferrer">formulario de AMPE Colombia y Defensa Civil</a>.</span>
+          <span class="btk-item">🏠 Prioridad ahora: refugio temporal, cobijas y colchonetas para familias desplazadas.</span>
+          <span class="btk-item">🔍 Prioridad ahora: reportar personas desaparecidas en Colombia Te Busca.</span>
+          <span class="btk-item">🙋 Corrección 13 ago: SÍ se necesitan voluntarios en El Campín (según Secretaría de Gobierno de Bogotá), además de Unicentro, Vive Claro, Nuestro Bogotá y la Universidad Jorge Tadeo Lozano. No requiere inscripción previa.</span>
+          <span class="btk-item">🔇 Prioritario: evita hacer ruido cerca de la zona cero; los equipos de rescate necesitan silencio para ubicar sobrevivientes. Si no vas a ayudar en la operación, mejor no te acerques.</span>
+          <span class="btk-item">🧩 Recursos para población TEA: <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">guía de la emergencia</a> y <a href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">audiocuento para explicar el terremoto</a>.</span>
+          <span class="btk-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
+        </div>
+      </div>
+  </div>
+
+  <script>
+    (function () {
+      function iniciarCinta() {
+        document.querySelectorAll(".btk-items").forEach((cinta) => {
+          cinta.style.animation = "none";
+          cinta.getBoundingClientRect();
+          cinta.style.animation = "";
+          cinta.style.animationPlayState = "running";
+        });
+      }
+
+      window.addEventListener("load", iniciarCinta);
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") iniciarCinta();
+      });
+    })();
+  </script>
 
   <header>
     <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
