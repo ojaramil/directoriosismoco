@@ -633,6 +633,30 @@
       color: #fff;
     }
 
+    .dir-chips-tag {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .dir-chips-tag .chip {
+      padding: .32rem .75rem;
+      border-radius: 50px;
+      border: 1px solid var(--line);
+      background: var(--wash);
+      color: var(--muted);
+      font: inherit;
+      font-weight: 700;
+      font-size: .72rem;
+      cursor: pointer;
+    }
+
+    .dir-chips-tag .chip.active {
+      background: var(--blue-2);
+      border-color: var(--blue-2);
+      color: #fff;
+    }
+
     .dir-group-title {
       font-family: var(--display);
       font-size: 1.1rem;
@@ -898,7 +922,6 @@
       <a href="#emergencias">Emergencias</a>
       <a href="#noticias">Noticias</a>
       <a href="#institucional">Institucional</a>
-      <a href="#ong">Organizaciones</a>
       <a href="#donar">Donar</a>
       <a href="#centros-acopio">Centros confirmados</a>
       <a href="#acopio">Acopio</a>
@@ -1022,55 +1045,6 @@
           </ul>
           <div class="button-row">
             <a href="https://www.defensacivil.gov.co/" target="_blank" rel="noopener noreferrer">Abrir Defensa Civil</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="ong">
-      <div class="section-head">
-        <div>
-          <span class="tag">ONG y ayuda social</span>
-          <h2>Organizaciones colombianas para ayudar</h2>
-          <p>Canales de apoyo de entidades con presencia en Colombia: Cruz Roja Colombiana, Asociación de Bancos de Alimentos de Colombia (ABACO), Minuto de Dios, Cáritas Colombiana y Ayuda a la Iglesia que Sufre - ACN Colombia.</p>
-        </div>
-      </div>
-      <div class="grid">
-        <article class="card ngo">
-          <h3>Cruz Roja Colombiana</h3>
-          <p>Los informes y artículos citados la ubican como canal central para respuesta humanitaria, donaciones, bancos de sangre, voluntariado coordinado y restablecimiento de contacto familiar.</p>
-          <div class="button-row">
-            <a href="https://www.cruzrojacolombiana.org/" target="_blank" rel="noopener noreferrer">Cruz Roja</a>
-          </div>
-        </article>
-        <article class="card ngo">
-          <h3>Asociación de Bancos de Alimentos de Colombia (ABACO)</h3>
-          <p>Canalizan recursos para comprar y distribuir alimentos y artículos esenciales mediante bancos de alimentos regionales y corredores humanitarios.</p>
-          <div class="button-row">
-            <a href="https://abaco.org.co/" target="_blank" rel="noopener noreferrer">ABACO</a>
-            <a class="alt" href="https://abaco.org.co/emergenciasaprio/" target="_blank" rel="noopener noreferrer">Emergencias</a>
-          </div>
-        </article>
-        <article class="card ngo">
-          <h3>Minuto de Dios</h3>
-          <p>La Corporación Organización El Minuto de Dios cuenta con programa de Ayuda Humanitaria para acompañar comunidades en adversidad en Colombia.</p>
-          <div class="button-row">
-            <a href="https://minutodedios.org/programa/ayuda-humanitaria" target="_blank" rel="noopener noreferrer">Ayuda humanitaria</a>
-          </div>
-        </article>
-        <article class="card ngo">
-          <h3>Cáritas Colombiana</h3>
-          <p>El Secretariado Nacional de Pastoral Social - Cáritas Colombiana tiene líneas de atención humanitaria, emergencias, migración y apoyo a poblaciones vulnerables.</p>
-          <div class="button-row">
-            <a href="https://caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Cáritas Colombia</a>
-            <a class="alt" href="https://donar.caritascolombiana.org/" target="_blank" rel="noopener noreferrer">Donar</a>
-          </div>
-        </article>
-        <article class="card ngo">
-          <h3>Ayuda a la Iglesia que Sufre</h3>
-          <p>ACN Colombia es una fundación pontificia con sede en Bogotá que apoya comunidades cristianas en dificultad, pobreza, persecución, guerras o catástrofes.</p>
-          <div class="button-row">
-            <a href="https://www.acncolombia.org/" target="_blank" rel="noopener noreferrer">ACN Colombia</a>
           </div>
         </article>
       </div>
@@ -1312,13 +1286,6 @@
           </div>
         </article>
         <article class="card">
-          <h3>El Tiempo — Mapa de centros de acopio</h3>
-          <p>Mapa interactivo con el listado completo de centros de acopio habilitados por ciudad para donar a los damnificados del terremoto.</p>
-          <div class="button-row">
-            <a href="https://www.eltiempo.com/datos/este-es-el-mapa-completo-de-los-centros-de-acopio-habilitados-en-colombia-para-ayudar-a-los-damnificados-del-terremoto-de-magnitud-7-3577654" target="_blank" rel="noopener noreferrer">Ver mapa El Tiempo</a>
-          </div>
-        </article>
-        <article class="card">
           <h3>Minuto de Dios — Banco de Ropa y acopio</h3>
           <p>El Banco de Ropa de Minuto de Dios recibe donaciones en especie y busca voluntarios para separar, revisar y preparar envíos a las zonas afectadas.</p>
           <div class="button-row">
@@ -1385,6 +1352,7 @@
         <div class="dir-chips" id="dir-chips">
           <button type="button" class="chip active" data-cat="todos" onclick="setCatDirectorio('todos', this)">Todos</button>
         </div>
+        <div class="dir-chips-tag" id="dir-chips-tag" aria-label="Filtrar por etiqueta"></div>
       </div>
       <div id="dir-resultado">
         <p class="dir-empty">Cargando directorio…</p>
@@ -1462,6 +1430,7 @@
 
     let DIRECTORIO_DATA = [];
     let dirCatActiva = "todos";
+    let dirTagActiva = "todas";
 
     function escapeHtml(str) {
       return String(str).replace(/[&<>"']/g, (c) => ({
@@ -1481,12 +1450,54 @@
         }
       });
       segmentos.push(actual);
-      return segmentos.filter((s) => s.items.length);
+      return segmentos
+        .map((seg) => ({
+          header: seg.header,
+          items: seg.items.some((it) => it.fecha)
+            ? [...seg.items].sort((a, b) => (b.fecha || "").localeCompare(a.fecha || ""))
+            : seg.items
+        }))
+        .filter((s) => s.items.length);
+    }
+
+    function renderChipsTag() {
+      const cont = document.getElementById("dir-chips-tag");
+      cont.innerHTML = "";
+      const tags = new Set();
+      DIRECTORIO_DATA.forEach((grupo) => {
+        if (dirCatActiva !== "todos" && dirCatActiva !== grupo.cat) return;
+        grupo.items.forEach((it) => { if (it.tag) tags.add(it.tag); });
+      });
+
+      const todas = document.createElement("button");
+      todas.type = "button";
+      todas.className = "chip" + (dirTagActiva === "todas" ? " active" : "");
+      todas.textContent = "Todas las etiquetas";
+      todas.onclick = () => setTagDirectorio("todas", todas);
+      cont.appendChild(todas);
+
+      [...tags].sort((a, b) => a.localeCompare(b, "es")).forEach((tag) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "chip" + (dirTagActiva === tag ? " active" : "");
+        btn.textContent = tag;
+        btn.onclick = () => setTagDirectorio(tag, btn);
+        cont.appendChild(btn);
+      });
     }
 
     function setCatDirectorio(cat, btn) {
       dirCatActiva = cat;
+      dirTagActiva = "todas";
       document.querySelectorAll("#dir-chips .chip").forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderChipsTag();
+      renderDirectorio();
+    }
+
+    function setTagDirectorio(tag, btn) {
+      dirTagActiva = tag;
+      document.querySelectorAll("#dir-chips-tag .chip").forEach((b) => b.classList.remove("active"));
       btn.classList.add("active");
       renderDirectorio();
     }
@@ -1503,6 +1514,7 @@
         const segmentos = segmentarItems(grupo.items).map((seg) => ({
           header: seg.header,
           items: seg.items.filter((it) => {
+            if (dirTagActiva !== "todas" && it.tag !== dirTagActiva) return false;
             if (!texto) return true;
             const hay = (it.h + " " + it.d + " " + (it.tag || "")).toLowerCase();
             return hay.includes(texto);
@@ -1578,6 +1590,7 @@
           btn.onclick = () => setCatDirectorio(grupo.cat, btn);
           chips.appendChild(btn);
         });
+        renderChipsTag();
         renderDirectorio();
       } catch (e) {
         document.getElementById("dir-resultado").innerHTML =
