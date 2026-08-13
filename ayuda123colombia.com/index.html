@@ -353,6 +353,121 @@
       background: color-mix(in srgb, var(--blue-2) 11%, transparent);
     }
 
+    .nav-inner a.tea {
+      background: #c9670c;
+      color: #fff;
+    }
+
+    .nav-inner a.tea:hover {
+      background: #a85808;
+    }
+
+    /* Progressive disclosure para reducir saturación */
+    details.colapsable {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--wash);
+      padding: .2rem .9rem;
+      margin-top: .9rem;
+    }
+
+    details.colapsable[open] {
+      padding-bottom: .9rem;
+    }
+
+    details.colapsable summary {
+      cursor: pointer;
+      padding: .8rem 0;
+      font-weight: 800;
+      font-size: .9rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .6rem;
+    }
+
+    details.colapsable summary::-webkit-details-marker { display: none; }
+
+    details.colapsable summary::after {
+      content: "＋ ver";
+      flex-shrink: 0;
+      font-size: .74rem;
+      font-weight: 800;
+      color: var(--blue-2);
+      white-space: nowrap;
+    }
+
+    details.colapsable[open] summary::after {
+      content: "－ ocultar";
+    }
+
+    details.colapsable > *:not(summary) {
+      margin-top: .2rem;
+    }
+
+    .tea-hero {
+      background: linear-gradient(135deg, #fff3e0, #ffe6cc);
+      border: 1.5px solid #c9670c;
+      border-radius: 16px;
+      padding: 1.5rem 1.6rem 1.7rem;
+      margin: 1.6rem 0;
+      color: #4a2e00;
+    }
+
+    .tea-hero .eyebrow-tea {
+      display: inline-block;
+      background: #c9670c;
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: .25rem .65rem;
+      border-radius: 50px;
+      margin-bottom: .6rem;
+    }
+
+    .tea-hero h2 {
+      color: #4a2e00;
+      font-size: 1.5rem;
+      margin: 0 0 .5rem;
+    }
+
+    .tea-hero p {
+      font-size: .92rem;
+      margin: 0 0 1.1rem;
+      max-width: 640px;
+    }
+
+    .tea-hero .fila {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+
+    .tea-hero .fila a {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .7rem 1.1rem;
+      border-radius: 8px;
+      font-weight: 800;
+      font-size: .86rem;
+      text-decoration: none;
+    }
+
+    .tea-hero .fila a.principal {
+      background: #c9670c;
+      color: #fff;
+    }
+
+    .tea-hero .fila a.secundario {
+      background: transparent;
+      color: #c9670c;
+      border: 1.5px solid #c9670c;
+    }
+
     main {
       width: min(1080px, calc(100% - 2rem));
       margin: 0 auto;
@@ -861,43 +976,6 @@
     <button onclick="location.reload()">Actualizar</button>
   </div>
 
-  <div class="banner-top" role="banner" aria-label="Cinta en vivo de noticias y emergencias">
-    <div class="btk-tag"><span class="btk-dot"></span>En vivo</div>
-    <div class="btk-track">
-      <div class="btk-items">
-          <span class="btk-item">🆘 Si hay riesgo inmediato, llama al <a href="tel:123">123</a> o a <a href="tel:144">Defensa Civil 144</a>.</span>
-          <span class="btk-item">📢 Prioritario! Infórmate: Priorizar ayudas.</span>
-          <span class="btk-item">🩸 Prioridad ahora: donación de sangre en bancos de sangre habilitados.</span>
-          <span class="btk-item">💧 Prioridad ahora: agua potable, alimentos no perecederos e insumos de aseo.</span>
-          <span class="btk-item">🏥 Prioridad ahora: atención médica y psicológica en Chocó, Valle, Caldas y Risaralda.</span>
-          <span class="btk-item">🧠 Apoyo psicológico en emergencias: <a href="https://forms.gle/nsqBN38vkbZFuek59" target="_blank" rel="noopener noreferrer">formulario de AMPE Colombia y Defensa Civil</a>.</span>
-          <span class="btk-item">🏠 Prioridad ahora: refugio temporal, cobijas y colchonetas para familias desplazadas.</span>
-          <span class="btk-item">🔍 Prioridad ahora: reportar personas desaparecidas en Colombia Te Busca.</span>
-          <span class="btk-item">🙋 Corrección 13 ago: SÍ se necesitan voluntarios en El Campín (según Secretaría de Gobierno de Bogotá), además de Unicentro, Vive Claro, Nuestro Bogotá y la Universidad Jorge Tadeo Lozano. No requiere inscripción previa.</span>
-          <span class="btk-item">🔇 Prioritario: evita hacer ruido cerca de la zona cero; los equipos de rescate necesitan silencio para ubicar sobrevivientes. Si no vas a ayudar en la operación, mejor no te acerques.</span>
-          <span class="btk-item">🧩 Recursos para población TEA: <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">guía de la emergencia</a> y <a href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">audiocuento para explicar el terremoto</a>.</span>
-          <span class="btk-item">⚠️ Verifica fecha, fuente y canal oficial antes de compartir cifras o cadenas.</span>
-        </div>
-      </div>
-  </div>
-
-  <script>
-    (function () {
-      function iniciarCinta() {
-        document.querySelectorAll(".btk-items").forEach((cinta) => {
-          cinta.style.animation = "none";
-          cinta.getBoundingClientRect();
-          cinta.style.animation = "";
-          cinta.style.animationPlayState = "running";
-        });
-      }
-
-      window.addEventListener("load", iniciarCinta);
-      document.addEventListener("visibilitychange", () => {
-        if (document.visibilityState === "visible") iniciarCinta();
-      });
-    })();
-  </script>
 
   <header>
     <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
@@ -920,6 +998,7 @@
   <nav aria-label="Secciones principales">
     <div class="nav-inner">
       <a href="#emergencias">Emergencias</a>
+      <a class="tea" href="#tea">🧩 TEA</a>
       <a href="#noticias">Noticias</a>
       <a href="#institucional">Institucional</a>
       <a href="#donar">Donar</a>
@@ -976,6 +1055,16 @@
             <a class="alt" href="tel:018000519853">018000 519853</a>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="tea" class="tea-hero">
+      <span class="eyebrow-tea">🧩 Recursos TEA</span>
+      <h2>Recursos para Voluntarios, Familiares de personas con Autismo en Colombia</h2>
+      <p>Guía de la emergencia y un audiocuento gratuitos, hechos por y para la comunidad TEA colombiana: cómo explicar el terremoto, qué esperar y cómo acompañar la sobrecarga sensorial en un centro de acopio o refugio.</p>
+      <div class="fila">
+        <a class="principal" href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">📥 Abrir guía de la emergencia</a>
+        <a class="secundario" href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">🎧 Escuchar audiocuento</a>
       </div>
     </section>
 
@@ -1292,27 +1381,32 @@
             <a href="https://minutodedios.org/" target="_blank" rel="noopener noreferrer">Abrir Minuto de Dios</a>
           </div>
         </article>
-        <article class="card">
-          <h3>Insumos prioritarios</h3>
-          <p>Agua embotellada, alimentos no perecederos, kits de aseo, papel higiénico, toallas higiénicas, pañales, cobijas, colchonetas, toldillos, linternas y elementos de primeros auxilios.</p>
-        </article>
-        <article class="card">
-          <h3>Rescate y protección</h3>
-          <p>En Cali se citaron guantes de construcción, cascos, gafas de seguridad, colchonetas y elementos de protección para brigadas. Entrégalos solo si el punto de acopio los está recibiendo.</p>
-        </article>
-        <article class="card">
-          <h3>Evita saturar la ayuda</h3>
-          <p>No envíes medicamentos sueltos, ropa usada sin clasificar, perecederos, productos vencidos ni cargamentos sin receptor confirmado. El dinero suele ser más ágil y trazable.</p>
-        </article>
-        <article class="card">
-          <h3>Acopios nacionales</h3>
-          <p>Consulta Cruz Roja Colombiana, Defensa Civil, Asociación de Bancos de Alimentos de Colombia (ABACO) y Cáritas/Pastoral Social para confirmar campañas activas, horarios y puntos autorizados en cada departamento.</p>
-        </article>
-        <article class="card">
-          <h3>Acopios internacionales</h3>
-          <p>Desde el exterior, prioriza canales como IFRC, CICR o consulados de Colombia. Evita enviar carga sin receptor confirmado y verifica cada centro antes de organizar recolecciones.</p>
-        </article>
       </div>
+      <details class="colapsable">
+        <summary>Ver consejos y contexto adicional (5)</summary>
+        <div class="grid">
+          <article class="card">
+            <h3>Insumos prioritarios</h3>
+            <p>Agua embotellada, alimentos no perecederos, kits de aseo, papel higiénico, toallas higiénicas, pañales, cobijas, colchonetas, toldillos, linternas y elementos de primeros auxilios.</p>
+          </article>
+          <article class="card">
+            <h3>Rescate y protección</h3>
+            <p>En Cali se citaron guantes de construcción, cascos, gafas de seguridad, colchonetas y elementos de protección para brigadas. Entrégalos solo si el punto de acopio los está recibiendo.</p>
+          </article>
+          <article class="card">
+            <h3>Evita saturar la ayuda</h3>
+            <p>No envíes medicamentos sueltos, ropa usada sin clasificar, perecederos, productos vencidos ni cargamentos sin receptor confirmado. El dinero suele ser más ágil y trazable.</p>
+          </article>
+          <article class="card">
+            <h3>Acopios nacionales</h3>
+            <p>Consulta Cruz Roja Colombiana, Defensa Civil, Asociación de Bancos de Alimentos de Colombia (ABACO) y Cáritas/Pastoral Social para confirmar campañas activas, horarios y puntos autorizados en cada departamento.</p>
+          </article>
+          <article class="card">
+            <h3>Acopios internacionales</h3>
+            <p>Desde el exterior, prioriza canales como IFRC, CICR o consulados de Colombia. Evita enviar carga sin receptor confirmado y verifica cada centro antes de organizar recolecciones.</p>
+          </article>
+        </div>
+      </details>
     </section>
 
     <section id="fuentes">
@@ -1323,20 +1417,23 @@
           <p>Estas son fuentes periodísticas y artículos presentes en los documentos base. Úsalas para contrastar noticias, acopios y canales de ayuda.</p>
         </div>
       </div>
-      <div class="source-list">
-        <ul>
-          <li><a href="https://www.elcolombiano.com/colombia/como-donar-afectados-terremoto-colombia-canales-oficiales-BF39784041" target="_blank" rel="noopener noreferrer">El Colombiano</a> - cómo donar a afectados y canales oficiales citados.</li>
-          <li><a href="https://elpais.com/america-colombia/2026-08-10/ultima-hora-del-terremoto-en-colombia-en-directo.html" target="_blank" rel="noopener noreferrer">El País</a> - última hora del terremoto en Colombia.</li>
-          <li><a href="https://elpais.com/america-colombia/2026-08-10/como-ayudar-a-las-personas-damnificadas-por-el-terremoto-en-colombia.html" target="_blank" rel="noopener noreferrer">El País</a> - cómo ayudar a las personas damnificadas.</li>
-          <li><a href="https://www.semana.com/nacion/articulo/en-vivo-fuerte-temblor-sacude-a-colombia/202611/" target="_blank" rel="noopener noreferrer">Semana</a> - cobertura en vivo del sismo.</li>
-          <li><a href="https://www.infobae.com/colombia/2026/08/10/centros-de-acopio-habilitados-en-colombia-tras-el-terremoto-guia-por-ciudad-para-donar-y-ayudar-a-las-victimas/" target="_blank" rel="noopener noreferrer">Infobae</a> - centros de acopio por ciudad.</li>
-          <li><a href="https://www.larepublica.co/especiales/catastrofe-nacional/estos-son-algunos-de-los-canales-oficiales-para-donar-a-los-damnificados-por-el-terremoto-4455056" target="_blank" rel="noopener noreferrer">La República</a> - canales oficiales para donar.</li>
-          <li><a href="https://www.publimetro.co/bogota/2026/08/10/como-puede-ayudar-a-las-victimas-del-terremoto-en-colombia-activaron-varios-centros-de-acopio-en-el-pais/" target="_blank" rel="noopener noreferrer">Publimetro</a> - centros de acopio activados en el país.</li>
-          <li><a href="https://caracol.com.co/2026/08/10/estamos-en-busqueda-y-rescate-cruz-roja-colombiana-aun-no-activa-donaciones-en-especie-tras-sismo/" target="_blank" rel="noopener noreferrer">Caracol Radio</a> - declaraciones de Cruz Roja sobre búsqueda, rescate y donaciones.</li>
-          <li><a href="https://www.infobae.com/colombia/2026/08/10/la-adres-garantizara-indemnizaciones-y-los-gastos-funerarios-a-las-familias-afectadas-por-el-terremoto-de-74-en-colombia/" target="_blank" rel="noopener noreferrer">Infobae</a> - cobertura sobre ADRES, indemnizaciones y gastos funerarios.</li>
-          <li><a href="https://www.cali.gov.co/boletines/publicaciones/193592/plazoleta-jairo-varela-funcionara-como-centro-de-acopio-para-recibir-donaciones-tras-el-sismo-de-este-lunes-10-de-agosto/" target="_blank" rel="noopener noreferrer">Alcaldía de Cali</a> - centro de acopio en la Plazoleta Jairo Varela.</li>
-        </ul>
-      </div>
+      <details class="colapsable">
+        <summary>Ver las 10 fuentes citadas</summary>
+        <div class="source-list">
+          <ul>
+            <li><a href="https://www.elcolombiano.com/colombia/como-donar-afectados-terremoto-colombia-canales-oficiales-BF39784041" target="_blank" rel="noopener noreferrer">El Colombiano</a> - cómo donar a afectados y canales oficiales citados.</li>
+            <li><a href="https://elpais.com/america-colombia/2026-08-10/ultima-hora-del-terremoto-en-colombia-en-directo.html" target="_blank" rel="noopener noreferrer">El País</a> - última hora del terremoto en Colombia.</li>
+            <li><a href="https://elpais.com/america-colombia/2026-08-10/como-ayudar-a-las-personas-damnificadas-por-el-terremoto-en-colombia.html" target="_blank" rel="noopener noreferrer">El País</a> - cómo ayudar a las personas damnificadas.</li>
+            <li><a href="https://www.semana.com/nacion/articulo/en-vivo-fuerte-temblor-sacude-a-colombia/202611/" target="_blank" rel="noopener noreferrer">Semana</a> - cobertura en vivo del sismo.</li>
+            <li><a href="https://www.infobae.com/colombia/2026/08/10/centros-de-acopio-habilitados-en-colombia-tras-el-terremoto-guia-por-ciudad-para-donar-y-ayudar-a-las-victimas/" target="_blank" rel="noopener noreferrer">Infobae</a> - centros de acopio por ciudad.</li>
+            <li><a href="https://www.larepublica.co/especiales/catastrofe-nacional/estos-son-algunos-de-los-canales-oficiales-para-donar-a-los-damnificados-por-el-terremoto-4455056" target="_blank" rel="noopener noreferrer">La República</a> - canales oficiales para donar.</li>
+            <li><a href="https://www.publimetro.co/bogota/2026/08/10/como-puede-ayudar-a-las-victimas-del-terremoto-en-colombia-activaron-varios-centros-de-acopio-en-el-pais/" target="_blank" rel="noopener noreferrer">Publimetro</a> - centros de acopio activados en el país.</li>
+            <li><a href="https://caracol.com.co/2026/08/10/estamos-en-busqueda-y-rescate-cruz-roja-colombiana-aun-no-activa-donaciones-en-especie-tras-sismo/" target="_blank" rel="noopener noreferrer">Caracol Radio</a> - declaraciones de Cruz Roja sobre búsqueda, rescate y donaciones.</li>
+            <li><a href="https://www.infobae.com/colombia/2026/08/10/la-adres-garantizara-indemnizaciones-y-los-gastos-funerarios-a-las-familias-afectadas-por-el-terremoto-de-74-en-colombia/" target="_blank" rel="noopener noreferrer">Infobae</a> - cobertura sobre ADRES, indemnizaciones y gastos funerarios.</li>
+            <li><a href="https://www.cali.gov.co/boletines/publicaciones/193592/plazoleta-jairo-varela-funcionara-como-centro-de-acopio-para-recibir-donaciones-tras-el-sismo-de-este-lunes-10-de-agosto/" target="_blank" rel="noopener noreferrer">Alcaldía de Cali</a> - centro de acopio en la Plazoleta Jairo Varela.</li>
+          </ul>
+        </div>
+      </details>
     </section>
 
     <section id="directorio">
@@ -1539,12 +1636,6 @@
         }
 
         segmentos.forEach((seg) => {
-          if (seg.header) {
-            const sub = document.createElement("div");
-            sub.className = "dir-subhead";
-            sub.textContent = seg.header;
-            bloque.appendChild(sub);
-          }
           const grid = document.createElement("div");
           grid.className = "dir-grid";
           seg.items.forEach((it) => {
@@ -1558,7 +1649,27 @@
               (it.url ? `<a class="dir-link" href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer">Abrir ↗</a>` : "");
             grid.appendChild(card);
           });
-          bloque.appendChild(grid);
+
+          const colapsar = seg.header && seg.items.length > 4;
+
+          if (colapsar) {
+            const det = document.createElement("details");
+            det.className = "colapsable";
+            if (texto) det.open = true;
+            const sum = document.createElement("summary");
+            sum.textContent = `${seg.header} (${seg.items.length})`;
+            det.appendChild(sum);
+            det.appendChild(grid);
+            bloque.appendChild(det);
+          } else {
+            if (seg.header) {
+              const sub = document.createElement("div");
+              sub.className = "dir-subhead";
+              sub.textContent = seg.header;
+              bloque.appendChild(sub);
+            }
+            bloque.appendChild(grid);
+          }
         });
 
         if (Array.isArray(grupo.notas) && grupo.notas.length) {

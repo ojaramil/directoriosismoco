@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-TY3XRF2GNV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag("js", new Date());
+    gtag("config", "G-TY3XRF2GNV");
+  </script>
+  <title>Ayuda123 Colombia — Rediseño (v2)</title>
+  <meta name="description" content="Propuesta de rediseño: acción inmediata, recursos TEA, cómo ayudar bien, canales oficiales y comunidad.">
+  <link rel="icon" href="icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #18212b;
+      --muted: #5f6f7f;
+      --line: #d9e3ee;
+      --paper: #ffffff;
+      --wash: #f4f8fb;
+      --blue: #123c69;
+      --blue-2: #2366a6;
+      --red: #b9352b;
+      --orange: #c9670c;
+      --gold: #b88920;
+      --green: #16756a;
+      --shadow: 0 12px 28px rgba(18, 60, 105, .08);
+      --display: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --ink: #edf4fb;
+        --muted: #a8b8c8;
+        --line: #24364a;
+        --paper: #101c29;
+        --wash: #0a131e;
+      }
+    }
+
+    :root[data-theme="dark"] {
+      --ink: #edf4fb;
+      --muted: #a8b8c8;
+      --line: #24364a;
+      --paper: #101c29;
+      --wash: #0a131e;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--wash);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+
+    a { color: var(--blue-2); }
+
+    h1, h2, h3, h4 {
+      font-family: var(--display);
+      margin: 0;
+      line-height: 1.15;
+    }
+
+    main {
+      width: min(880px, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.6rem 0 4rem;
+    }
+
+    .top-note {
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      font-size: .78rem;
+      font-weight: 700;
+      padding: .5rem 1rem;
+    }
+
+    .top-note a { color: #cfe0f5; }
+
+    .bloque {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--accent, var(--blue));
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 1.5rem 1.5rem 1.7rem;
+      margin-top: 1.3rem;
+    }
+
+    .bloque-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      font-size: .7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent, var(--blue));
+      margin-bottom: .5rem;
+    }
+
+    .bloque h2 {
+      font-size: 1.35rem;
+      margin-bottom: .3rem;
+    }
+
+    .bloque > p.lead {
+      color: var(--muted);
+      font-size: .9rem;
+      margin: 0 0 1.1rem;
+    }
+
+    .fila-emergencia {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .7rem;
+      align-items: center;
+      background: color-mix(in srgb, var(--red) 8%, var(--paper));
+      border: 1px solid color-mix(in srgb, var(--red) 30%, var(--line));
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    .fila-emergencia .txt { flex: 1; min-width: 200px; font-weight: 700; }
+    .fila-emergencia .txt small { display: block; font-weight: 500; color: var(--muted); margin-top: .2rem; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      padding: .7rem 1.1rem;
+      border-radius: 8px;
+      background: var(--blue-2);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: .86rem;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn.rojo { background: var(--red); }
+    .btn.grande { padding: .9rem 1.4rem; font-size: .95rem; }
+    .btn.alt {
+      background: transparent;
+      color: var(--blue-2);
+      border: 1.5px solid var(--blue-2);
+    }
+
+    .estado-caja {
+      display: flex;
+      align-items: center;
+      gap: .8rem;
+      background: var(--wash);
+      border-radius: 10px;
+      padding: .9rem 1.1rem;
+      margin-bottom: 1rem;
+      font-size: .88rem;
+    }
+
+    .estado-caja .num { font-size: 1.6rem; font-weight: 800; font-family: var(--display); color: var(--orange); }
+
+    .prioridades-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .8rem;
+    }
+
+    .prioridad-card {
+      background: var(--wash);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 1rem .9rem;
+      text-align: center;
+    }
+
+    .prioridad-card .ic { font-size: 1.8rem; display: block; margin-bottom: .4rem; }
+    .prioridad-card h3 { font-size: .92rem; margin-bottom: .25rem; }
+    .prioridad-card p { font-size: .78rem; color: var(--muted); margin: 0; }
+
+    .tea-destacado {
+      background: linear-gradient(135deg, #fff3e0, #ffe6cc);
+      border: 1.5px solid var(--orange);
+      border-radius: 14px;
+      padding: 1.3rem 1.4rem;
+      margin-bottom: 1rem;
+      color: #4a2e00;
+    }
+
+    .tea-destacado h3 { font-size: 1.15rem; margin-bottom: .4rem; color: #4a2e00; }
+    .tea-destacado p { font-size: .88rem; margin: 0 0 1rem; }
+    .tea-destacado .fila { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+    .grid2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: .8rem;
+    }
+
+    .mini-card {
+      background: var(--wash);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .9rem 1rem;
+    }
+
+    .mini-card h4 { font-size: .88rem; margin-bottom: .3rem; }
+    .mini-card p { font-size: .8rem; color: var(--muted); margin: 0 0 .6rem; }
+
+    .no-dones {
+      background: color-mix(in srgb, var(--gold) 14%, var(--paper));
+      border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line));
+      border-radius: 12px;
+      padding: 1rem 1.1rem;
+      margin-bottom: 1rem;
+      font-size: .88rem;
+    }
+
+    .no-dones strong { display: block; margin-bottom: .3rem; font-size: .98rem; }
+
+    .col2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .col2 h4 { font-size: .88rem; margin-bottom: .5rem; }
+    .col2 ul { margin: 0; padding-left: 1.1rem; font-size: .84rem; }
+    .col2 li { margin-bottom: .35rem; }
+    .col2 .si h4 { color: var(--green); }
+    .col2 .no h4 { color: var(--red); }
+
+    .pasos {
+      counter-reset: paso;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .pasos li {
+      counter-increment: paso;
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+      margin-bottom: .6rem;
+      font-size: .85rem;
+    }
+
+    .pasos li::before {
+      content: counter(paso);
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #fff;
+      font-size: .74rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .canal-tabla { width: 100%; border-collapse: collapse; font-size: .84rem; margin-bottom: .3rem; }
+    .canal-tabla th { text-align: left; font-size: .68rem; text-transform: uppercase; color: var(--muted); padding: .4rem .5rem; border-bottom: 2px solid var(--line); }
+    .canal-tabla td { padding: .55rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .canal-tabla a { font-weight: 700; }
+
+    .aviso-verificar {
+      background: color-mix(in srgb, var(--red) 10%, var(--paper));
+      border: 1px solid color-mix(in srgb, var(--red) 35%, var(--line));
+      border-radius: 10px;
+      padding: .8rem 1rem;
+      font-size: .82rem;
+      margin: .8rem 0 1.2rem;
+      font-weight: 700;
+      color: var(--red);
+    }
+
+    .corte {
+      font-size: .8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding-top: .8rem;
+      margin-top: 1rem;
+    }
+
+    .comunidad-msg {
+      text-align: center;
+      padding: .5rem 0 1.2rem;
+    }
+
+    .comunidad-msg p { font-size: .95rem; max-width: 520px; margin: 0 auto; color: var(--muted); }
+
+    .quien-soy {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: var(--wash);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .quien-soy .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .quien-soy p { margin: 0; font-size: .84rem; color: var(--muted); }
+    .quien-soy strong { color: var(--ink); }
+
+    footer {
+      background: #0b2034;
+      color: #c4d6e8;
+      padding: 1.6rem 1rem;
+      text-align: center;
+      font-size: .78rem;
+      margin-top: 1.6rem;
+    }
+
+    footer a { color: #a9cff7; }
+
+    .whatsapp-fab {
+      position: fixed;
+      right: 1rem;
+      bottom: 1rem;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      z-index: 40;
+    }
+
+    .whatsapp-fab svg { width: 26px; height: 26px; fill: #fff; }
+
+    @media (max-width: 640px) {
+      .prioridades-3 { grid-template-columns: 1fr; }
+      .grid2 { grid-template-columns: 1fr; }
+      .col2 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-note">🧪 Prototipo de rediseño — no reemplaza <a href="index.html">index.html</a> todavía</div>
+
+  <main>
+
+    <!-- 🔴 BLOQUE 1 — Acción inmediata -->
+    <section class="bloque" style="--accent: var(--red);">
+      <div class="bloque-eyebrow" style="color:var(--red);">🔴 Bloque 1 · Acción inmediata</div>
+      <h2>¿Estás en riesgo ahora mismo?</h2>
+      <p class="lead">En 5 segundos deberías saber si hay peligro y qué es lo más urgente hoy.</p>
+
+      <div class="fila-emergencia">
+        <div class="txt">🆘 Si hay riesgo inmediato, llama ya.
+          <small>Personas atrapadas, incendio, colapso, lesionados.</small>
+        </div>
+        <a class="btn rojo grande" href="tel:123">Llamar 123</a>
+        <a class="btn alt" href="tel:144">Defensa Civil 144</a>
+      </div>
+
+      <div class="estado-caja">
+        <span class="num">78 h</span>
+        <div>
+          <strong>78 horas desde el sismo de magnitud 7,4.</strong><br>
+          <span style="color:var(--muted);">Fase actual: estabilización y recuperación.</span>
+        </div>
+      </div>
+
+      <h3 style="font-size:1rem;margin-bottom:.6rem;">Las 3 prioridades de hoy</h3>
+      <div class="prioridades-3">
+        <div class="prioridad-card">
+          <span class="ic">💧</span>
+          <h3>Agua y alimentos</h3>
+          <p>Potable, no perecederos, con fecha de vencimiento lejana.</p>
+        </div>
+        <div class="prioridad-card">
+          <span class="ic">🧠</span>
+          <h3>Salud médica y mental</h3>
+          <p>Atención médica y apoyo psicológico en zonas afectadas.</p>
+        </div>
+        <div class="prioridad-card">
+          <span class="ic">🏠</span>
+          <h3>Refugio temporal</h3>
+          <p>Colchonetas, cobijas y alojamiento para familias desplazadas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟠 BLOQUE 2 — Recursos TEA -->
+    <section class="bloque" style="--accent: var(--orange);">
+      <div class="bloque-eyebrow" style="color:var(--orange);">🟠 Bloque 2 · Recursos TEA</div>
+      <h2>¿Tienes un hijo o hija con autismo?</h2>
+      <p class="lead">Esto es lo que nos hace distintos — por eso va arriba, no al final.</p>
+
+      <div class="tea-destacado">
+        <h3>🧩 Guía de la emergencia + audiocuento, hechos por y para la comunidad TEA</h3>
+        <p>Materiales gratuitos para acompañar a personas autistas/Asperger durante el terremoto: cómo explicarlo, qué esperar, cómo regular la ansiedad y la sobrecarga sensorial en un centro de acopio o refugio.</p>
+        <div class="fila">
+          <a class="btn" style="background:var(--orange);" href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">📥 Abrir guía de la emergencia</a>
+          <a class="btn alt" style="color:var(--orange);border-color:var(--orange);" href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">🎧 Escuchar audiocuento</a>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div class="mini-card">
+          <h4>🧸 Guardianes del Refugio</h4>
+          <p>Guía de Fundación Soy Un Guardián para niños y adolescentes ante desastres naturales.</p>
+          <a href="https://drive.google.com/file/d/1mVD13UDRgTV_zl4vvG4RL2amATYx_ka5/view" target="_blank" rel="noopener noreferrer">Abrir guía ↗</a>
+        </div>
+        <div class="mini-card">
+          <h4>💚 Primeros Auxilios Psicológicos</h4>
+          <p>Mindshift Health: acompañamiento gratuito y confidencial por WhatsApp en menos de 48 h.</p>
+          <a href="https://www.instagram.com/mindshiftglobalhealth" target="_blank" rel="noopener noreferrer">Ver en Instagram ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🟡 BLOQUE 3 — Cómo ayudar bien -->
+    <section class="bloque" style="--accent: var(--gold);">
+      <div class="bloque-eyebrow" style="color:var(--gold);">🟡 Bloque 3 · Cómo ayudar bien</div>
+      <h2>No dones con afán</h2>
+      <p class="lead">Este bloque convierte el impulso de "ayudar rápido" en "ayudar bien".</p>
+
+      <div class="no-dones">
+        <strong>⚠️ Errores comunes que saturan los centros de acopio</strong>
+        Ropa sucia o dañada, alimentos vencidos o cerca de vencer, medicamentos sueltos o de prescripción sin receta, cargamentos enviados sin receptor confirmado. El dinero suele ser más ágil y trazable que un envío físico mal coordinado.
+      </div>
+
+      <div class="col2">
+        <div class="si">
+          <h4>✅ Qué SÍ donar</h4>
+          <ul>
+            <li>Agua embotellada</li>
+            <li>Alimentos no perecederos, fecha lejana</li>
+            <li>Kits de aseo e higiene</li>
+            <li>Pañales (bebé y adulto)</li>
+            <li>Colchonetas y cobijas nuevas o limpias</li>
+            <li>Cajas para empacar y embalar</li>
+          </ul>
+        </div>
+        <div class="no">
+          <h4>❌ Qué NO donar</h4>
+          <ul>
+            <li>Ropa sucia o rota</li>
+            <li>Alimentos vencidos o casi vencidos</li>
+            <li>Medicamentos sueltos o de prescripción</li>
+            <li>Perecederos sin cadena de frío</li>
+            <li>Cargamentos sin receptor confirmado</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="font-size:1rem;margin:1.2rem 0 .3rem;">Cómo empacar y etiquetar</h3>
+      <ol class="pasos">
+        <li>Separa por categoría: alimentos, aseo, ropa, abrigo — no mezcles en la misma caja.</li>
+        <li>Usa cajas resistentes, ciérralas bien y evita bolsas sueltas que se rompen en el transporte.</li>
+        <li>Etiqueta cada caja con el contenido y la cantidad aproximada (ej. "Aseo x 20 kits").</li>
+        <li>Si el destino ya está definido, anota también la ciudad o punto de entrega en la caja.</li>
+        <li>Confirma con el centro de acopio si están recibiendo esa categoría antes de llevarla.</li>
+      </ol>
+    </section>
+
+    <!-- 🟢 BLOQUE 4 — Canales oficiales -->
+    <section class="bloque" style="--accent: var(--green);">
+      <div class="bloque-eyebrow" style="color:var(--green);">🟢 Bloque 4 · Canales oficiales</div>
+      <h2>Lo institucional, verificado</h2>
+      <p class="lead">Todo lo que necesitas confirmar con una entidad oficial antes de actuar.</p>
+
+      <h3 style="font-size:.95rem;margin-bottom:.5rem;">Emergencias</h3>
+      <table class="canal-tabla">
+        <tr><th>Entidad</th><th>Contacto</th></tr>
+        <tr><td>Línea 123 Colombia</td><td><a href="tel:123">123</a></td></tr>
+        <tr><td>Defensa Civil</td><td><a href="tel:144">144</a> · <a href="tel:+576013199000">601 319 9000</a></td></tr>
+        <tr><td>UNGRD</td><td><a href="tel:+576015529696">601 552 9696</a> · <a href="tel:018000113200">01 8000 113200</a></td></tr>
+        <tr><td>Cruz Roja Colombiana</td><td><a href="tel:+576017946566">601 794 6566</a> · <a href="tel:018000519853">018000 519853</a></td></tr>
+      </table>
+
+      <h3 style="font-size:.95rem;margin:1.1rem 0 .5rem;">Donaciones (cuentas y links oficiales)</h3>
+      <table class="canal-tabla">
+        <tr><th>Organización</th><th>Canal</th></tr>
+        <tr><td>Cruz Roja Colombiana</td><td><a href="https://www.cruzrojacolombiana.org/dona-dinero/" target="_blank" rel="noopener noreferrer">cruzrojacolombiana.org/dona-dinero</a></td></tr>
+        <tr><td>Banco de Alimentos de Bogotá</td><td>Bre-B <strong>0091677852</strong> · <a href="https://www.bancodealimentos.org.co/" target="_blank" rel="noopener noreferrer">bancodealimentos.org.co</a></td></tr>
+        <tr><td>World Central Kitchen</td><td><a href="https://donate.wck.org/" target="_blank" rel="noopener noreferrer">donate.wck.org</a></td></tr>
+        <tr><td>Fundación Plan</td><td>Bre-B <strong>emergenciaterrem</strong> · <a href="https://www.plan.org.co/" target="_blank" rel="noopener noreferrer">plan.org.co</a></td></tr>
+        <tr><td>GlobalGiving — Colombia Earthquake Relief Fund</td><td><a href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">globalgiving.org</a></td></tr>
+      </table>
+      <div class="aviso-verificar">⚠️ Verifica siempre cuentas, claves Bre-B y enlaces directamente en el sitio oficial antes de transferir. No dones a cuentas personales.</div>
+
+      <h3 style="font-size:.95rem;margin-bottom:.5rem;">Acopios</h3>
+      <p style="font-size:.86rem;color:var(--muted);margin:0 0 .6rem;">Mapa completo por ciudad, y el directorio filtrable con todos los puntos confirmados.</p>
+      <div class="fila-emergencia" style="background:transparent;border-color:var(--line);">
+        <a class="btn" style="background:var(--green);" href="https://www.eltiempo.com/datos/este-es-el-mapa-completo-de-los-centros-de-acopio-habilitados-en-colombia-para-ayudar-a-los-damnificados-del-terremoto-de-magnitud-7-3577654" target="_blank" rel="noopener noreferrer">Ver mapa El Tiempo</a>
+        <a class="btn alt" style="color:var(--green);border-color:var(--green);" href="index.html#centros-acopio">Ver listado por ciudad</a>
+      </div>
+
+      <div class="corte">
+        <strong>Noticias y fuentes:</strong> corte documental 13 de agosto de 2026, 1:34 p. m. hora de Colombia. La emergencia sigue en evaluación; cifras y necesidades pueden cambiar. <a href="index.html#fuentes">Ver fuentes citadas ↗</a>
+      </div>
+    </section>
+
+    <!-- 🔵 BLOQUE 5 — Comunidad y continuidad -->
+    <section class="bloque" style="--accent: var(--blue);">
+      <div class="bloque-eyebrow" style="color:var(--blue);">🔵 Bloque 5 · Comunidad y continuidad</div>
+      <h2>Esto no es de un día</h2>
+
+      <div class="comunidad-msg">
+        <p>La emergencia no termina cuando bajan las noticias. Vamos a seguir informando y acompañando durante semanas, no solo los primeros días. Si quieres mantenerte cerca de esta comunidad más allá de esta página, pronto compartiremos cómo.</p>
+      </div>
+
+      <div class="quien-soy">
+        <div class="avatar">OJ</div>
+        <p><strong>¿Quién soy?</strong> Orlando Javier Jaramillo Gutiérrez — hecho con ❤️ por Asperger para Asperger® por la comunidad asperger y autista para los colombianos y comunidad asperger y autista.<br>
+          <a href="https://www.linkedin.com/in/orlando-j-jaramillo-gutierrez/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
+      </div>
+
+      <div class="fila-emergencia" style="background:transparent;border-color:var(--line);margin-top:1rem;">
+        <div class="txt">¿Conoces un recurso u organización que falte?
+          <small>La comunidad alimenta esta página.</small>
+        </div>
+        <a class="btn alt" href="https://forms.gle/KYmeAQV7aentFFFTA" target="_blank" rel="noopener noreferrer">Proponer un recurso</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <strong>Ayuda123 Colombia</strong> — Directorio comunitario sin fines de lucro. Verifica siempre fechas, cuentas y canales antes de donar.<br>
+    Prototipo de rediseño (index2.html) · <a href="index.html">Volver a la versión actual</a>
+  </footer>
+
+  <a class="whatsapp-fab" href="https://wa.me/?text=Ayuda123%20Colombia%3A%20recursos%20verificados%20para%20ayudar%20tras%20el%20terremoto%20(emergencias%2C%20TEA%2C%20acopio%2C%20donaciones).%20https%3A%2F%2Fayuda123colombia.com" target="_blank" rel="noopener noreferrer" aria-label="Compartir por WhatsApp">
+    <svg viewBox="0 0 448 512" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
