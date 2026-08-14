@@ -992,6 +992,247 @@
       }
     }
 
+    /* ── Fusión de prioritario/index.html: guía Dónde y Cómo Donar ── */
+    .prio-caja {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--blue);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 1.6rem 1.6rem 1.8rem;
+    }
+
+    .prio-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      background: var(--red);
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .25rem .7rem;
+      border-radius: 50px;
+      margin-bottom: .7rem;
+    }
+
+    .prio-caja h3 { font-size: 1.35rem; color: var(--ink); margin: .2rem 0 .2rem; }
+    .prio-org { font-size: .82rem; color: var(--blue-2); font-weight: 700; margin-bottom: .6rem; }
+    .prio-lead { font-size: .88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1.2rem; }
+
+    .prio-caja h4.prio-h4 {
+      font-size: .95rem;
+      color: var(--ink);
+      margin: 1.5rem 0 .8rem;
+      padding-bottom: .35rem;
+      border-bottom: 2px solid var(--line);
+    }
+
+    .prio-caja h4.prio-h4:first-of-type { margin-top: 0; }
+
+    .prio-necesidad-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: .7rem;
+      margin-bottom: .8rem;
+    }
+
+    .prio-necesidad-card {
+      background: var(--wash);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: .8rem .9rem;
+    }
+
+    .prio-necesidad-card.urgente { background: color-mix(in srgb, var(--red) 10%, var(--paper)); border-color: color-mix(in srgb, var(--red) 35%, var(--line)); }
+    .prio-necesidad-card .n-icon { font-size: 1.3rem; display: block; margin-bottom: .3rem; }
+    .prio-necesidad-card h5 { font-size: .8rem; font-weight: 700; color: var(--ink); margin: 0 0 .25rem; }
+    .prio-necesidad-card.urgente h5 { color: var(--red); }
+    .prio-necesidad-card p { font-size: .76rem; color: var(--muted); line-height: 1.5; margin: 0; }
+
+    .prio-org-destacada { border: 1.5px solid var(--blue); border-radius: 12px; overflow: hidden; margin-bottom: .8rem; }
+
+    .prio-org-destacada-header {
+      background: var(--blue);
+      padding: .7rem .9rem;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
+    .prio-org-destacada-header .org-badge {
+      background: var(--gold);
+      color: #1a1a18;
+      font-size: .62rem;
+      font-weight: 700;
+      padding: .15rem .5rem;
+      border-radius: 10px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .prio-org-destacada-header h5 { color: #fff; font-size: .9rem; font-weight: 700; margin: 0; }
+    .prio-org-destacada-body { background: var(--wash); padding: .8rem .9rem; }
+    .prio-org-destacada-body p { font-size: .82rem; color: var(--muted); line-height: 1.55; margin: 0 0 .6rem; }
+
+    .prio-org-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .6rem; }
+
+    .prio-org-tag {
+      font-size: .68rem;
+      background: color-mix(in srgb, var(--blue-2) 12%, var(--paper));
+      color: var(--blue-2);
+      border: 1px solid var(--line);
+      padding: .15rem .55rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .prio-org-destacada-body a.org-link { font-size: .78rem; font-weight: 700; color: var(--blue-2); text-decoration: none; }
+
+    .prio-otras-org-tabla { width: 100%; border-collapse: collapse; font-size: .8rem; }
+    .prio-otras-org-tabla th {
+      text-align: left;
+      font-size: .68rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+      padding: .4rem .5rem;
+      border-bottom: 2px solid var(--line);
+    }
+    .prio-otras-org-tabla td { padding: .55rem .5rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .prio-otras-org-tabla a { color: var(--blue-2); font-weight: 700; text-decoration: none; }
+
+    .prio-tips-box { display: flex; flex-direction: column; gap: .7rem; }
+    .prio-tip-row { display: flex; gap: .7rem; align-items: flex-start; }
+    .prio-tip-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: .78rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .prio-tip-row p { margin: 0; font-size: .84rem; color: var(--muted); }
+    .prio-tip-row p strong { color: var(--ink); }
+
+    .prio-sources-box { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+    .prio-sources-box h4 { font-size: .85rem; color: var(--ink); margin: 0 0 .5rem; }
+    .prio-sources-box ul { margin: 0; padding-left: 1.1rem; }
+    .prio-sources-box li { font-size: .78rem; margin-bottom: .3rem; }
+    .prio-sources-box a { color: var(--blue-2); text-decoration: none; }
+
+    .prio-compromiso-caja {
+      margin-top: 1.3rem;
+      background: var(--wash);
+      border-radius: 10px;
+      padding: 1rem 1.1rem;
+    }
+    .prio-compromiso-caja p { margin: 0; font-size: .84rem; color: var(--ink); line-height: 1.6; }
+
+    .prio-aviso {
+      background: color-mix(in srgb, var(--gold) 16%, var(--paper));
+      border: 1px solid color-mix(in srgb, var(--gold) 40%, var(--line));
+      border-radius: 8px;
+      padding: .8rem 1rem;
+      color: var(--ink);
+      font-size: .84rem;
+      margin-bottom: .8rem;
+    }
+
+    /* ── Fase, prioridades y WhatsApp flotante ── */
+    .hero-fase {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .3);
+      border-radius: 50px;
+      padding: .4rem .9rem;
+      font-size: .82rem;
+      font-weight: 700;
+      color: #fff;
+      margin-top: 1rem;
+    }
+
+    .prioridades-hoy {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: .7rem;
+      margin-top: 1.2rem;
+      max-width: 640px;
+    }
+
+    .prioridades-hoy .p-card {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .25);
+      border-radius: 10px;
+      padding: .8rem .7rem;
+      text-align: center;
+    }
+
+    .prioridades-hoy .p-card .ic { font-size: 1.4rem; display: block; margin-bottom: .3rem; }
+    .prioridades-hoy .p-card strong { display: block; font-size: .8rem; color: #fff; }
+
+    @media (max-width: 640px) {
+      .prioridades-hoy { grid-template-columns: 1fr; }
+    }
+
+    .whatsapp-fab {
+      position: fixed;
+      left: 1rem;
+      bottom: 1rem;
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #25d366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      z-index: 40;
+    }
+
+    .whatsapp-fab svg { width: 26px; height: 26px; fill: #fff; }
+
+    .emergencia-dominante {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .7rem;
+      flex-wrap: wrap;
+      background: var(--red);
+      color: #fff;
+      text-decoration: none;
+      padding: .9rem 1rem;
+      text-align: center;
+    }
+
+    .emergencia-dominante .txt {
+      font-size: 1.05rem;
+      font-weight: 800;
+    }
+
+    .emergencia-dominante .num {
+      background: #fff;
+      color: var(--red);
+      font-size: 1.3rem;
+      font-weight: 900;
+      padding: .3rem 1rem;
+      border-radius: 50px;
+    }
+
+    @media (max-width: 640px) {
+      .emergencia-dominante .txt { font-size: .92rem; }
+      .emergencia-dominante .num { font-size: 1.1rem; }
+    }
+
   </style>
   <script>
     (function () {
@@ -1051,14 +1292,21 @@
     })();
   </script>
 
+  <a class="emergencia-dominante" href="tel:123">
+    <span class="txt">🆘 ¿Riesgo inmediato? Llama ya</span>
+    <span class="num">📞 123</span>
+  </a>
+
   <header>
     <button type="button" class="theme-toggle" id="theme-toggle" onclick="alternarTema()" aria-label="Cambiar tema">☾</button>
     <div class="hero">
       <span class="eyebrow">Ayuda123 Colombia</span>
-      <h1>Ayuda para Colombia tras el terremoto</h1>
-      <p>Guía práctica para entender la emergencia, ubicar necesidades prioritarias y encontrar canales de donación de organizaciones colombianas verificables.</p>
+      <h1>Ayuda para Colombia tras el terremoto <span style="color:#c9670c;">🧩 con foco en TEA</span></h1>
+      <p>Guía práctica para entender la emergencia, ubicar necesidades prioritarias y encontrar canales de donación de organizaciones colombianas verificables — con recursos especiales para la comunidad autista.</p>
 
-      <a class="hero-tea-badge" href="#tea">
+      <span class="hero-fase">⏱️ 78+ horas desde el sismo · Fase: estabilización</span>
+
+      <a class="hero-tea-badge" href="#tea" style="margin-top:1rem;">
         <span class="ic">🧩</span>
         <span>
           <strong>Recursos para voluntarios y familiares de personas con autismo</strong>
@@ -1066,10 +1314,16 @@
         </span>
       </a>
 
+      <div class="prioridades-hoy">
+        <div class="p-card"><span class="ic">💧</span><strong>Agua y alimentos</strong></div>
+        <div class="p-card"><span class="ic">🧠</span><strong>Salud y salud mental</strong></div>
+        <div class="p-card"><span class="ic">🏠</span><strong>Refugio temporal</strong></div>
+      </div>
+
       <div class="hero-actions">
         <a class="tea-cta" href="#tea">🧩 Ver recursos TEA</a>
-        <a href="prioritario/index.html">🚨 Prioritario</a>
-        <a class="secondary" href="prioritario/index.html">Dónde y Cómo Donar — Organizaciones Verificadas</a>
+        <a href="#prioritario">🚨 Prioritario</a>
+        <a class="secondary" href="#prioritario">Dónde y Cómo Donar — Organizaciones Verificadas</a>
         <a class="secondary" href="#noticias">Ver noticias</a>
         <a class="secondary" href="#donar">Canales</a>
         <a class="secondary" href="#fuentes">Fuentes de prensa</a>
@@ -1089,7 +1343,7 @@
       <a href="#acopio">Acopio</a>
       <a href="#fuentes">Fuentes de prensa</a>
       <a href="#directorio">Directorio</a>
-      <a href="prioritario/index.html">Prioritario</a>
+      <a href="#prioritario">Prioritario</a>
     </div>
   </nav>
 
@@ -1157,6 +1411,182 @@
       </div>
     </section>
 
+    <section id="prioritario">
+      <div class="prio-caja">
+        <span class="prio-badge">🚨 Prioritario</span>
+        <h3>💙 Dónde y Cómo Donar — Organizaciones Verificadas</h3>
+        <p class="prio-org">Ayuda Humanitaria Colombia 2026</p>
+        <p class="prio-lead">El 10 de agosto un terremoto de magnitud 7,4 con epicentro en San José del Palmar, Chocó, dejó cientos de fallecidos, miles de heridos y daños estructurales en Chocó, Caldas, Risaralda y Valle del Cauca. El Gobierno declaró desastre nacional y más de 12 países ofrecieron ayuda. La fase actual es sostener la respuesta por semanas, no solo días — esta guía ayuda a canalizar tu apoyo de forma efectiva, especialmente si donas desde fuera de Colombia.</p>
+
+        <h4 class="prio-h4">🆘 Las mayores necesidades en este momento</h4>
+        <div class="prio-necesidad-grid">
+          <div class="prio-necesidad-card urgente">
+            <span class="n-icon">💧</span>
+            <h5>Agua y alimentos — URGENTE</h5>
+            <p>Agua potable, alimentos no perecederos e insumos de aseo para familias desplazadas.</p>
+          </div>
+          <div class="prio-necesidad-card urgente">
+            <span class="n-icon">🏥</span>
+            <h5>Atención médica y psicológica — URGENTE</h5>
+            <p>Zonas más afectadas: Chocó, Valle del Cauca, Caldas y Risaralda.</p>
+          </div>
+          <div class="prio-necesidad-card">
+            <span class="n-icon">🏠</span>
+            <h5>Refugio temporal</h5>
+            <p>Cobijas, colchonetas y kits de vivienda temporal para familias sin hogar.</p>
+          </div>
+          <div class="prio-necesidad-card">
+            <span class="n-icon">🩸</span>
+            <h5>Donación de sangre</h5>
+            <p>Bancos de sangre habilitados en las ciudades afectadas.</p>
+          </div>
+          <div class="prio-necesidad-card">
+            <span class="n-icon">🔍</span>
+            <h5>Búsqueda de personas</h5>
+            <p>Reportar desaparecidos en la plataforma ciudadana Colombia Te Busca.</p>
+          </div>
+        </div>
+
+        <h4 class="prio-h4">⭐ Organizaciones destacadas — donar desde el exterior</h4>
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>➕ Cruz Roja Colombiana</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Canal humanitario central para búsqueda, rescate, salud, apoyo psicosocial y kits de emergencia.</p>
+            <div class="prio-org-tags">
+              <span class="prio-org-tag">🍽️ Alimentos</span><span class="prio-org-tag">💧 Agua</span><span class="prio-org-tag">🏥 Salud</span><span class="prio-org-tag">🧠 Psicosocial</span>
+            </div>
+            <a class="org-link" href="https://www.cruzrojacolombiana.org/dona-dinero/" target="_blank" rel="noopener noreferrer">cruzrojacolombiana.org/dona-dinero ↗</a>
+          </div>
+        </div>
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>📦 Banco de Alimentos de Bogotá</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Corredor humanitario activo tras el terremoto. Recibe donaciones por su página oficial o transferencia directa mediante Bre-B.</p>
+            <div class="prio-org-tags">
+              <span class="prio-org-tag">🍽️ Alimentos</span><span class="prio-org-tag">💳 Bre-B: 0091677852</span>
+            </div>
+            <a class="org-link" href="https://www.bancodealimentos.org.co/" target="_blank" rel="noopener noreferrer">bancodealimentos.org.co ↗</a>
+          </div>
+        </div>
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>🍽️ World Central Kitchen</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Trabaja con cocinas y restaurantes locales para distribuir comida caliente en Chocó, Cali, Pereira y Manizales.</p>
+            <div class="prio-org-tags">
+              <span class="prio-org-tag">🍽️ Comida caliente</span><span class="prio-org-tag">🌍 Internacional</span>
+            </div>
+            <a class="org-link" href="https://donate.wck.org/" target="_blank" rel="noopener noreferrer">donate.wck.org ↗</a>
+          </div>
+        </div>
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>🧒 Fundación Plan</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Más de 63 años en Colombia. Campaña "Terremoto en Colombia" enfocada en niños, adolescentes, familias y comunidades afectadas.</p>
+            <div class="prio-org-tags">
+              <span class="prio-org-tag">🧒 Niñez</span><span class="prio-org-tag">💳 Bre-B: emergenciaterrem</span>
+            </div>
+            <a class="org-link" href="https://www.plan.org.co/" target="_blank" rel="noopener noreferrer">plan.org.co ↗</a>
+          </div>
+        </div>
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>🌎 GlobalGiving — Colombia Earthquake Relief Fund</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Fondo internacional que canaliza financiación rápida a organizaciones locales para salud de emergencia, búsqueda y rescate, refugio, alimentos y agua.</p>
+            <div class="prio-org-tags">
+              <span class="prio-org-tag">🌍 Internacional</span><span class="prio-org-tag">💰 Fondo multi-ONG</span>
+            </div>
+            <a class="org-link" href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">globalgiving.org ↗</a>
+          </div>
+        </div>
+
+        <h4 class="prio-h4">🤝 Otras organizaciones confiables</h4>
+        <table class="prio-otras-org-tabla">
+          <tr><th>Organización</th><th>Enfoque</th><th>Sitio</th></tr>
+          <tr>
+            <td>🍲 Asociación de Bancos de Alimentos de Colombia (ABACO)</td>
+            <td>Red nacional de bancos de alimentos</td>
+            <td><a href="https://www.abaco.org.co/" target="_blank" rel="noopener noreferrer">abaco.org.co</a></td>
+          </tr>
+          <tr>
+            <td>🕊️ Cáritas Colombiana / Pastoral Social</td>
+            <td>Canal humanitario con presencia territorial</td>
+            <td><a href="https://donar.caritascolombiana.org/" target="_blank" rel="noopener noreferrer">donar.caritascolombiana.org</a></td>
+          </tr>
+          <tr>
+            <td>🏠 Minuto de Dios</td>
+            <td>Ayuda humanitaria y banco de ropa</td>
+            <td><a href="https://minutodedios.org/programa/ayuda-humanitaria" target="_blank" rel="noopener noreferrer">minutodedios.org</a></td>
+          </tr>
+          <tr>
+            <td>✝️ Ayuda a la Iglesia que Sufre (ACN Colombia)</td>
+            <td>Proyectos pastorales y humanitarios</td>
+            <td><a href="https://www.acncolombia.org/" target="_blank" rel="noopener noreferrer">acncolombia.org</a></td>
+          </tr>
+        </table>
+
+        <h4 class="prio-h4">🧩 Recursos para población TEA</h4>
+        <a class="badge-a4a" href="https://www.aspergerparaasperger.org" target="_blank" rel="noopener noreferrer">💜 Proporcionado por Asperger para Asperger</a>
+        <p class="prio-aviso">Guía de la emergencia y un audiocuento pensado para explicar el terremoto a personas autistas/Asperger, hechos por y para la comunidad TEA colombiana. <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer">Abrir guía de la emergencia ↗</a> · <a href="https://drive.google.com/file/d/16pMERPHQQd5_01RCGTBM1pBhXjaxz_-J/view?usp=drive_link" target="_blank" rel="noopener noreferrer">Escuchar audiocuento ↗</a></p>
+
+        <div class="prio-org-destacada">
+          <div class="prio-org-destacada-header"><span class="org-badge">Recomendada</span>
+            <h5>🧩 Fundación Federico García Villegas — Soy Diferente Soy Como Tú</h5>
+          </div>
+          <div class="prio-org-destacada-body">
+            <p>Fundación con sede en Cali, una de las ciudades afectadas por el sismo, que brinda acompañamiento a personas con autismo y sus familias.</p>
+            <a class="badge-a4a" href="https://www.aspergerparaasperger.org" target="_blank" rel="noopener noreferrer">💜 Recomendado por Asperger para Asperger</a><br>
+            <a class="org-link" href="https://www.instagram.com/soydiferentesoycomotu" target="_blank" rel="noopener noreferrer">instagram.com/soydiferentesoycomotu ↗</a><br>
+            <a class="org-link" href="https://www.facebook.com/soydiferentesoycomotu/" target="_blank" rel="noopener noreferrer">facebook.com/soydiferentesoycomotu ↗</a>
+          </div>
+        </div>
+
+        <h4 class="prio-h4">💡 Consejos para que tu donación tenga el mayor impacto</h4>
+        <div class="prio-tips-box">
+          <div class="prio-tip-row"><span class="prio-tip-num">1</span>
+            <p><strong>Prioriza el dinero sobre los insumos físicos</strong> — las organizaciones en terreno compran lo que más se necesita en cada momento; las donaciones económicas son más flexibles y llegan más rápido.</p>
+          </div>
+          <div class="prio-tip-row"><span class="prio-tip-num">2</span>
+            <p><strong>Verifica siempre el canal oficial</strong> — confirma cuentas, claves Bre-B y enlaces directamente en el sitio de la organización antes de transferir. No dones a cuentas personales.</p>
+          </div>
+          <div class="prio-tip-row"><span class="prio-tip-num">3</span>
+            <p><strong>Si donas insumos, confirma la lista de necesidades del centro de acopio</strong> antes de salir: agua, alimentos no perecederos, aseo, pañales y cobijas suelen ser prioritarios.</p>
+          </div>
+          <div class="prio-tip-row"><span class="prio-tip-num">4</span>
+            <p><strong>Evita hacer ruido cerca de la zona cero</strong> — los equipos de rescate necesitan silencio para ubicar sobrevivientes. Si no vas a ayudar en la operación, mejor no te acerques.</p>
+          </div>
+          <div class="prio-tip-row"><span class="prio-tip-num">5</span>
+            <p><strong>Amplifica solo información verificada</strong> — no compartas cadenas sin fecha, fuente y contacto. Si un dato no se puede confirmar, márcalo como "por verificar".</p>
+          </div>
+        </div>
+
+        <div class="prio-sources-box">
+          <h4>Fuentes verificadas</h4>
+          <ul>
+            <li><a href="https://www.semana.com/nacion/articulo/bancos-de-alimentos-activan-ayuda-para-damnificados-por-el-terremoto-en-colombia-asi-puede-donar/202641/" target="_blank" rel="noopener noreferrer">Semana</a> — bancos de alimentos activan ayuda y Bre-B.</li>
+            <li><a href="https://www.elespectador.com/bogota/banco-de-alimentos-activa-corredor-humanitario-tras-terremoto-en-colombia-esto-puede-donar/" target="_blank" rel="noopener noreferrer">El Espectador</a> — corredor humanitario del Banco de Alimentos.</li>
+            <li><a href="https://www.elnuevosiglo.com.co/nacion/por-sismo-el-banco-de-alimentos-activa-campana-de-emergencia" target="_blank" rel="noopener noreferrer">El Nuevo Siglo</a> — campaña de emergencia del Banco de Alimentos.</li>
+            <li><a href="https://www.telemundo.com/noticias/noticias-telemundo/desastres-naturales/asi-puede-ayudar-organizaciones-trabajando-ayuda-colombia-rcna591980" target="_blank" rel="noopener noreferrer">Telemundo</a> — organizaciones trabajando en la ayuda a Colombia.</li>
+            <li><a href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/" target="_blank" rel="noopener noreferrer">GlobalGiving</a> — Colombia Earthquake Relief Fund.</li>
+            <li><a href="https://elpais.com/america-colombia/2026-08-10/como-ayudar-a-las-personas-damnificadas-por-el-terremoto-en-colombia.html" target="_blank" rel="noopener noreferrer">El País</a> — cómo ayudar a las personas damnificadas.</li>
+          </ul>
+        </div>
+
+        <div class="prio-compromiso-caja">
+          <p><strong>💙 Ayuda123 Colombia</strong> Seguiremos informando con pasos concretos para apoyar a las comunidades afectadas. Cada donación, cada insumo, cada mensaje de apoyo cuenta.<br>La fuerza está en la solidaridad.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="noticias">
       <div class="section-head">
         <div>
@@ -1172,15 +1602,19 @@
       <div class="grid">
         <article class="card">
           <h3>Última hora y balance</h3>
-          <p>La emergencia continúa en evaluación. Las prioridades inmediatas incluyen búsqueda y rescate, atención médica, agua potable, alimentos, alojamiento temporal y evaluación de daños. Consulta los comunicados más recientes de la UNGRD, las autoridades territoriales y la Cruz Roja para conocer el balance confirmado y las zonas priorizadas.</p>
+          <p>La emergencia continúa en evaluación. Con corte al 13 de agosto de 2026, se reportan <strong>281 personas fallecidas, 3.971 heridas, 379 desaparecidas y más de 102.000 personas afectadas</strong>. Las cifras pueden cambiar mientras avanzan las labores de rescate, identificación y verificación de daños. Consulta los comunicados de la UNGRD y autoridades locales antes de difundirlas.</p>
         </article>
         <article class="card">
-          <h3>Apoyos internacionales</h3>
-          <p>Se han anunciado apoyos humanitarios internacionales para búsqueda y rescate, refugio, suministros, atención inicial y evaluación de daños. Diferenciamos entre ayuda anunciada, en despliegue y recibida a medida que las entidades oficiales lo confirmen.</p>
+          <h3>Zonas afectadas y daños</h3>
+          <p>El sismo impactó <strong>15 departamentos y 426 municipios</strong>. Se reportan viviendas averiadas y destruidas, afectaciones en vías, acueductos, centros de salud e instituciones educativas. Las evaluaciones técnicas continúan mediante equipos en territorio, sobrevuelos, drones e imágenes satelitales. Evita regresar a edificaciones sin autorización oficial.</p>
         </article>
         <article class="card">
-          <h3>Necesidades prioritarias</h3>
-          <p>Las necesidades pueden variar por municipio. Actualmente se reportan requerimientos de agua potable, alimentos no perecederos, kits de higiene, alojamiento temporal, atención médica, apoyo psicosocial, logística y protección de poblaciones vulnerables. Antes de donar, verifica los requerimientos y canales oficiales de la UNGRD, Cruz Roja Colombiana y alcaldías.</p>
+          <h3>Apoyo nacional e internacional</h3>
+          <p>Continúan los apoyos humanitarios para búsqueda y rescate, salud, alojamiento temporal, alimentos, agua potable y reconstrucción. Se han anunciado aportes de varios países y organismos, pero los montos divulgados pueden corresponder a compromisos, propuestas o ayudas en trámite; <strong>no siempre son recursos ya desembolsados</strong>. Verifica siempre la fuente y fecha de corte.</p>
+        </article>
+        <article class="card">
+          <h3>Necesidades y donaciones seguras</h3>
+          <p>Las necesidades prioritarias incluyen agua potable, alimentos no perecederos, kits de higiene, medicamentos, alojamiento temporal y apoyo psicosocial. Antes de donar dinero, insumos o trabajo voluntario, confirma los requerimientos y canales oficiales de la <strong>UNGRD, Cruz Roja Colombiana, Defensa Civil, alcaldías y gobernaciones</strong>. No difundas cuentas de recaudo no verificadas.</p>
         </article>
       </div>
       <p style="font-size:.82rem;color:var(--muted);margin-top:.9rem;">Última verificación: 13 de agosto de 2026, 9:23 p. m. — La información puede cambiar; se actualiza únicamente con fuentes oficiales o medios verificables.</p>
@@ -1353,7 +1787,7 @@
           </div>
         </article>
       </div>
-      <p style="font-size:.82rem;color:var(--muted);margin-top:.9rem;">¿Prefieres ver todo esto ordenado como guía rápida, útil sobre todo si donas desde España u otro país? Consulta la <a href="prioritario/index.html">página prioritaria de donación</a>.</p>
+      <p style="font-size:.82rem;color:var(--muted);margin-top:.9rem;">¿Prefieres ver todo esto ordenado como guía rápida, útil sobre todo si donas desde España u otro país? Consulta la <a href="#prioritario">guía prioritaria de donación</a>, en esta misma página.</p>
     </section>
 
     <section id="centros-acopio">
@@ -1573,6 +2007,12 @@
   </main>
 
   <button type="button" class="share-fab" onclick="compartirPagina()" aria-label="Compartir esta página">↗</button>
+
+  <a class="whatsapp-fab" href="https://wa.me/?text=Ayuda123%20Colombia%3A%20recursos%20verificados%20tras%20el%20terremoto%20%E2%80%94%20emergencias%2C%20recursos%20TEA%2C%20donaciones%2C%20acopio%20y%20directorio.%20https%3A%2F%2Fayuda123colombia.com" target="_blank" rel="noopener noreferrer" aria-label="Compartir por WhatsApp">
+    <svg viewBox="0 0 448 512" aria-hidden="true">
+      <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+    </svg>
+  </a>
 
   <div style="position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 29; display: flex; flex-direction: column; gap: 10px;">
     <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link" target="_blank" rel="noopener noreferrer" style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 8px; border-radius: 10px 0 0 10px; background: #123c69; color: #ffffff; text-decoration: none; font-family: Arial,sans-serif; font-size: 11px; font-weight: 600; line-height: 1.3; writing-mode: vertical-rl; text-orientation: mixed; box-shadow: -2px 2px 8px rgba(0,0,0,.25);">🇨🇴 Recursos Emergencia Colombia 2026</a>
