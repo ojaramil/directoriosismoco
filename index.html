@@ -770,28 +770,29 @@
       color: #fff;
     }
 
-    .dir-chips-tag {
+    .dir-filtro-ciudad {
       display: flex;
+      align-items: center;
+      gap: .5rem;
       flex-wrap: wrap;
-      gap: .4rem;
     }
 
-    .dir-chips-tag .chip {
-      padding: .32rem .75rem;
-      border-radius: 50px;
-      border: 1px solid var(--line);
-      background: var(--wash);
+    .dir-filtro-ciudad label {
+      font-size: .8rem;
+      font-weight: 700;
       color: var(--muted);
+    }
+
+    .dir-filtro-ciudad select {
+      padding: .45rem .7rem;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
       font: inherit;
       font-weight: 700;
-      font-size: .72rem;
-      cursor: pointer;
-    }
-
-    .dir-chips-tag .chip.active {
-      background: var(--blue-2);
-      border-color: var(--blue-2);
-      color: #fff;
+      font-size: .82rem;
+      max-width: 260px;
     }
 
     .dir-group-title {
@@ -1544,7 +1545,10 @@
         <div class="dir-chips" id="dir-chips">
           <button type="button" class="chip active" data-cat="todos" onclick="setCatDirectorio('todos', this)">Todos</button>
         </div>
-        <div class="dir-chips-tag" id="dir-chips-tag" aria-label="Filtrar por etiqueta"></div>
+        <div class="dir-filtro-ciudad">
+          <label for="dir-select-tag">Filtrar por ciudad/etiqueta:</label>
+          <select id="dir-select-tag" onchange="setTagDirectorio(this.value)"></select>
+        </div>
       </div>
       <div id="dir-resultado">
         <p class="dir-empty">Cargando directorio…</p>
@@ -1653,29 +1657,33 @@
     }
 
     function renderChipsTag() {
-      const cont = document.getElementById("dir-chips-tag");
-      cont.innerHTML = "";
-      const tags = new Set();
+      const sel = document.getElementById("dir-select-tag");
+      sel.innerHTML = "";
+      const counts = new Map();
       DIRECTORIO_DATA.forEach((grupo) => {
         if (dirCatActiva !== "todos" && dirCatActiva !== grupo.cat) return;
-        grupo.items.forEach((it) => { if (it.tag) tags.add(it.tag); });
+        grupo.items.forEach((it) => {
+          if (!it.tag) return;
+          counts.set(it.tag, (counts.get(it.tag) || 0) + 1);
+        });
       });
 
-      const todas = document.createElement("button");
-      todas.type = "button";
-      todas.className = "chip" + (dirTagActiva === "todas" ? " active" : "");
-      todas.textContent = "Todas las etiquetas";
-      todas.onclick = () => setTagDirectorio("todas", todas);
-      cont.appendChild(todas);
+      const optTodas = document.createElement("option");
+      optTodas.value = "todas";
+      optTodas.textContent = "Todas las ciudades/etiquetas";
+      sel.appendChild(optTodas);
 
-      [...tags].sort((a, b) => a.localeCompare(b, "es")).forEach((tag) => {
-        const btn = document.createElement("button");
-        btn.type = "button";
-        btn.className = "chip" + (dirTagActiva === tag ? " active" : "");
-        btn.textContent = tag;
-        btn.onclick = () => setTagDirectorio(tag, btn);
-        cont.appendChild(btn);
-      });
+      // Más relevante primero: por frecuencia, luego alfabético.
+      [...counts.entries()]
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], "es"))
+        .forEach(([tag, n]) => {
+          const opt = document.createElement("option");
+          opt.value = tag;
+          opt.textContent = `${tag} (${n})`;
+          sel.appendChild(opt);
+        });
+
+      sel.value = dirTagActiva;
     }
 
     function setCatDirectorio(cat, btn) {
@@ -1687,10 +1695,8 @@
       renderDirectorio();
     }
 
-    function setTagDirectorio(tag, btn) {
+    function setTagDirectorio(tag) {
       dirTagActiva = tag;
-      document.querySelectorAll("#dir-chips-tag .chip").forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
       renderDirectorio();
     }
 
