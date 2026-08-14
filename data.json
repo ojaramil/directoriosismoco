@@ -736,6 +736,13 @@
     "aviso": "Lleva solo lo solicitado: agua, alimentos no perecederos, aseo, primeros auxilios, colchonetas/cobijas y elementos de protección. Confirma horario antes de salir.",
     "items": [
       {
+        "icon": "🗺️",
+        "tag": "Herramienta",
+        "h": "Ayudas Pereira — Coordinación de centros de acopio",
+        "d": "Elige tu ciudad para ver qué falta y dónde sobra en los centros de acopio.",
+        "url": "https://ayudaspereira.com/"
+      },
+      {
         "header": "Puntos principales"
       },
       {
