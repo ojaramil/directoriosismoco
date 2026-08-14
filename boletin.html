@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primer boletín 72 horas | Ayuda123Colombia</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0eeea;
+            padding: 24px 16px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .email-wrapper {
+            max-width: 620px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            font-size: 15px;
+            line-height: 1.65;
+            color: #1a1a18;
+        }
+
+        .email-header {
+            background: #ffffff;
+            padding: 24px 32px 16px;
+            text-align: center;
+        }
+
+        .email-header img.logo {
+            width: 160px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .portada-img {
+            width: 100%;
+            display: block;
+        }
+
+        .header-meta {
+            background: #ffffff;
+            padding: 14px 32px 18px;
+            text-align: center;
+            border-bottom: 0.5px solid #e0ddd5;
+        }
+
+        .header-badge {
+            display: inline-block;
+            background: #1a3a8c;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .header-meta .subtitle {
+            color: #888780;
+            font-size: 13px;
+        }
+
+        .body-content {
+            padding: 28px 32px;
+        }
+
+        .greeting {
+            font-size: 15px;
+            color: #1a1a18;
+            margin-bottom: 16px;
+        }
+
+        .intro-text {
+            font-size: 15px;
+            color: #444441;
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        /* CIFRAS */
+        .cifras-box {
+            background: #1a3a8c;
+            border-radius: 12px;
+            padding: 20px 22px;
+            margin-bottom: 20px;
+        }
+
+        .cifras-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: rgba(255, 255, 255, 0.5);
+            margin-bottom: 14px;
+        }
+
+        .cifra-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cifra-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .cifra-icon {
+            font-size: 18px;
+            flex-shrink: 0;
+            width: 26px;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .cifra-body .num {
+            font-size: 18px;
+            font-weight: 800;
+            color: #f5cc5a;
+            line-height: 1.1;
+        }
+
+        .cifra-body .desc {
+            font-size: 12.5px;
+            color: rgba(255, 255, 255, 0.75);
+            margin-top: 2px;
+        }
+
+        .cifra-body .fuente {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.38);
+            margin-top: 2px;
+        }
+
+        .cifras-nota {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.42);
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 0.5px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* FASE */
+        .fase-box {
+            background: #fff8e1;
+            border: 1px solid #f5cc5a;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+            font-size: 14px;
+            color: #5a4200;
+            line-height: 1.65;
+        }
+
+        /* SECCIONES */
+        .section-label {
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            color: #888780;
+            margin-bottom: 12px;
+        }
+
+        .cat-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 11px 0;
+            border-bottom: 0.5px solid #e8e6e0;
+        }
+
+        .cat-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .cat-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .bg-red {
+            background: #fde8e8;
+        }
+
+        .bg-blue {
+            background: #ddeeff;
+        }
+
+        .bg-amber {
+            background: #fff0cc;
+        }
+
+        .bg-purple {
+            background: #eeecfe;
+        }
+
+        .bg-green {
+            background: #e2f5d0;
+        }
+
+        .bg-teal {
+            background: #d8f2ea;
+        }
+
+        .cat-text h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a18;
+            margin-bottom: 2px;
+        }
+
+        .cat-text p {
+            font-size: 13px;
+            color: #666461;
+            line-height: 1.5;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-top: 4px;
+            margin-right: 3px;
+            font-weight: 600;
+        }
+
+        .tag-green {
+            background: #e2f5d0;
+            color: #2f7a5b;
+        }
+
+        .tag-purple {
+            background: #eeecfe;
+            color: #4a2d8c;
+        }
+
+        .tag-blue {
+            background: #ddeeff;
+            color: #185fa5;
+        }
+
+        .tag-amber {
+            background: #fff0cc;
+            color: #8a5c00;
+        }
+
+        /* VERIFICACION BOX */
+        .verify-box {
+            background: #e8f5f0;
+            border: 1.5px solid #2f7a5b;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 20px 0;
+        }
+
+        .verify-box .verify-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #2f7a5b;
+            margin-bottom: 8px;
+        }
+
+        .verify-box h3 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #1a1a18;
+            margin-bottom: 6px;
+        }
+
+        .verify-box p {
+            font-size: 13px;
+            color: #1a4535;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .verify-box a {
+            display: inline-block;
+            background: #2f7a5b;
+            color: #fff;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 7px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        /* DONACIONES */
+        .help-box {
+            background: #f9f8f5;
+            border: 0.5px solid #e0ddd5;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 20px 0;
+        }
+
+        .help-box h3 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a1a18;
+            margin-bottom: 8px;
+        }
+
+        .help-box p {
+            font-size: 13.5px;
+            color: #444441;
+            line-height: 1.65;
+            margin-bottom: 8px;
+        }
+
+        .help-box ul {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .help-box ul li {
+            font-size: 13px;
+            color: #5f5e5a;
+            padding: 3px 0;
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .help-box ul li::before {
+            content: "›";
+            position: absolute;
+            left: 2px;
+            color: #1a3a8c;
+            font-weight: 700;
+        }
+
+        /* TEA */
+        .tea-box {
+            background: #f4f0fb;
+            border: 1.5px solid #4a2d8c;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 20px 0;
+        }
+
+        .tea-box .tea-label {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #4a2d8c;
+            margin-bottom: 8px;
+        }
+
+        .tea-box h3 {
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #1a1a18;
+            margin-bottom: 6px;
+        }
+
+        .tea-box p {
+            font-size: 13px;
+            color: #3a2060;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .tea-box a {
+            display: inline-block;
+            background: #4a2d8c;
+            color: #fff;
+            font-size: 12.5px;
+            font-weight: 700;
+            padding: 7px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+        }
+
+        /* CTA */
+        .cta-main {
+            background: #1a3a8c;
+            border-radius: 12px;
+            padding: 24px 22px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .cta-main p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .cta-main a {
+            display: inline-block;
+            background: #f5cc5a;
+            color: #1a1a18;
+            font-size: 15px;
+            font-weight: 800;
+            padding: 13px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .cta-url {
+            margin-top: 10px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* UPDATE */
+        .update-box {
+            background: #e8f0fb;
+            border-left: 4px solid #1a3a8c;
+            border-radius: 0 10px 10px 0;
+            padding: 14px 16px;
+            margin-bottom: 24px;
+            font-size: 13.5px;
+            color: #1a2060;
+            line-height: 1.6;
+        }
+
+        .update-box strong {
+            color: #1a3a8c;
+        }
+
+        /* FUENTES */
+        .sources-box {
+            background: #f9f8f5;
+            border: 0.5px solid #e0ddd5;
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin: 20px 0;
+        }
+
+        .sources-box h4 {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            color: #888780;
+            margin-bottom: 10px;
+        }
+
+        .sources-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sources-box ul li {
+            font-size: 12px;
+            color: #5f5e5a;
+            padding: 4px 0 4px 14px;
+            border-bottom: 0.5px solid #e8e6e0;
+            position: relative;
+        }
+
+        .sources-box ul li:last-child {
+            border-bottom: none;
+        }
+
+        .sources-box ul li::before {
+            content: "›";
+            position: absolute;
+            left: 2px;
+            color: #1a3a8c;
+            font-weight: 700;
+        }
+
+        .sources-box ul li a {
+            color: #185fa5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .divider {
+            border: none;
+            border-top: 0.5px solid #e0ddd5;
+            margin: 24px 0;
+        }
+
+        .closing {
+            font-size: 15px;
+            color: #444441;
+            margin-bottom: 14px;
+            line-height: 1.7;
+        }
+
+        .signature {
+            font-size: 14px;
+            color: #1a3a8c;
+            font-weight: 700;
+        }
+
+        .email-footer {
+            background: #f9f8f5;
+            border-top: 0.5px solid #e0ddd5;
+            padding: 18px 32px;
+            text-align: center;
+            font-size: 12px;
+            color: #888780;
+            line-height: 1.7;
+        }
+
+        .footer-brand {
+            font-weight: 600;
+            color: #1a3a8c;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="email-wrapper">
+        <div class="email-header"><img alt="Asperger para Asperger" class="logo"
+                src="https://assets.ipzmarketing.com/data/227bd8184d67825de07e363e1cdb79f6fab2a789/media_files/323/original/logo-claro.png"
+                style="width: 140px; height: 100%;" /></div>
+        <img alt="Ayuda123Colombia.com" class="portada-img"
+            src="portada.jpg"
+            style="width: 100%; height: 100%;" />
+        <div class="header-meta">
+            <div class="header-badge">📊 Primer boletín — 13 de agosto de 2026</div>
+
+            <p class="subtitle">72 horas del terremoto · Directorio activo · Recursos curados por nuestro equipo</p>
+        </div>
+
+        <div class="body-content">
+            <p class="greeting">Hola comunidad,</p>
+
+            <p class="intro-text">Antes que nada, una disculpa: no los habíamos contactado antes porque seguíamos de
+                lleno en la respuesta al terremoto de Venezuela con <strong>ayuda123venezuela.com</strong>. El 10 de
+                agosto, un sismo de magnitud 7,4 con epicentro en San José del Palmar, Chocó, sacudió gran parte de
+                Colombia. Ya pasaron 72 horas y activamos <strong>ayuda123colombia.com</strong> para nuestros
+                hermanos colombianos — ahora esperamos toda su solidaridad, como comunidad.</p>
+            <!-- CIFRAS -->
+
+            <div class="cifras-box">
+                <div class="cifras-label">Cifras reportadas al 13 de agosto de 2026</div>
+
+                <div class="cifra-row">
+                    <div class="cifra-icon">🕯️</div>
+
+                    <div class="cifra-body">
+                        <div class="num">180+</div>
+
+                        <div class="desc">fallecidos reportados (cifra preliminar, en actualización)</div>
+
+                        <div class="fuente">Fuente: Infobae, 10–11 ago 2026</div>
+                    </div>
+                </div>
+
+                <div class="cifra-row">
+                    <div class="cifra-icon">🏥</div>
+
+                    <div class="cifra-body">
+                        <div class="num">Cientos</div>
+
+                        <div class="desc">de personas heridas, con derrumbes reportados en Cali y Manizales</div>
+
+                        <div class="fuente">Fuente: Infobae, en vivo</div>
+                    </div>
+                </div>
+
+                <div class="cifra-row">
+                    <div class="cifra-icon">🌎</div>
+
+                    <div class="cifra-body">
+                        <div class="num">12+</div>
+
+                        <div class="desc">países anunciaron envío de ayuda humanitaria</div>
+
+                        <div class="fuente">Fuente: Infobae</div>
+                    </div>
+                </div>
+
+                <div class="cifra-row">
+                    <div class="cifra-icon">📍</div>
+
+                    <div class="cifra-body">
+                        <div class="num">4 zonas</div>
+
+                        <div class="desc">priorizadas: Chocó, Caldas, Risaralda y Valle del Cauca</div>
+
+                        <div class="fuente">Fuente: cobertura de prensa citada</div>
+                    </div>
+                </div>
+
+                <div class="cifra-row">
+                    <div class="cifra-icon">🏛️</div>
+
+                    <div class="cifra-body">
+                        <div class="num">UNGRD</div>
+
+                        <div class="desc">activó Sala de Crisis Nacional y declaró desastre nacional</div>
+
+                        <div class="fuente">Fuente: UNGRD</div>
+                    </div>
+                </div>
+
+                <div class="cifras-nota">Las cifras oficiales siguen en evaluación. Verifica siempre la fecha de corte antes de compartirlas.</div>
+            </div>
+            <!-- FASE -->
+
+            <div class="fase-box">⚠️ <strong>A las 72 horas, la urgencia incluye:</strong> agua potable, alimentos,
+                atención médica y psicológica, refugio temporal y voluntariado en centros de acopio. La UNGRD y la
+                Cruz Roja Colombiana coordinan la respuesta en las zonas más afectadas.</div>
+            <!-- DIRECTORIO -->
+
+            <div class="section-label">El directorio ayuda123colombia.com ya está activo con</div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-red">🆘</div>
+
+                <div class="cat-text">
+                    <h4>Emergencias y verificación</h4>
+
+                    <p>Línea 123, Defensa Civil 144, UNGRD, Cruz Roja Colombiana y mapas colaborativos en vivo.</p>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-teal">🎙️</div>
+
+                <div class="cat-text">
+                    <h4>Comunicados oficiales</h4>
+
+                    <p>Resúmenes de autoridades como la Secretaría de Gobierno de Bogotá, ordenados del más reciente al más antiguo.</p>
+                    <span class="tag tag-amber">Nuevo en el directorio</span>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-blue">📦</div>
+
+                <div class="cat-text">
+                    <h4>Puntos de acopio y voluntariado</h4>
+
+                    <p>Listado filtrable por ciudad y país, con estado de voluntariado actualizado punto por punto.</p>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-green">💳</div>
+
+                <div class="cat-text">
+                    <h4>Donaciones económicas</h4>
+
+                    <p>Cruz Roja Colombiana, Banco de Alimentos de Bogotá, World Central Kitchen, Fundación Plan y GlobalGiving, con cuentas y claves Bre-B verificadas.</p>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-purple">🧩</div>
+
+                <div class="cat-text">
+                    <h4>Recursos para personas TEA</h4>
+
+                    <p>Guía de la emergencia y audiocuento, hechos por y para la comunidad TEA colombiana.</p>
+                    <span class="tag tag-purple">Especial comunidad</span>
+                </div>
+            </div>
+
+            <div class="cat-row">
+                <div class="cat-icon bg-amber">✅</div>
+
+                <div class="cat-text">
+                    <h4>Qué donar y qué no</h4>
+
+                    <p>Guía clara de insumos prioritarios y errores comunes que saturan los centros de acopio.</p>
+                </div>
+            </div>
+            <!-- VERIFICACION -->
+
+            <div class="verify-box">
+                <div class="verify-label">🎙️ Información verificada</div>
+
+                <h3>Comunicados oficiales, ordenados y con fuente</h3>
+
+                <p>Sumamos una categoría propia para resúmenes de autoridades y voceros oficiales, siempre con fuente
+                    citada, para que la información urgente no se pierda entre cadenas sin verificar.</p>
+                <a href="https://ayuda123colombia.com/#directorio" target="_blank">→ Ver comunicados en el directorio</a>
+            </div>
+            <!-- CÓMO DONAR MEJOR -->
+
+            <div class="help-box">
+                <h3>💙 Cómo ayudar mejor desde donde estás</h3>
+
+                <p>No dones con afán. Las organizaciones en terreno son las que mejor saben qué necesitan. Si vas a
+                    donar, prioriza insumos de uso inmediato:</p>
+
+                <ul>
+                    <li>Agua potable y alimentos no perecederos, con fecha de vencimiento lejana</li>
+                    <li>Kits de aseo e higiene</li>
+                    <li>Pañales para bebés y adultos</li>
+                    <li>Colchonetas y cobijas nuevas o limpias</li>
+                    <li>Cajas para empacar y embalar, bien etiquetadas por contenido</li>
+                </ul>
+
+                <p style="margin-top:10px;font-size:13px;color:#888780;">Evita ropa sucia, alimentos vencidos y
+                    medicamentos sueltos — saturan los centros y restan capacidad de respuesta. El dinero suele ser
+                    más ágil y trazable que un envío físico mal coordinado.</p>
+            </div>
+            <!-- TEA -->
+
+            <div class="tea-box">
+                <div class="tea-label">🧩 Recurso especial TEA</div>
+
+                <h3>Guía de la emergencia + audiocuento para explicar el terremoto</h3>
+
+                <p>Materiales gratuitos, hechos por y para la comunidad TEA colombiana: cómo explicar el terremoto,
+                    qué esperar y cómo acompañar la sobrecarga sensorial en un centro de acopio o refugio.</p>
+                <a href="https://drive.google.com/drive/folders/1MBZmlLP3XpeOUb_FW83g9nAfiR7Unwdz?usp=drive_link"
+                    target="_blank">→ Abrir recursos TEA</a>
+            </div>
+            <!-- CTA -->
+
+            <div class="cta-main">
+                <p>Información curada con fuentes públicas verificables.</p>
+                <a href="https://ayuda123colombia.com" target="_blank">→ Ir al directorio</a>
+
+                <div class="cta-url">ayuda123colombia.com</div>
+            </div>
+            <!-- UPDATE -->
+
+            <div class="update-box"><strong>📬 ¿Conoces un recurso que no está listado?</strong><br />
+                Responde este correo o <a href="https://forms.gle/KYmeAQV7aentFFFTA" target="_blank">propónlo aquí</a>. Este proyecto existe para servir a la comunidad, no para cerrarla.
+            </div>
+            <!-- FUENTES -->
+
+            <div class="sources-box">
+                <h4>📚 Fuentes y verificación</h4>
+
+                <ul>
+                    <li><a href="https://cnnespanol.cnn.com/2026/08/10/colombia/live-news/sismo-magnitud-7-4-en-vivo-orix"
+                            target="_blank">CNN en Español — Cobertura en vivo del sismo de magnitud 7,4</a></li>
+                    <li><a href="https://www.infobae.com/colombia/2026/08/10/en-vivo-fuerte-temblor-de-74-se-sintio-en-colombia-cali-y-manizales-reportan-derrumbes-en-edificaciones/"
+                            target="_blank">Infobae — Balance en vivo y ayuda internacional</a></li>
+                    <li><a href="https://www.jornada.com.mx/noticia/2026/08/10/mundo/terremoto-de-74-en-colombia-deja-danos-y-heridos"
+                            target="_blank">La Jornada — Balance nacional de fallecidos y daños</a></li>
+                    <li><a href="https://www.univision.com/noticias/america-latina/fuerte-sismo-sacude-el-departamento-de-choco-en-colombia-este-lunes"
+                            target="_blank">Univision — Daños e infraestructura en Chocó</a></li>
+                    <li><a href="https://www.elespectador.com/bogota/banco-de-alimentos-activa-corredor-humanitario-tras-terremoto-en-colombia-esto-puede-donar/"
+                            target="_blank">El Espectador — Corredor humanitario del Banco de Alimentos de Bogotá</a></li>
+                    <li><a href="https://www.globalgiving.org/projects/colombia-earthquake-relief-fund/"
+                            target="_blank">GlobalGiving — Colombia Earthquake Relief Fund</a></li>
+                </ul>
+            </div>
+
+            <hr class="divider" />
+            <p class="closing">Un abrazo,</p>
+
+            <p class="signature">Orlando</p>
+
+            <p style="font-size:13px;color:#888780;margin-top:4px;">Asperger para Asperger®</p>
+        </div>
+
+        <div class="email-footer">
+            <p><span class="footer-brand">Asperger para Asperger®</span></p>
+
+            <p style="margin-top:4px;">Diversidad · Tolerancia · Respeto</p>
+
+            <p style="margin-top:6px;font-size:11px;color:#b4b2a9;">Directorio comunitario gratuito ·
+                ayuda123colombia.com · 13 de agosto de 2026. Si no deseas seguir recibiendo emails, puedes darte de <a
+                    href="{{%20unsubscribe_url%20}}" style="color:#b4b2a9;">baja</a>.</p>
+        </div>
+    </div>
+</body>
+
+</html>
