@@ -555,6 +555,27 @@
       color: var(--muted);
     }
 
+    #noticias .section-head {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+      align-items: start;
+      gap: 1rem;
+    }
+
+    .news-context {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .85rem;
+      margin-top: .75rem;
+    }
+
+    .news-context p {
+      margin: 0;
+    }
+
+    #noticias .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .tag {
       color: var(--blue-2);
       font-size: .74rem;
@@ -992,10 +1013,13 @@
         min-height: 88svh;
       }
 
+      #noticias .section-head,
+      #noticias .grid,
       .section-head,
       .grid,
       .donation-grid,
-      .news-links {
+      .news-links,
+      .news-context {
         grid-template-columns: 1fr;
       }
 
@@ -1839,9 +1863,11 @@
         <div>
           <span class="tag">Noticias y contexto</span>
           <h2>Qué se reporta del sismo</h2>
-          <p>Colombia mantiene la atención de la emergencia tras el sismo de magnitud 7,4. La respuesta reúne acciones
-            nacionales, ayuda humanitaria internacional y opciones de financiamiento para la recuperación de las zonas
-            afectadas.</p>
+          <div class="news-context">
+            <p>Colombia mantiene la atención de la emergencia tras el sismo de magnitud 7,4.</p>
+            <p>La respuesta reúne acciones nacionales, ayuda humanitaria internacional y opciones de financiamiento para
+              la recuperación de las zonas afectadas.</p>
+          </div>
         </div>
         <div class="card callout">
           <h3>Dato clave</h3>
